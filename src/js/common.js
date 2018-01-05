@@ -333,4 +333,14 @@ $(document).ready(function () {
     });
 
     $('#fullpage').fullpage();
+
+    var swiper = new Swiper('.wishlist-carousel', {
+        slidesPerView: 1,
+        slidesPerColumn: 2,
+        spaceBetween: 0,
+        navigation: {
+            nextEl: '.nav-products-next',
+            prevEl: '.nav-products-prev',
+        }
+    });
 });

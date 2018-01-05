@@ -51,13 +51,12 @@ h1, h2, h3, h4, h5, h6,
     margin-bottom: 1.0625rem;
     font-family: inherit;
     line-height: 1.2;
-    color: inherit;
+    color: #FFFFFF;
 }
 
 h1, .h1 {
-    margin-bottom: 71px;
-    font-weight: 600;
-    line-height: 50px;
+    font-weight: 300;
+    @include font-size(46px);
 }
 
 h2, .h2 {
