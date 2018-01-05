@@ -1,0 +1,14 @@
+node_modules
+dist/
+.tmp
+app.yaml
+.idea
+bower_components
+LICENSE
+README.md
+.DS_Store
+sources
+Thumbs.db
+complimento.iml
+/build
+package-lock.json
