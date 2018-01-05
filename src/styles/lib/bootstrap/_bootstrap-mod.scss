@@ -87,11 +87,6 @@ dfn {
     font-style: italic;
 }
 
-b,
-strong {
-    font-weight: bolder;
-}
-
 small {
     font-size: 80%;
 }
@@ -110,32 +105,6 @@ sub {
 
 sup {
     top: -.5em;
-}
-
-a {
-    color: #007bff;
-    text-decoration: none;
-    background-color: transparent;
-    -webkit-text-decoration-skip: objects;
-}
-
-a:hover {
-    color: #0056b3;
-    text-decoration: underline;
-}
-
-a:not([href]):not([tabindex]) {
-    color: inherit;
-    text-decoration: none;
-}
-
-a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
-    color: inherit;
-    text-decoration: none;
-}
-
-a:not([href]):not([tabindex]):focus {
-    outline: 0;
 }
 
 pre,
@@ -323,39 +292,6 @@ template {
     display: none !important;
 }
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-    margin-bottom: 0.5rem;
-    font-family: inherit;
-    font-weight: 500;
-    line-height: 1.2;
-    color: inherit;
-}
-
-h1, .h1 {
-    font-size: 2.5rem;
-}
-
-h2, .h2 {
-    font-size: 2rem;
-}
-
-h3, .h3 {
-    font-size: 1.75rem;
-}
-
-h4, .h4 {
-    font-size: 1.5rem;
-}
-
-h5, .h5 {
-    font-size: 1.25rem;
-}
-
-h6, .h6 {
-    font-size: 1rem;
-}
-
 hr {
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -420,152 +356,60 @@ pre code {
 
 .container-fluid, .container {
     width: 100%;
-    padding-right: 100px;
-    padding-left: 100px;
     margin-right: auto;
     margin-left: auto;
 }
 
-@media (min-width: 576px) {
-    .container {
-        max-width: 540px;
+@media (max-width: 767px) {
+    .container-fluid, .container {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    .row {
+        margin-right: -20px;
+        margin-left: -20px;
     }
 }
 
 @media (min-width: 768px) {
+    .container-fluid, .container {
+        padding-right: 60px;
+        padding-left: 60px;
+    }
+    .row {
+        margin-right: -60px;
+        margin-left: -60px;
+    }
+}
+
+@media (min-width: 1100px) {
+    .container-fluid, .container {
+        padding-right: 75px;
+        padding-left: 75px;
+    }
     .container {
-        max-width: 720px;
+        max-width: 1700px;
+    }
+    .row {
+        margin-right: -75px;
+        margin-left: -75px;
     }
 }
 
-@media (min-width: 992px) {
-    .container {
-        max-width: 960px;
+@media (min-width: 1440px) {
+    .container-fluid, .container {
+        padding-right: 100px;
+        padding-left: 100px;
     }
-}
-
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1500px;
+    .row {
+        margin-right: -100px;
+        margin-left: -100px;
     }
-}
-
-.row {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-}
-
-.embed-responsive {
-    position: relative;
-    display: block;
-    width: 100%;
-    padding: 0;
-    overflow: hidden;
-}
-
-.embed-responsive::before {
-    display: block;
-    content: "";
-}
-
-.embed-responsive .embed-responsive-item,
-.embed-responsive iframe,
-.embed-responsive embed,
-.embed-responsive object,
-.embed-responsive video {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-
-.embed-responsive-21by9::before {
-    padding-top: 42.857143%;
-}
-
-.embed-responsive-16by9::before {
-    padding-top: 56.25%;
-}
-
-.embed-responsive-4by3::before {
-    padding-top: 75%;
-}
-
-.embed-responsive-1by1::before {
-    padding-top: 100%;
-}
-
-@supports ((position: -webkit-sticky) or (position: sticky)) {
-    .sticky-top {
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
-        z-index: 1020;
-    }
-}
-
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    -webkit-clip-path: inset(50%);
-    clip-path: inset(50%);
-    border: 0;
-}
-
-.sr-only-focusable:active, .sr-only-focusable:focus {
-    position: static;
-    width: auto;
-    height: auto;
-    overflow: visible;
-    clip: auto;
-    white-space: normal;
-    -webkit-clip-path: none;
-    clip-path: none;
-}
-
-.text-nowrap {
-    white-space: nowrap !important;
-}
-
-.text-truncate {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.text-hide {
-    font: 0/0 a;
-    color: transparent;
-    text-shadow: none;
-    background-color: transparent;
-    border: 0;
-}
-
-.visible {
-    visibility: visible !important;
-}
-
-.invisible {
-    visibility: hidden !important;
 }
 
 .row {
     display: flex;
     flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
 }
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
