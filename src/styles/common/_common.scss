@@ -15,7 +15,8 @@ body {
     margin: 0;
     font-family: 'akrobat', -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     line-height: 1.4;
-    background-color: #000;
+    background: #000 url(../img/bg/bg-body.jpg) no-repeat center;
+    background-size: cover;
     font-weight: 400;
     color: #fff;
     text-align: left;
@@ -42,11 +43,6 @@ img {
 
 b, strong {
     font-weight: normal;
-}
-
-p {
-    margin-top: 0;
-    margin-bottom: 1.6875rem;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -165,87 +161,3 @@ button, input, select, textarea {
 .hidden {
     display: none;
 }
-
-.arrow-down {
-    padding: 10px;
-    cursor: pointer;
-    position: relative;
-    transition: all 0.4s ease;
-    &::before {
-        width: 1px;
-        height: 51px;
-        display: block;
-        background-color: #1E201D;
-        content: '';
-        transition: all 0.3s ease;
-    }
-    &::after {
-        width: 9px;
-        height: 9px;
-        content: '';
-        border-right: 1px solid #000;
-        border-bottom: 1px solid #000;
-        bottom: 10px;
-        left: 6px;
-        position: absolute;
-        transform: rotate(45deg);
-        transition: all 0.3s ease;
-    }
-}
-
-.arrow-right {
-    width: 71px;
-    padding: 10px;
-    cursor: pointer;
-    position: relative;
-    top: -6px;
-    left: -10px;
-    display: block;
-    transition: all 0.4s ease;
-    &::before {
-        width: 100%;
-        height: 1px;
-        display: block;
-        background-color: #1E201D;
-        content: '';
-        transition: all 0.3s ease;
-    }
-    &::after {
-        right: 10px;
-        bottom: 6px;
-        width: 9px;
-        height: 9px;
-        content: '';
-        border-right: 1px solid #000;
-        border-bottom: 1px solid #000;
-        position: absolute;
-        transform: rotate(-45deg);
-        transition: all 0.3s ease;
-    }
-}
-
-header {
-    flex: 0 0 auto;
-}
-
-.wrapper {
-    padding-top: 120px;
-    width: 100%;
-    flex: 1 0 auto;
-    background-color: #fff;
-    background-repeat: no-repeat;
-}
-
-.home .wrapper {
-    padding-top: 0;
-    background-image: url(../img/bg/bg-pre-top.jpg), url(../img/bg/bg-pre-footer.jpg);
-    background-position: top right, bottom left;
-    background-size: 830px 730px, 830px 730px;
-}
-
-.page .wrapper {
-    background-image: url(../img/bg/bg-pre-top.jpg);
-    background-position: top right;
-    background-size: 830px 730px;
-}
-
