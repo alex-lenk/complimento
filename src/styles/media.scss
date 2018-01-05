@@ -1,0 +1,14 @@
+@import 'lib/breakpoint';
+@import 'lib/breakpoint-slicer';
+@import "common/variables";
+@import "common/mixin";
+
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+}
+
+@media (max-width: 1919px) {
+}
+
+@media (max-width: 1599px) {
+}

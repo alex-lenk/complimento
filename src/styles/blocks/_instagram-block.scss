@@ -1,0 +1,110 @@
+.instagram-block {
+    padding-top: 32px;
+    position: relative;
+    overflow: hidden;
+    z-index: $instagram-block;
+    display: flex;
+    justify-content: space-between;
+    &::before {
+        width: 208px;
+        height: 6px;
+        background-color: #E9E9E9;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        content: '';
+    }
+}
+
+.instagram-left {
+    max-width: 529px;
+    height: 200px;
+    position: relative;
+    display: flex;
+    flex: 1 1 529px;
+    &::before {
+        width: 55px;
+        height: 94px;
+        top: 23px;
+        right: 0;
+        border-right: 3px solid $colorDark;
+        border-top: 3px solid $colorDark;
+        position: absolute;
+        content: '';
+    }
+    .first {
+        width: 200px;
+    }
+    .second {
+        width: 200px;
+        box-shadow: 6px 12px 15px 0 rgba(0, 0, 0, 0.15);
+    }
+    .third {
+        width: 137px;
+        bottom: 0;
+        right: 19px;
+        position: absolute;
+        z-index: -1;
+    }
+}
+
+.instagram-center {
+    padding-top: 33px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    flex: 1;
+    .instagram {
+        width: 48px;
+        height: 48px;
+        fill: $colorDark;
+    }
+}
+
+.instagram-followers {
+    margin-bottom: 5px;
+    color: $colorDark;
+    @include font-size(18px)
+}
+
+.instagram-join-us {
+    color: $colorGray;
+    @include font-size(28px);
+    &:hover {
+        color: $colorDark;
+    }
+}
+
+.instagram-right {
+    max-width: 529px;
+    height: 200px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    flex: 1 1 529px;
+    &::before {
+        width: 84px;
+        height: 53px;
+        top: 75px;
+        left: 0;
+        border-left: 3px solid #939190;
+        border-top: 3px solid #939190;
+        position: absolute;
+        content: '';
+    }
+    .first {
+        width: 178px;
+        bottom: -67px;
+        left: -16px;
+        position: absolute;
+        z-index: -1;
+    }
+    .second {
+        width: 200px;
+        box-shadow: -6px 10px 15px 0 rgba(0, 0, 0, 0.15);
+    }
+    .third {
+        width: 200px;
+    }
+}

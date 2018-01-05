@@ -1,0 +1,169 @@
+.catalog-sidebar {
+    padding: 48px 50px 50px 100px;
+    max-width: 400px;
+    color: #fff;
+    position: relative;
+    z-index: 30;
+    flex: 0 0 400px;
+    &::before {
+        width: 100%;
+        max-width: inherit;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: fixed;
+        z-index: -1;
+        background: #212121 url(../img/bg/bg-catalog-sidebar.jpg) no-repeat top center;
+        content: '';
+    }
+}
+
+.catalog-sidebar-logo {
+    width: 174px;
+    margin-bottom: 83px;
+}
+
+.catalog-sidebar-fixed {
+    padding-top: 50px;
+    top: 0;
+}
+
+.box-heading, .mfilter-heading {
+    margin-bottom: 37px;
+    text-transform: uppercase;
+    color: #FFF;
+    font-weight: 400;
+    line-height: 1;
+    @include font-size(25px);
+}
+
+.list-group {
+    margin-bottom: 77px;
+    display: inline-flex;
+    flex-direction: column;
+    .active {
+        color: #F3F0EE;
+        &::after {
+            width: 100%;
+            height: 1px;
+            bottom: -1px;
+            left: 0;
+            background-color: #fff;
+            position: absolute;
+            content: '';
+        }
+    }
+}
+
+.list-group-item {
+    color: #F3F0EE;
+    font-weight: 400;
+    line-height: 1;
+    position: relative;
+    text-decoration: none;
+    align-self: flex-start;
+    @include font-size(18px);
+    &:not(:last-of-type) {
+        margin-bottom: 29px;
+    }
+    &:not(.active):hover {
+        color: $colorGray;
+    }
+}
+
+.mfilter-box {
+    .box-heading, .mfilter-head-icon, .fa {
+        display: none;
+    }
+    ul {
+        margin-bottom: 0;
+        padding-left: 0;
+        list-style: none;
+    }
+    .form-control {
+        width: 100px;
+        height: 40px;
+        padding-left: 14px;
+        background: $colorDark;
+        border: 0;
+        border-bottom: 1px solid #3F3F3F;
+        color: #fff;
+        font-weight: 400;
+        transition: all 0.3s ease;
+        @include font-size(16px);
+        
+        @include hidePlaceholder {
+            opacity: 1;
+            color: $colorGray;
+            transition: opacity 0.3s ease;
+            font-weight: 400;
+            @include font-size(18px);
+        }
+        &:focus {
+            border-bottom: 1px solid #fff;
+            @include hidePlaceholder {
+                opacity: 0;
+                transition: all 0.3s ease;
+            }
+        }
+    }
+}
+
+.mfilter-tb {
+    max-width: 270px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.mfilter-option {
+    margin-bottom: 16px;
+    &:not(:last-of-type) {
+        margin-right: 40px;
+    }
+    input[type="checkbox"] {
+        visibility: hidden;
+        position: absolute;
+    }
+}
+
+.mfilter-tb-as-td {
+    line-height: 1;
+    color: #F3F0EE;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+    @include font-size(18px);
+    transition: all 0.3s ease;
+    &:hover {
+        color: #939190;
+    }
+}
+
+.mfilter-input-active label.mfilter-tb-as-td {
+    border-bottom-color: #fff;
+}
+
+.mfilter-col-count, .mfilter-price-slider {
+    display: none;
+}
+
+.mfilter-filter-item {
+    &:not(:last-of-type) {
+        margin-bottom: 72px;
+        margin-right: 0;
+    }
+}
+
+.mfilter-price .mfilter-heading {
+    margin-bottom: 42px;
+}
+
+#mfilter-opts-price-min {
+    margin-right: 6px;
+}
+
+#mfilter-opts-price-max {
+    margin-left: 6px;
+}

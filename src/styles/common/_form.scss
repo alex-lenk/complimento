@@ -1,0 +1,77 @@
+@import "mixin";
+@import "variables";
+
+.ui-placeholder, .form-control {
+    @include hidePlaceholder {
+        opacity: 1;
+        color: $colorGray;
+        font-weight: 300;
+        transition: opacity 0.3s ease;
+        font-family: 'sofia', -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        @include font-size(18px);
+    }
+    &:focus {
+        @include hidePlaceholder {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+    }
+}
+
+.ui-group, .form-group {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.ui-field:not(.ui-textarea), .form-control:not(.ui-textarea) {
+    height: 53px;
+}
+
+.ui-field, .form-control {
+    width: 100%;
+    padding: 0 20px;
+    background: #F9F9F9;
+    color: $colorDark;
+    font-weight: 300;
+    display: block;
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid #C5C5C5;
+    transition: all .3s ease;
+    font-family: 'sofia', -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    @include font-size(18px);
+    &:focus {
+        border-bottom: 1px solid $colorDark;
+    }
+}
+
+.field-filled {
+    .ui-field, .form-control {
+        border-bottom: 1px solid $colorDark;
+    }
+}
+
+.required-star {
+    color: #FF5353;
+}
+
+.ui-error .ui-field {
+    border-bottom-color: #FF5353;
+    background-color: #fff;
+    @include hidePlaceholder {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+}
+
+.ui-error-text {
+    padding-top: 5px;
+    color: #FF5353;
+    text-align: left;
+    line-height: 1;
+    position: absolute;
+    top: 12px;
+    left: 17px;
+    font-weight: 100;
+    @include font-size(18px)
+}

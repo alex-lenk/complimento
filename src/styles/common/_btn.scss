@@ -1,0 +1,93 @@
+@import "variables";
+@import "mixin";
+
+.btn {
+    min-width: 135px;
+    height: 52px;
+    padding: 0 10px;
+    border: 2px solid transparent;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    line-height: 1;
+    border-radius: 100px;
+    font-weight: 300;
+    text-decoration: none;
+    font-family: 'sofia', sans-serif;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    @include font-size(17px);
+    
+    &-black {
+        color: $colorDark;
+        border-color: $colorDark;
+        background-color: $colorWhite;
+        &:hover {
+            background-color: $colorDark;
+            color: $colorWhite;
+        }
+    }
+    
+    &-black-full {
+        background-color: $colorDark;
+        color: $colorWhite;
+        border-color: $colorDark;
+        .basket {
+            fill: #fff;
+        }
+        &:hover {
+            color: $colorDark;
+            background-color: $colorWhite;
+            border-color: $colorDark;
+        }
+    }
+    
+    &-gray {
+        color: $colorGray;
+        border-color: $colorGray;
+        &:hover {
+            background-color: $colorGray;
+            color: $colorWhite;
+        }
+    }
+    
+    &-white {
+        padding: 0 32px;
+        color: $colorWhite;
+        border-color: $colorWhite;
+        position: relative;
+        z-index: 1;
+        &:hover {
+            color: $colorDark;
+            background-color: $colorWhite;
+        }
+        &:disabled {
+            border-color: $colorLight;
+            color: $colorLight;
+            background-color: $colorWhite;
+            cursor: default;
+        }
+    }
+    
+    &-disabled {
+        color: $colorLight;
+        border-color: $colorLight;
+        background-color: $colorWhite;
+        &:hover {
+            background-color: $colorLight;
+            color: $colorWhite;
+        }
+    }
+    &-gray-full {
+        color: $colorWhite;
+        border-color: $colorLight;
+        background-color: $colorLight;
+        &:hover {
+            background-color: $colorWhite;
+            color: $colorLight;
+        }
+    }
+}

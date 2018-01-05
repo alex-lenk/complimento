@@ -1,0 +1,122 @@
+.home-sales {
+    margin-bottom: 140px;
+    position: relative;
+    z-index: $home-sales;
+}
+
+.sales-left,.sales-right {
+    background-repeat: no-repeat;
+}
+.sales-left {
+    background-color: #F2F2F2;
+}
+
+.sales-right {
+    background-color: #E9E9E9;
+    position: relative;
+}
+
+.sales-title {
+    margin-bottom: 25px;
+    color: #868583;
+    font-weight: 600;
+    line-height: 24px;
+    @include font-size(21px);
+    a {
+        text-decoration: none;
+        color: inherit;
+        &:hover {
+            color: $colorDark;
+        }
+    }
+}
+
+.sales-price {
+    line-height: 1;
+    margin-bottom: 45px;
+}
+
+.sales-price-cost {
+    margin-right: 10px;
+    display: inline-block;
+    color: #2A2928;
+    font-weight: 600;
+    @include font-size(40px);
+}
+
+.sales-price-old {
+    color: #A6A6A6;
+    font-weight: 400;
+    @include font-size(24px)
+}
+
+.sale-look {
+    line-height: 1;
+    color: #2A2928;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    @include font-size(17px);
+    &:hover {
+        color: #868583;
+        .arrow-right {
+            &::before {
+                background-color: $colorGray;
+            }
+            &::after {
+                border-right-color: $colorGray;
+                border-bottom-color: $colorGray;
+            }
+        }
+    }
+}
+
+.sale-look-text {
+    margin-bottom: 7px;
+    display: block;
+}
+
+.sale-look-arrow {
+    width: 160px;
+    &::before {
+        width: 140px;
+    }
+}
+
+.sales-all {
+    padding: 0 33px;
+    height: 60px;
+    top: 150px;
+    left: 50%;
+    border-width: 0;
+    position: absolute;
+    z-index: 5;
+    transform: translateX(-50%);
+}
+
+.sales-control-left, .sales-control-right {
+    width: 14px;
+    height: 14px;
+    background-color: #D8D8D8;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    z-index: 5;
+    transition: all 0.3s ease;
+}
+
+.sales-control-left {
+    right: 74px;
+}
+
+.sales-control-right {
+    right: 39px;
+}
+
+.sales-control-current {
+    width: 16px;
+    height: 16px;
+    background-color: #212121;
+    pointer-events: none;
+    cursor: default;
+}

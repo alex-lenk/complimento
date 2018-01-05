@@ -1,0 +1,113 @@
+.contacts-wrap {
+    background-image: none !important;
+    &::before {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: url(../img/bg/bg-earth.jpg) no-repeat center;
+        content: '';
+    }
+}
+
+.contacts-container {
+    display: flex;
+}
+
+.contacts-map {
+    flex: 1;
+    position: relative;
+}
+
+.contacts-block {
+    width: 100%;
+    padding: 60px 55px 75px;
+    position: relative;
+    background-color: #F3F0EE;
+    align-self: flex-start;
+    &::before {
+        position: absolute;
+        border-left: 3px solid $colorDark;
+        border-top: 3px solid $colorDark;
+        content: '';
+    }
+}
+
+.contacts-block-item {
+    font-weight: 300;
+    line-height: 24px;
+    @include font-size(21px);
+    &:not(:last-of-type) {
+        margin-bottom: 45px;
+    }
+    a {
+        color: inherit;
+        &:not(.contacts-block-order) {
+            text-decoration: none;
+        }
+    }
+}
+
+.contacts-block-order {
+    margin-top: 10px;
+    @include font-size(17px);
+}
+
+.contacts-block-small {
+    margin-top: 15px;
+    @include font-size(18px);
+}
+
+.contacts-block-email {
+    text-decoration: none;
+}
+
+.contacts-form {
+    width: 100%;
+    height: calc(100% - 94px);
+    padding: 31px 25px;
+    text-align: center;
+    background-color: #fff;
+    top: 135px;
+    left: 0;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 0 8px rgba(#000, .1);
+    transition: opacity .3s ease;
+    &::before {
+        width: 12px;
+        height: 12px;
+        top: -6px;
+        left: 107px;
+        background-color: #fff;
+        position: absolute;
+        content: '';
+        border-radius: 4px;
+        box-shadow: 4px 4px 0 4px #ffffff, -1px -1px 8px rgba(#000, .1);
+        transform: rotate(45deg);
+    }
+    .btn-black {
+        position: relative;
+        top: 10px;
+        min-width: 190px;
+    }
+}
+
+.contacts-form-title {
+    padding: 0 30px 0 25px;
+    margin-bottom: 53px;
+    line-height: 1;
+    font-weight: 400;
+    color: $colorDark;
+    @include font-size(20px);
+}
+
+.contacts-form-opened {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.contacts-form-close {
+    top: 21px;
+    right: 11px;
+}

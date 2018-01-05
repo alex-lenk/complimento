@@ -1,0 +1,48 @@
+.added-bag {
+    width: 100%;
+    height: 82px;
+    bottom: 0;
+    left: 0;
+    border-bottom: 3px solid $colorDark;
+    position: fixed;
+    z-index: 90;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.10);
+}
+
+.added-bag-text {
+    padding-left: 88px;
+    font-weight: 300;
+    position: relative;
+    &::before {
+        width: 22px;
+        height: 11px;
+        top: 2px;
+        left: 33px;
+        position: absolute;
+        border-bottom: 2px solid $colorDark;
+        border-left: 2px solid $colorDark;
+        transform: rotate(-46deg);
+        transition: all 0.3s ease;
+        content: '';
+    }
+}
+
+.added-bag-checkout {
+    margin-left: auto;
+    padding: 0 34px;
+}
+
+.added-bag-close {
+    margin-left: 68px;
+    font-weight: 300;
+    border-bottom: 1px solid;
+    line-height: 1;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+    &:hover {
+        border-color: transparent;
+    }
+}

@@ -1,0 +1,32 @@
+.header-page {
+    position: relative;
+    z-index: $header-page;
+    background-color: $colorDark;
+    .menu-item:not(:last-child) {
+        margin-right: 7%;
+    }
+    .menu-catalog .arrow-s {
+        fill: #ffffff;
+    }
+    .header-home-icons svg {
+        fill: #fff;
+    }
+    .icon-basket::before {
+        content: attr(data-count);
+        background-color: #ffffff;
+    }
+    .hearth {
+        margin-top: -1px;
+    }
+}
+
+.header-page-panel {
+    width: 100%;
+    position: relative;
+    z-index: $header-page-panel;
+    display: flex;
+}
+
+.header-page-logo {
+    margin-right: 226px;
+}

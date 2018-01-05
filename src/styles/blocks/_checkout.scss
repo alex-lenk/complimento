@@ -1,0 +1,148 @@
+.checkout-head {
+    padding-left: 234px;
+    position: relative;
+    .link-back {
+        top: 47px;
+    }
+    .link-back-text {
+        padding-left: 31px;
+    }
+    .arrow-left {
+        width: 133px;
+    }
+}
+
+.checkout-head-info {
+    margin-bottom: 90px;
+    color: $colorGray;
+    font-weight: 400;
+    @include font-size(23px);
+}
+
+.checkout-head-cost {
+    color: $colorDark;
+}
+
+.checkout-content {
+    padding-top: 70px;
+    position: relative;
+    &::before, &::after {
+        left: 0;
+        border-left: 4px solid $colorDark;
+        position: absolute;
+        content: '';
+    }
+    &::before {
+        width: 52px;
+        height: 252px;
+        top: 0;
+        border-top: 4px solid $colorDark;
+    }
+    &::after {
+        height: 40px;
+        bottom: 30px;
+        border-left-color: #F3F0EE;
+        border-bottom: 4px solid #F3F0EE;
+    }
+}
+
+.checkout-side-list {
+    .header-product-title {
+        text-transform: uppercase;
+    }
+    .header-product-close {
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+    .header-product-item:hover .header-product-close {
+        visibility: visible;
+    }
+}
+
+.checkout-info {
+    width: 100%;
+    margin-bottom: 55px;
+    display: flex;
+}
+
+.checkout-info-block {
+    width: 49%;
+    .radio {
+        line-height: 1;
+        &:not(:last-of-type) {
+            margin-bottom: 44px;
+        }
+    }
+    .label-block {
+        padding-left: 42px;
+    }
+}
+
+.checkout-payments-block {
+    .radio-custom-view {
+        opacity: .6;
+    }
+    .radio-custom:checked ~ .radio-custom-view {
+        opacity: 1;
+    }
+}
+
+.checkout-info-title {
+    margin-bottom: 55px;
+}
+
+.checkout-info-label {
+    top: 100%;
+    left: 41px;
+    color: #939190;
+    position: absolute;
+    @include font-size(16px);
+}
+
+.checkout-form-title {
+    width: 100%;
+    margin-bottom: 50px;
+    @include font-size(25px)
+}
+
+.customer-shipping-address {
+    margin-bottom: 47px;
+}
+
+.checkout-form-fields {
+    .form-horizontal {
+        overflow: hidden;
+    }
+    .form-group {
+        float: left;
+        margin-bottom: 44px;
+        width: 50%;
+    }
+    
+    .control-label {
+        display: none;
+    }
+    .col-sm-8 {
+        padding: 0;
+    }
+}
+
+.checkout-form-total {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .total {
+        color: #939190;
+        font-weight: 400;
+        @include font-size(22px);
+    }
+    .sub-total {
+        color: $colorDark;
+        @include font-size(25px);
+    }
+    .btn {
+        padding-left: 35px;
+        padding-right: 35px;
+        margin-left: 60px;
+    }
+}

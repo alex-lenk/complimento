@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'akrobat';
+    src: url('../fonts/akrobat-regular.woff2') format('woff2'),
+    url('../fonts/akrobat-regular.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'akrobat';
+    src: url('../fonts/akrobat-semibold.woff2') format('woff2'),
+    url('../fonts/akrobat-semibold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'akrobat';
+    src: url('../fonts/akrobat-bold.woff2') format('woff2'),
+    url('../fonts/akrobat-bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}

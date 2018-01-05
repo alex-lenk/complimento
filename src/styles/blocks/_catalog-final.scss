@@ -1,0 +1,27 @@
+.catalog-final {
+    margin-bottom: 200px;
+    position: relative;
+    z-index: $catalog-final;
+    .view-catalog {
+        margin-bottom: 99px;
+    }
+}
+
+.catalog-final-title {
+    margin-bottom: 67px;
+    color: $colorDark;
+    font-weight: 400;
+    @include font-size(52px)
+}
+
+.catalog-final-more {
+    padding: 55px 0;
+    text-align: center;
+    color: #fff;
+    background: url(../img/bg/bg-more.jpg) no-repeat center;
+    .title {
+        margin-bottom: 34px;
+        font-weight: 300;
+        @include font-size(37px);
+    }
+}

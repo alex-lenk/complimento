@@ -1,0 +1,14 @@
+.fashion-news {
+    margin-bottom: 200px;
+    position: relative;
+    z-index: $fashion-news;
+}
+
+.fashion-news-head {
+    display: flex;
+}
+
+.fashion-news-title {
+    font-weight: 400;
+    color: $colorDark;
+}

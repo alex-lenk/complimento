@@ -1,0 +1,22 @@
+.about-company-media {
+    max-width: 344px;
+}
+
+.about-company-statistic {
+    background-color: #F9F9F9;
+    display: flex;
+}
+
+.about-company-statistic-item {
+    text-align: center;
+}
+
+.about-company-statistic__count {
+    font-weight: 400;
+}
+
+.about-company-statistic__text {
+    font-weight: 300;
+    text-transform: uppercase;
+    @include font-size(20px);
+}
