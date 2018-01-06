@@ -75,28 +75,6 @@ $(document).ready(function () {
     /!* END header-modal-bag *!/
 
 
-    /!* BEGIN header-modal-wishlist *!/
-
-    var headerModalWishlist = $('.header-modal-wishlist'),
-        headerBagWishlist = 'modal-wishlist-open';
-
-    $('.header-modal-wishlist-close').click(
-        function () {
-            headerModalWishlist.removeClass(headerBagWishlist);
-            domBody.toggleClass(openWindow);
-        }
-    );
-
-    $('.header-wishlist').click(
-        function () {
-            headerModalWishlist.toggleClass(headerBagWishlist);
-            domBody.toggleClass(openWindow);
-        }
-    );
-
-    /!* END header-modal-wishlist *!/
-
-
     /!* BEGIN header-catalog *!/
 
     var headerCatalog = $('.header-catalog'),
@@ -343,4 +321,18 @@ $(document).ready(function () {
             prevEl: '.nav-products-prev',
         }
     });
+
+
+    /* BEGIN panel-wishlist */
+
+    var myWishlist = 'my-wishlist',
+        elementBody = $('body');
+
+    $('.panel-wishlist').click(
+        function () {
+            elementBody.toggleClass(myWishlist);
+        }
+    );
+
+    /* END panel-wishlist */
 });

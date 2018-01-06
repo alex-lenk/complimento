@@ -55,28 +55,41 @@
     border-radius: 50%;
     color: #000;
     background-color: #fff;
-    top: 13px;
-    right: 27px;
+    top: 18px;
+    right: 5px;
     position: absolute;
     font-weight: bold;
     text-align: center;
-    line-height: 1;
+    line-height: 14px;
     transition: all 0.3s ease;
     @include font-size(11px);
 }
 
 .panel-wishlist,
 .panel-basket {
+    width: 35px;
+    height: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
     position: relative;
     cursor: pointer;
-    .hearth, .bag {
+    svg {
+        position: absolute;
+        top: 5px;
+        left: 6px;
         fill: #fff;
         transition: all 0.3s ease;
     }
-    &:hover {
-        .hearth, .bag {
-            transform: scale(1.1);
-        }
+    .cancel {
+        width: 18px;
+        height: 18px;
+        top: 9px;
+        left: 9px;
+        opacity: 0;
+    }
+    &:hover svg {
+        transform: scale(1.1);
     }
 }
 
@@ -88,7 +101,8 @@
 }
 
 .panel-basket {
-    margin: 30px 0 40px;
+    margin-top: 25px;
+    margin-bottom: 35px;
     .bag {
         width: 23px;
         height: 24px;
@@ -159,6 +173,8 @@
     background: #070707 url(../img/bg/bg-nav-window.jpg) no-repeat center;
     background-size: cover;
     box-shadow: 3px 2px 30px rgba(#000, .60);
+    transform: translateX(100%);
+    transition: transform 1.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 
 .nav-window__title {
@@ -302,11 +318,26 @@
         transform: translateX(5px);
     }
 }
+
 .swiper-wrapper .nav-products__slide {
     &:nth-of-type(odd) {
         transform: translateY(25px);
     }
     &:nth-of-type(even) {
         transform: translateY(-25px);
+    }
+}
+
+.my-wishlist {
+    .nav-window {
+        transform: translateX(0);
+    }
+    .panel-wishlist {
+        .cancel {
+            opacity: 1;
+        }
+        .hearth, .count-products {
+            opacity: 0;
+        }
     }
 }
