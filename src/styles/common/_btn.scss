@@ -11,83 +11,56 @@
     text-transform: uppercase;
     cursor: pointer;
     line-height: 1;
-    border-radius: 100px;
     font-weight: 300;
     text-decoration: none;
-    font-family: 'sofia', sans-serif;
+    font-family: 'akrobat', sans-serif;
+    overflow: hidden;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    @include font-size(17px);
-    
-    &-black {
-        color: $colorDark;
-        border-color: $colorDark;
-        background-color: $colorWhite;
-        &:hover {
-            background-color: $colorDark;
-            color: $colorWhite;
-        }
-    }
-    
-    &-black-full {
-        background-color: $colorDark;
-        color: $colorWhite;
-        border-color: $colorDark;
-        .basket {
-            fill: #fff;
-        }
-        &:hover {
-            color: $colorDark;
-            background-color: $colorWhite;
-            border-color: $colorDark;
-        }
-    }
-    
-    &-gray {
-        color: $colorGray;
-        border-color: $colorGray;
-        &:hover {
-            background-color: $colorGray;
-            color: $colorWhite;
-        }
-    }
     
     &-white {
+        min-width: 149px;
+        height: 57px;
         padding: 0 32px;
-        color: $colorWhite;
-        border-color: $colorWhite;
+        color: #000;
+        border: 1px solid #fff;
+        background-color: #fff;
         position: relative;
         z-index: 1;
+        @include font-size(19px);
+    
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 0;
+            top: 50%;
+            left: 50%;
+            background-color: #000;
+            opacity: 0;
+            transition: all 0.6s;
+            transform: translateX(-50%) translateY(-50%) rotate(45deg);
+        }
+    
+        span {
+            position: relative;
+            z-index: 4;
+        }
+        
         &:hover {
-            color: $colorDark;
-            background-color: $colorWhite;
+            color: #fff;
+            border-color: #fff;
+            &::before {
+                height: 250px;
+                opacity: 1;
+            }
         }
         &:disabled {
-            border-color: $colorLight;
-            color: $colorLight;
-            background-color: $colorWhite;
             cursor: default;
-        }
-    }
-    
-    &-disabled {
-        color: $colorLight;
-        border-color: $colorLight;
-        background-color: $colorWhite;
-        &:hover {
-            background-color: $colorLight;
-            color: $colorWhite;
-        }
-    }
-    &-gray-full {
-        color: $colorWhite;
-        border-color: $colorLight;
-        background-color: $colorLight;
-        &:hover {
-            background-color: $colorWhite;
-            color: $colorLight;
+            pointer-events: none;
         }
     }
 }
