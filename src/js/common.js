@@ -332,6 +332,7 @@ $(document).ready(function () {
 
     var myWishlistOpened = 'my-wishlist__opened',
         myBagOpened = 'my-bag__opened',
+        pageMenuOpened = 'page-menu__opened',
         elementBody = $('body');
 
     $('.panel-wishlist').click(
@@ -344,6 +345,13 @@ $(document).ready(function () {
     $('.panel-basket').click(
         function () {
             elementBody.toggleClass(myBagOpened);
+        }
+    );
+
+
+    $('.open-menu').click(
+        function () {
+            elementBody.toggleClass(pageMenuOpened);
         }
     );
 

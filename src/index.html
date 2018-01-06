@@ -1,9 +1,13 @@
 <!doctype html>
 <html lang="en">
 <!-- include "template/head.html" -->
-<body class="home">
+<body class="home page-menu__opened">
 <aside class="nav-panel">
-    <div class="open-menu"></div>
+    <div class="open-menu">
+        <svg class="cancel">
+            <use xlink:href="img/sprite.svg#cancel"></use>
+        </svg>
+    </div>
 
     <div class="panel-basket">
         <svg class="bag">
@@ -25,7 +29,7 @@
         </svg>
     </div>
 
-    <a href="#" class="nav-panel__instagram" rel="nofollow" target="_blank">
+    <a href="https://www.instagram.com/" class="nav-panel__instagram" rel="nofollow" target="_blank">
         <svg class="instagram">
             <use xlink:href="img/sprite.svg#instagram"></use>
         </svg>
@@ -336,6 +340,15 @@
     </div>
 </div>
 
+<div class="page-menu nav-window">
+    <ul class="page-menu__list list-unstyled">
+        <li class="page-menu__point page-menu__active"><a href="#" class="page-menu__link">Home</a></li>
+        <li class="page-menu__point"><a href="#" class="page-menu__link">Gallery</a></li>
+        <li class="page-menu__point"><a href="#" class="page-menu__link">About Us</a></li>
+        <li class="page-menu__point"><a href="#" class="page-menu__link">Contacts</a></li>
+    </ul>
+</div>
+
 <nav class="nav-area">
     <div class="container">
         <ul class="menu list-unstyled">
@@ -351,7 +364,10 @@
 
 <div id="fullpage">
     <div class="main-section section">
-        Some section 1
+        <div class="copyright">
+            © 2017-2018 Complimento.com. All rights reserved.
+            Powered by <a href="http://azro.studio/" target="_blank">Azro.studio</a>
+        </div>
     </div>
     <div class="section">Some section 2</div>
     <div class="section">Some section 3</div>
