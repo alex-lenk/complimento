@@ -4,8 +4,8 @@
 @import "common/variables";
 @import "common/mixin";
 @import "common/fonts";
-/*
 @import "common/btn";
+/*
 @import "common/form";
 @import "common/checkbox-radio";*/
 @import "common/common";
@@ -16,6 +16,28 @@
 }
 */
 
+.close-block {
+    width: 20px;
+    height: 20px;
+    right: 0;
+    top: 0;
+    position: absolute;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    .cancel {
+        width: 14px;
+        height: 14px;
+        fill: #fff;
+        position: absolute;
+        top: 2px;
+        left: 2px;
+    }
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
 //*******************
 
 .nav-panel {
@@ -25,20 +47,45 @@
     top: 0;
     right: 0;
     position: fixed;
+    display: flex;
+    flex-direction: column;
     z-index: $index-nav-panel;
     background-color: #000;
     text-align: center;
 }
 
+.nav-panel__instagram {
+    width: 30px;
+    height: 30px;
+    margin: auto auto 30px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    .instagram {
+        width: 24px;
+        height: 24px;
+        fill: #fff;
+        top: 3px;
+        left: 3px;
+        position: absolute;
+    }
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
 .open-menu {
-    padding: 15px 10px;
-    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    display: inline-flex;
     position: relative;
     cursor: pointer;
     &::before {
         width: 22px;
         height: 2px;
-        display: block;
+        margin: auto;
         background-color: #fff;
         box-shadow: 0 7px 0 #fff, 0 -7px 0 #fff;
         transition: all .3s ease;
@@ -169,12 +216,15 @@
     right: 0;
     top: 0;
     position: fixed;
+    display: flex;
+    flex-direction: column;
     z-index: $index-nav-window;
     background: #070707 url(../img/bg/bg-nav-window.jpg) no-repeat center;
     background-size: cover;
     box-shadow: 3px 2px 30px rgba(#000, .60);
     transform: translateX(100%);
     transition: transform 1.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    will-change: transform;
 }
 
 .nav-window__title {
@@ -258,25 +308,36 @@
     }
 }
 
-.close-block {
-    width: 20px;
-    height: 20px;
+.nav-window__bottom {
+    margin-top: auto;
+    margin-bottom: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-window__total {
+    margin-right: 70px;
+    color: #fff;
+    @include font-size(22px);
+}
+
+.nav-window__total-cost {
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.close-product {
     right: 0;
     top: 102px;
-    position: absolute;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    .cancel {
-        width: 14px;
-        height: 14px;
-        fill: #fff;
-        position: absolute;
-        top: 2px;
-        left: 2px;
+}
+
+.swiper-wrapper .nav-products__slide {
+    &:nth-of-type(odd) {
+        transform: translateY(25px);
     }
-    &:hover {
-        transform: scale(1.1);
+    &:nth-of-type(even) {
+        transform: translateY(-25px);
     }
 }
 
@@ -319,17 +380,53 @@
     }
 }
 
-.swiper-wrapper .nav-products__slide {
-    &:nth-of-type(odd) {
-        transform: translateY(25px);
-    }
-    &:nth-of-type(even) {
-        transform: translateY(-25px);
-    }
+.nav-products__options {
+    color: #DADADA;
+    @include font-size(18px);
 }
 
-.my-wishlist {
-    .nav-window {
+.nav-products__size {
+    margin-bottom: 7px;
+}
+
+.products-color {
+    display: flex;
+    align-items: center;
+}
+
+.box-color {
+    width: 21px;
+    height: 21px;
+    margin-left: 11px;
+    display: inline-block;
+    border: 2px solid #fff;
+    border-radius: 100%;
+}
+
+.color-black {
+    background-color: #000;
+}
+
+.color-white {
+    background-color: #fff;
+}
+
+.color-turquoise {
+    background-color: #7DFAFF;
+}
+
+.color-pink {
+    background-color: #FEC0FF;
+}
+
+.color-light-green {
+    background-color: #CEEC8C;
+}
+
+//**********************
+
+.my-wishlist__opened {
+    .my-wishlist {
         transform: translateX(0);
     }
     .panel-wishlist {
@@ -337,6 +434,20 @@
             opacity: 1;
         }
         .hearth, .count-products {
+            opacity: 0;
+        }
+    }
+}
+
+.my-bag__opened {
+    .my-bag {
+        transform: translateX(0);
+    }
+    .panel-basket {
+        .cancel {
+            opacity: 1;
+        }
+        .bag, .count-products {
             opacity: 0;
         }
     }
