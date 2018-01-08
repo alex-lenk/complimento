@@ -587,52 +587,62 @@
 
 .catalog {
     padding-top: 75px;
-  h1 {
-    margin-bottom: 75px;
-  }
+    h1 {
+        margin-bottom: 75px;
+    }
 }
 
 .catalog-list {
+    margin: 0 -35px;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .catalog-item {
-  text-align: center;
+    margin-bottom: 85px;
+    min-width: 237px;
+    text-align: center;
     @include font-size(18px);
     a {
-      display: inline-block;
+        display: inline-block;
         text-decoration: none;
-        &:hover .catalog-view {
-            color: #fff;
-            &::before {
-                width: 100%;
+        &:hover {
+            .catalog-new {
                 background-color: #fff;
+                color: #202020;
+            }
+            .catalog-view {
+                color: #fff;
+                &::before {
+                    width: 100%;
+                    background-color: #fff;
+                }
             }
         }
     }
 }
 
 .catalog-media {
-  width: 148px;
-  height: 191px;
-  margin-bottom: 15px;
-  position: relative;
-  display: block;
-  z-index: -1;
-  img {
-    max-width: 274px;
-    max-height: 307px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-  }
+    width: 148px;
+    height: 191px;
+    margin-bottom: 15px;
+    position: relative;
+    display: block;
+    z-index: -1;
+    img {
+        max-width: 274px;
+        max-height: 307px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
 
 .catalog-title {
-  display: block;
-  font-weight: 600;
-  color: #fff;
+    display: block;
+    font-weight: 600;
+    color: #fff;
 }
 
 .catalog-view {
@@ -651,4 +661,21 @@
         content: '';
         transition: all 0.3s ease;
     }
+}
+
+.catalog-new {
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    border: 1px solid #626262;
+    background-color: #171717;
+    color: #fff;
+    line-height: 34px;
+    text-transform: uppercase;
+    top: 0;
+    left: -3px;
+    position: absolute;
+    z-index: 5;
+    transition: all 0.3s ease;
+    @include font-size(13px);
 }

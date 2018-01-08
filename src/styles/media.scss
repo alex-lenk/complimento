@@ -11,7 +11,7 @@
     .catalog-wrap {
         padding-right: 61px;
     }
-
+    
     .nav-panel {
         width: 61px;
     }
@@ -268,10 +268,14 @@
 }
 
 @media (min-width: 1920px) {
+    .catalog-item {
+        width: calc(100% / 5);
+    }
+    
     .catalog-wrap {
         padding-right: 80px;
     }
-
+    
     .nav-panel {
         width: 80px;
     }
@@ -287,7 +291,22 @@
     }
 }
 
+@media (min-width: 768px) and (max-width: 1099px) {
+    .catalog-item {
+        min-width: 138px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+    .catalog-item {
+        width: calc(100% / 3);
+    }
+}
+
 @media (min-width: 1440px) and (max-width: 1919px) {
+    .catalog-item {
+        width: calc(100% / 4);
+    }
     .copyright {
         @include font-size(15px);
     }
