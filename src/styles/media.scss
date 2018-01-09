@@ -23,7 +23,7 @@
         padding-top: 115px;
         padding-right: 61px;
     }
-    .home:not(.fp-viewing-0) .logo {
+    body:not(.fp-viewing-0) .logo {
         margin-right: 7%;
     }
     
@@ -37,7 +37,7 @@
 }
 
 @media (max-width: 1439px) {
-    .home:not(.fp-viewing-0) .logo {
+    body:not(.fp-viewing-0) .logo {
         padding-top: 10px;
         max-width: 244px;
     }
@@ -65,7 +65,7 @@
         height: 0;
     }
     
-    .home:not(.fp-viewing-0) {
+    body:not(.fp-viewing-0) {
         .nav-area {
             top: 34px;
         }
