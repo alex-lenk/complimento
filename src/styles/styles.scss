@@ -773,11 +773,17 @@ body:not(.fp-viewing-0) {
 }
 
 .contacts-form__title {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     color: #fff;
     font-weight: 600;
     @include font-size(32px)
 }
 
 .contacts-form__block {
+    padding: 50px 50px;
+    background-color: rgba(#000,.3);
+    text-align: right;
+    .ui-group {
+        text-align: left;
+    }
 }

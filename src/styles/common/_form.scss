@@ -35,17 +35,21 @@
 }
 
 
-.ui-label {
+.has-error__text, .ui-label {
   top: 3px;
   left: 12px;
   margin-bottom: 0;
   font-weight: 300;
-  color: #DADADA;
   pointer-events: none;
   transition: all .3s ease;
   position: absolute;@include font-size(18px);
 }
-
+.ui-label {
+  color: #DADADA;
+}
+textarea.ui-field, textarea.form-control {
+  min-height: 34px;
+}
 .ui-field, .form-control {
   height: 34px;
   width: 100%;
@@ -58,7 +62,7 @@
   border: 0;
   border-bottom: 1px solid #4E4E4E;
   transition: all .3s ease;
-  font-family: 'akrobat', -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: 'akrobat', -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif, "Segoe UI Symbol";
   @include font-size(18px);
 }
 
@@ -66,35 +70,24 @@
   width: 100%;
 }
 
-.ui-field:focus +, .form-control:focus +, .field-filled {
-  .ui-label {
+.ui-field:focus +, .form-control:focus +, .field-filled,
+.has-error .ui-field:focus ˜, .has-error .form-control:focus ˜{
+  .ui-label,.has-error__text {
     top: -22px;
     left: 9px;
     transform: scale(.8);
   }
 }
 
-.required-star {
-    color: #FF5353;
+.has-error {
+  .ui-label {
+    display: none;
+  }
+  .ui-field {
+    border-bottom-color: #FE5E5E;
+  }
 }
 
-.ui-error .ui-field {
-    border-bottom-color: #FF5353;
-    background-color: #fff;
-    @include hidePlaceholder {
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
-}
-
-.ui-error-text {
-    padding-top: 5px;
-    color: #FF5353;
-    text-align: left;
-    line-height: 1;
-    position: absolute;
-    top: 12px;
-    left: 17px;
-    font-weight: 100;
-    @include font-size(18px)
+.has-error__text {
+    color: #FE5E5E;
 }
