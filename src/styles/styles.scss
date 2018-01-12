@@ -711,6 +711,7 @@ body:not(.fp-viewing-0) {
     margin: auto;
     text-align: center;
 }
+
 .not-found__text {
     margin-bottom: 70px;
     @include font-size(18px);
@@ -747,7 +748,7 @@ body:not(.fp-viewing-0) {
         z-index: 10;
         top: 0;
         left: 0;
-
+        
         background: url(../img/about-us.png) no-repeat right bottom;
         position: absolute;
         content: '';
@@ -761,4 +762,22 @@ body:not(.fp-viewing-0) {
     text-align: justify;
 }
 
+//******************************
 
+.contacts {
+    padding-top: 70px;
+}
+
+.contacts-form {
+    max-width: 600px;
+}
+
+.contacts-form__title {
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: 600;
+    @include font-size(32px)
+}
+
+.contacts-form__block {
+}
