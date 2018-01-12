@@ -765,10 +765,14 @@ body:not(.fp-viewing-0) {
 //******************************
 
 .contacts {
-    padding-top: 70px;
+    padding-top: 55px;
+    color: #fff;
+    display: flex;
 }
 
 .contacts-form {
+    padding-top: 15px;
+    width: 100%;
     max-width: 600px;
 }
 
@@ -786,4 +790,157 @@ body:not(.fp-viewing-0) {
     .ui-group {
         text-align: left;
     }
+}
+
+.contacts-info {
+    padding-left: 165px;
+    flex: 1;
+}
+
+.contacts-info__title {
+   margin-bottom: 85px;
+}
+.contacts-info__list {
+    margin-bottom: 85px;
+    line-height: 1;
+    display: flex;
+    flex-wrap: wrap;
+    @include font-size(22px);
+    li:not(:last-child){
+        margin-right: 145px;
+    }
+    div {
+        margin-bottom: 11px;
+        color: #DADADA;
+        font-weight: 300;
+        @include font-size(18px);
+    }
+    a {
+        color: inherit;
+        font-weight: 400;
+        text-decoration: none;
+    }
+}
+
+.contacts-info__follow {
+    font-weight: 400;
+    line-height: 1;
+    display: flex;
+    align-items: flex-end;
+    @include font-size(18px);
+}
+.contacts-social {
+    display: flex;
+    li:not(:last-child) {
+        margin-right: 21px;
+    }
+    a {
+        width: 24px;
+        height: 24px;
+        border-radius: 2px;
+        background-color: #fff;
+        position: relative;
+        display: block;
+        transition: all 0.5s ease;
+        &:hover {
+            background-color: transparent;
+            svg {
+                fill: #fff;
+            }
+        }
+    }
+    svg {
+        fill: #000;
+        left: 4px;
+        position: absolute;
+        transition: all 0.3s ease;
+    }
+    .fb {
+        width: 23px;
+        height: 23px;
+        top: 3px;
+
+    }
+    .instagram {
+        width: 16px;
+        height: 17px;
+        top: 4px;
+    }
+}
+
+.contacts-info__follow-text {
+    margin-right: 35px;
+}
+
+//********************
+
+.flying-message {
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background: #fff;
+  color: #202020;
+  border-bottom: 5px solid;
+  position: fixed;
+  z-index: 55;
+  box-shadow: 0 0 8px 0 rgba(#000, .1);
+  .container {
+    min-height: 83px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.flying-message__text {
+  padding-left: 56px;
+  font-weight: 400;
+  position: relative;
+  @include font-size(18px);
+}
+
+.message-successfully {
+  border-bottom-color: #202020;
+  .flying-message__text {
+    &::before, &::after {
+      top: 50%;
+      position: absolute;
+      content: '';
+    }
+    &::before {
+      height: 24px;
+      width: 24px;
+      border-radius: 100%;
+      background-color: #202020;
+      left: 0;
+      transform: translateY(-50%);
+    }
+    &::after {
+      width: 13px;
+      height: 7px;
+      margin-top: -5px;
+      left: 5px;
+      border-bottom: 2px solid #ffffff;
+      border-left: 2px solid #ffffff;
+      transform: rotate(-43deg);
+    }
+  }
+}
+
+.message-wrong {
+  border-color: #FE5E5E;
+  .warning {
+    width: 25px;
+    height: 25px;
+    left: 0;
+    top: 50%;
+    position: absolute;
+    fill: #202020;
+    transform: translateY(-50%);
+  }
+}
+
+.flying-message-link {
+  margin-left: auto;
+  color: inherit;
+  line-height: 1;
 }
