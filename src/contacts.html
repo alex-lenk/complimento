@@ -5,57 +5,59 @@
 
 <!-- include "template/fixed-block.html" -->
 
-<div class="contacts container">
-    <div class="contacts-form">
-        <h2 class="contacts-form__title">Have a question? Ask us!</h2>
-        <form action="#" class="contacts-form__block">
-            <div class="ui-group">
-                <input type="text" class="ui-field" id="input1">
-                <label class="ui-label" for="input1">Full Name</label>
-            </div>
-            <div class="ui-group has-error">
-                <input type="email" class="ui-field" id="input2">
-                <label class="ui-label" for="input2">Email</label>
-                <span class="has-error__text">Incorrect Email Adress</span>
-            </div>
-            <div class="ui-group">
-                <textarea class="ui-field" id="input3" cols="30" rows="1"></textarea>
-                <label class="ui-label" for="input3">Message</label>
-            </div>
-            <button class="btn-white btn"><span>Send message</span></button>
-        </form>
-    </div>
-    <div class="contacts-info">
-        <h1 class="contacts-info__title">Contact information</h1>
-        <ul class="contacts-info__list list-unstyled">
-            <li>
-                <div>Email</div>
-                <a href="emailto:info@complimento.com" rel="nofollow">info@complimento.com</a>
-            </li>
-            <li>
-                <div>Phone</div>
-                <a href="tel:+19297777770" rel="nofollow">+1 929 777 7770</a>
-            </li>
-        </ul>
+<div class="contacts">
+    <div class="contacts-wrap container">
+        <div class="contacts-form">
+            <h2 class="contacts-form__title">Have a question? Ask us!</h2>
+            <form action="#" class="contacts-form__block">
+                <div class="ui-group">
+                    <input type="text" class="ui-field" id="input1">
+                    <label class="ui-label" for="input1">Full Name</label>
+                </div>
+                <div class="ui-group has-error">
+                    <input type="email" class="ui-field" id="input2">
+                    <label class="ui-label" for="input2">Email</label>
+                    <span class="has-error__text">Incorrect Email Adress</span>
+                </div>
+                <div class="ui-group">
+                    <textarea class="ui-field" id="input3" cols="30" rows="1"></textarea>
+                    <label class="ui-label" for="input3">Message</label>
+                </div>
+                <button class="btn-white btn"><span>Send message</span></button>
+            </form>
+        </div>
 
-        <div class="contacts-info__follow">
-            <div class="contacts-info__follow-text">Follow us:</div>
-            <ul class="contacts-social list-unstyled">
-                <li><a href="#" rel="nofollow" target="_blank">
-                    <svg class="fb">
-                        <use xlink:href="img/sprite.svg#fb"></use>
-                    </svg>
-                </a></li>
-                <li><a href="#" rel="nofollow" target="_blank">
-                    <svg class="instagram">
-                        <use xlink:href="img/sprite.svg#instagram"></use>
-                    </svg>
-                </a></li>
+        <div class="contacts-info">
+            <h1 class="contacts-info__title">Contact information</h1>
+            <ul class="contacts-info__list list-unstyled">
+                <li>
+                    <div>Email</div>
+                    <a href="emailto:info@complimento.com" rel="nofollow">info@complimento.com</a>
+                </li>
+                <li>
+                    <div>Phone</div>
+                    <a href="tel:+19297777770" rel="nofollow">+1 929 777 7770</a>
+                </li>
             </ul>
+
+            <div class="contacts-info__follow">
+                <div class="contacts-info__follow-text">Follow us:</div>
+                <ul class="contacts-social list-unstyled">
+                    <li><a href="#" rel="nofollow" target="_blank">
+                        <svg class="fb">
+                            <use xlink:href="img/sprite.svg#fb"></use>
+                        </svg>
+                    </a></li>
+                    <li><a href="#" rel="nofollow" target="_blank">
+                        <svg class="instagram">
+                            <use xlink:href="img/sprite.svg#instagram"></use>
+                        </svg>
+                    </a></li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
-
 <!--
 
 Ниже представлены два всплывающих сообщения, в них достаточно указать класс какой блок хотим вызвать.
@@ -82,10 +84,9 @@
             </svg>
             Some fields are not filled in or filled wrong. Please, correct information!
         </div>
-        <div class="flying-message-close">Got It!</div>
+        <div class="flying-message-close as-link">Got It!</div>
     </div>
 </div>
-
 
 
 <!-- include "template/scripts.html" -->
