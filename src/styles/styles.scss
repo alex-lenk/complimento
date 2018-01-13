@@ -970,9 +970,12 @@
 .item-page__right {
     width: 100%;
     max-width: 615px;
-    
+    position: relative;
     h3, .h3 {
         margin-bottom: 6px;
+    }
+    &:not(.out-stock) h2 {
+        margin-bottom: 10px;
     }
 }
 
@@ -1142,6 +1145,77 @@
     text-align: center;
     border-bottom: 0;
     background-color: rgba(#000, .3);
+}
+
+.order-form {
+    width: 101%;
+    height: 591px;
+    padding: 30px;
+    background: #101010;
+    box-shadow: 0 0 25px rgba(#000, .50);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 50;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+.order-form__info {
+    margin-bottom: 80px;
+    display: flex;
+    .products-color:not(:last-of-type) {
+        margin-right: 44px;
+    }
+}
+
+.order-form__form {
+    display: flex;
+    flex-direction: column;
+    .btn-white {
+        margin: auto auto 0;
+    }
+}
+
+.order-form__wrap {
+    margin: 0 -15px 130px;
+    display: flex;
+    flex-wrap: wrap;
+    .ui-group {
+        max-width: calc(100% / 2 - 30px);
+        margin: 0 15px;
+        flex: 0 0 calc(100% / 2 - 30px);
+        &:not(:last-of-type) {
+            margin-bottom: 85px
+        }
+    }
+}
+
+.order-form__close {
+    width: 23px;
+    height: 23px;
+    top: 40px;
+    right: 31px;
+    position: absolute;
+    cursor: pointer;
+    .cancel {
+        width: 18px;
+        height: 18px;
+        fill: #fff;
+        top: 3px;
+        left: 4px;
+        position: absolute;
+        transition: fill 0.3s ease;
+    }
+    &:hover .cancel {
+        fill: #dadada;
+    }
+}
+
+.order-form__opened {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 //******************************

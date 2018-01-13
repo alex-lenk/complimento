@@ -104,6 +104,31 @@ $(document).ready(function () {
 
     /* END message-successfully и message-wrong */
 
+
+
+    /* BEGIN действия для формы заказа товара на странице продукта */
+
+    var makeOrder = '.make-an-order',
+        orderFormOpened = 'order-form__opened';
+
+    $(makeOrder).click(
+        function () {
+            $(this).parent().next().addClass(orderFormOpened);
+            $(this).prop("disabled", true);
+        }
+    );
+
+    $('.order-form__close').click(
+        function () {
+            $(this).parent().removeClass(orderFormOpened);
+            $(this).parent().parent().find(makeOrder).prop("disabled", false);
+        }
+    );
+
+    /* END */
+
+
+
     (function($) {
         $(function() {
             $('select').styler();

@@ -100,6 +100,27 @@ textarea.ui-field, textarea.form-control {
       pointer-events: none;
     }
   }
+
+  &.product-select .text-danger {
+    display: none;
+  }
+  .text-danger {
+    top: 50px;
+    left: 0;
+    position: absolute;
+    color: #FE5E5E;
+    font-size: 16px;
+  }
+  .control-label {
+    color: #FE5E5E;
+  }
+  .ui-field, .form-control {
+    color: #FE5E5E;
+    outline: 1px solid #FE5E5E;
+  }
+  .jq-selectbox__trigger-arrow {
+    background: url(../img/arrow-error.svg) no-repeat;
+  }
 }
 
 .has-error__text {
