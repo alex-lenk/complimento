@@ -3,7 +3,7 @@
 <!-- include "template/head.html" -->
 <body class="page">
 
-<!-- include "template/fixed-modal.html" -->
+<!-- include "template/fixed-block.html" -->
 
 <div class="contacts container">
     <div class="contacts-form">
@@ -56,6 +56,24 @@
     </div>
 </div>
 
+<!--
+
+Ниже представлены два всплывающих сообщения, в них достаточно указать класс какой блок хотим вызвать.
+
+Успешная отправка: message-successfully
+В форме ошибки: message-wrong
+
+ -->
+
+<div class="flying-message message-successfully">
+    <div class="container">
+        <div class="flying-message__text">
+            Your Message has been successfully sent!
+        </div>
+        <div class="flying-message-close as-link">Got It!</div>
+    </div>
+</div>
+
 <div class="flying-message message-wrong">
     <div class="container">
         <div class="flying-message__text">
@@ -64,16 +82,11 @@
             </svg>
             Some fields are not filled in or filled wrong. Please, correct information!
         </div>
-        <a href="#" class="flying-message-link">Got It!</a>
+        <div class="flying-message-close">Got It!</div>
     </div>
 </div>
 
-<!--<div class="flying-message message-successfully">-->
-    <!--<div class="container">-->
-        <!--<div class="flying-message__text">Your Message has been successfully sent!</div>-->
-        <!--<a href="#" class="flying-message-link">Got It!</a>-->
-    <!--</div>-->
-<!--</div>-->
+
 
 <!-- include "template/scripts.html" -->
 

@@ -884,6 +884,8 @@ body:not(.fp-viewing-0) {
   position: fixed;
   z-index: 55;
   box-shadow: 0 0 8px 0 rgba(#000, .1);
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
   .container {
     min-height: 83px;
     display: flex;
@@ -896,6 +898,10 @@ body:not(.fp-viewing-0) {
   font-weight: 400;
   position: relative;
   @include font-size(18px);
+}
+
+.message-successfully, .message-wrong {
+  transform: translateY(0);
 }
 
 .message-successfully {
@@ -939,7 +945,7 @@ body:not(.fp-viewing-0) {
   }
 }
 
-.flying-message-link {
+.flying-message-close{
   margin-left: auto;
   color: inherit;
   line-height: 1;
