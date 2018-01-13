@@ -15,12 +15,12 @@ body {
     margin: 0;
     text-align: left;
     line-height: 1.4;
-    font-weight: normal;
     color: #fff;
+    font-weight: 300;
     background: #000 url(../img/bg/bg-body.jpg) no-repeat center;
     background-size: cover;
     font-family: 'akrobat', -apple-system, "Segoe UI", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-    @include font-size(16px);
+    @include font-size(18px);
 }
 
 a, .as-link {
@@ -51,32 +51,28 @@ h1, h2, h3, h4, h5, h6,
     margin-bottom: 1.0625rem;
     font-family: inherit;
     line-height: 1.2;
-    color: #FFFFFF;
+    color: #fff;
+    font-weight: 400;
 }
 
 h1, .h1 {
-    font-weight: 300;
-    @include font-size(46px);
+    @include font-size(42px);
 }
 
 h2, .h2 {
-    line-height: 29px;
+    margin-bottom: 10px;
+    @include font-size(28px);
 }
 
 h3, .h3 {
-    line-height: 24px;
+    @include font-size(22px);
 }
 
 h4, .h4 {
-    line-height: 20px;
-    @include font-size(21px);
+    @include font-size(20px);
 }
 
-h5, .h5 {
-    @include font-size(19px);
-}
-
-h6, .h6 {
+h6, .h6 , h5, .h5 {
     @include font-size(18px);
 }
 
@@ -130,16 +126,19 @@ h6, .h6 {
         margin-bottom: 0;
         list-style: none;
         li {
-            padding-left: 25px;
+            padding-left: 32px;
             position: relative;
             &::before {
-                top: -1px;
+                width: 16px;
+                height: 1px;
+                top: 12px;
                 left: 0;
                 position: absolute;
-                content: '—';
+                background-color: #fff;
+                content: '';
             }
             &:not(:last-child) {
-                margin-bottom: 10px;
+                margin-bottom: 3px;
             }
         }
     }

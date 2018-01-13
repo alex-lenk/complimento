@@ -104,4 +104,10 @@ $(document).ready(function () {
 
     /* END message-successfully и message-wrong */
 
+    (function($) {
+        $(function() {
+            $('select').styler();
+        });
+    })(jQuery);
+
 });

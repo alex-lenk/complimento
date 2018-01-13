@@ -8,12 +8,13 @@
 }
 
 @media (max-width: 1919px) {
-    .half-block__right {
-        padding-right: 161px;
-    }
     
     .catalog-wrap {
         padding-right: 61px;
+    }
+    
+    .half-block__right {
+        padding-right: 161px;
     }
     
     .nav-panel {
@@ -231,6 +232,13 @@
 //*********************************
 
 @media (min-width: 768px) {
+    h1, .h1 {
+        @include font-size(46px);
+    }
+    h2, .h2 {
+        @include font-size(32px);
+    }
+    
     
     //**********************
     
@@ -274,6 +282,10 @@
 }
 
 @media (min-width: 1920px) {
+    .item-page {
+        padding-right: 80px;
+    }
+    
     .page .nav-area {
         margin-bottom: 170px;
     }
@@ -330,7 +342,7 @@
 }
 
 @media (min-width: 768px) and (max-width: 1919px) {
-    .contacts {
+    .item-page, .contacts {
         padding-right: 61px;
     }
 }
