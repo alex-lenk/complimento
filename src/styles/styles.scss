@@ -191,7 +191,7 @@
 
 .menu {
     width: 100%;
-  padding-top: 30px;
+    padding-top: 30px;
     margin-left: auto;
     color: #fff;
     line-height: 1;
@@ -233,18 +233,19 @@
     opacity: 0;
     flex: 0;
 }
+
 .home:not(.fp-viewing-0), .page {
-  .logo {
-    max-width: 2882px;
-    height: 69px;
-    margin-right: 275px;
-    opacity: 1;
-    flex: 0 0 303px;
-  }
+    .logo {
+        max-width: 2882px;
+        height: 69px;
+        margin-right: 275px;
+        opacity: 1;
+        flex: 0 0 303px;
+    }
 }
 
 .page .nav-area {
-  margin-bottom: 130px;
+    margin-bottom: 130px;
 }
 
 .home:not(.fp-viewing-0) {
@@ -775,7 +776,7 @@
 }
 
 .contacts-wrap {
-  display: flex;
+    display: flex;
 }
 
 .contacts-form {
@@ -793,7 +794,7 @@
 
 .contacts-form__block {
     padding: 50px 50px;
-    background-color: rgba(#000,.3);
+    background-color: rgba(#000, .3);
     text-align: right;
     .ui-group {
         text-align: left;
@@ -806,14 +807,15 @@
 }
 
 .contacts-info__title {
-   margin-bottom: 85px;
+    margin-bottom: 85px;
 }
+
 .contacts-info__list {
     line-height: 1;
     display: flex;
     flex-wrap: wrap;
     @include font-size(22px);
-    li:not(:last-child){
+    li:not(:last-child) {
         margin-right: 145px;
     }
     div {
@@ -836,6 +838,7 @@
     align-items: flex-end;
     @include font-size(18px);
 }
+
 .contacts-social {
     display: flex;
     li:not(:last-child) {
@@ -866,7 +869,7 @@
         width: 23px;
         height: 23px;
         top: 3px;
-
+        
     }
     .instagram {
         width: 16px;
@@ -882,78 +885,78 @@
 //********************
 
 .flying-message {
-  width: 100%;
-  left: 0;
-  bottom: 0;
-  background: #fff;
-  color: #202020;
-  border-bottom: 5px solid;
-  position: fixed;
-  z-index: 55;
-  box-shadow: 0 0 8px 0 rgba(#000, .1);
-  transform: translateY(100%);
-  transition: transform 0.3s ease;
-  .container {
-    min-height: 83px;
-    display: flex;
-    align-items: center;
-  }
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    color: #202020;
+    border-bottom: 5px solid;
+    position: fixed;
+    z-index: 55;
+    box-shadow: 0 0 8px 0 rgba(#000, .1);
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    .container {
+        min-height: 83px;
+        display: flex;
+        align-items: center;
+    }
 }
 
 .flying-message__text {
-  padding-left: 56px;
-  font-weight: 400;
-  position: relative;
-  @include font-size(18px);
+    padding-left: 56px;
+    font-weight: 400;
+    position: relative;
+    @include font-size(18px);
 }
 
 .message-successfully, .message-wrong {
-  transform: translateY(0);
+    transform: translateY(0);
 }
 
 .message-successfully {
-  border-bottom-color: #202020;
-  .flying-message__text {
-    &::before, &::after {
-      top: 50%;
-      position: absolute;
-      content: '';
+    border-bottom-color: #202020;
+    .flying-message__text {
+        &::before, &::after {
+            top: 50%;
+            position: absolute;
+            content: '';
+        }
+        &::before {
+            height: 24px;
+            width: 24px;
+            border-radius: 100%;
+            background-color: #202020;
+            left: 0;
+            transform: translateY(-50%);
+        }
+        &::after {
+            width: 13px;
+            height: 7px;
+            margin-top: -5px;
+            left: 5px;
+            border-bottom: 2px solid #ffffff;
+            border-left: 2px solid #ffffff;
+            transform: rotate(-43deg);
+        }
     }
-    &::before {
-      height: 24px;
-      width: 24px;
-      border-radius: 100%;
-      background-color: #202020;
-      left: 0;
-      transform: translateY(-50%);
-    }
-    &::after {
-      width: 13px;
-      height: 7px;
-      margin-top: -5px;
-      left: 5px;
-      border-bottom: 2px solid #ffffff;
-      border-left: 2px solid #ffffff;
-      transform: rotate(-43deg);
-    }
-  }
 }
 
 .message-wrong {
-  border-color: #FE5E5E;
-  .warning {
-    width: 25px;
-    height: 25px;
-    left: 0;
-    top: 50%;
-    position: absolute;
-    fill: #202020;
-    transform: translateY(-50%);
-  }
+    border-color: #FE5E5E;
+    .warning {
+        width: 25px;
+        height: 25px;
+        left: 0;
+        top: 50%;
+        position: absolute;
+        fill: #202020;
+        transform: translateY(-50%);
+    }
 }
 
-.flying-message-close{
-  margin-left: auto;
-  color: inherit;
-  line-height: 1;
+.flying-message-close {
+    margin-left: auto;
+    color: inherit;
+    line-height: 1;
 }
