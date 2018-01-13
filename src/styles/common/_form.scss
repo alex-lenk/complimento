@@ -34,7 +34,7 @@
   }
 }
 
-.has-error__text, .ui-label {
+.ui-error__text, .ui-label {
   top: 3px;
   left: 12px;
   margin-bottom: 0;
@@ -73,10 +73,10 @@ textarea.ui-field, textarea.form-control {
   &::after {
     width: 100%;
   }
-  .has-error__text {
+  .ui-error__text {
     opacity: 0;
   }
-  &.has-error .ui-label {
+  &.ui-error .ui-label {
     opacity: 1;
   }
 }
@@ -89,18 +89,20 @@ textarea.ui-field, textarea.form-control {
   }
 }
 
-.has-error {
-  .ui-label {
-    opacity: 0;
-  }
-  .ui-field {
-    border-bottom-color: #FE5E5E;
-    &:focus ~ .has-error__text {
-      opacity: 0;
-      pointer-events: none;
+.ui-error {
+    .ui-label {
+        opacity: 0;
     }
-  }
+    .ui-field {
+        border-bottom-color: #FE5E5E;
+        &:focus ~ .ui-error__text {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+}
 
+.has-error {
   &.product-select .text-danger {
     display: none;
   }
@@ -123,7 +125,7 @@ textarea.ui-field, textarea.form-control {
   }
 }
 
-.has-error__text {
+.ui-error__text {
   color: #FE5E5E;
   transition: opacity .3s ease;
 }
