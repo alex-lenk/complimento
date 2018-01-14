@@ -10,24 +10,26 @@
 @import "common/common";
 
 .close-block {
-    width: 20px;
-    height: 20px;
-    right: 0;
-    top: 0;
+    width: 23px;
+    height: 23px;
     position: absolute;
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.3s ease;
     .cancel {
-        width: 14px;
-        height: 14px;
+        width: 18px;
+        height: 18px;
         fill: #fff;
         position: absolute;
-        top: 2px;
-        left: 2px;
+        top: 3px;
+        left: 4px;
+        transition: fill 0.3s ease;
     }
     &:hover {
         transform: scale(1.1);
+        .cancel {
+            fill: #dadada;
+        }
     }
 }
 
@@ -388,7 +390,15 @@
 
 .close-product {
     right: 0;
-    top: 102px;
+    top: 99px;
+    width: 20px;
+    height: 20px;
+    .cancel {
+        width: 14px;
+        height: 14px;
+        top: 3px;
+        left: 3px;
+    }
 }
 
 .swiper-wrapper .nav-products__slide {
@@ -1193,24 +1203,8 @@
 }
 
 .order-form__close {
-    width: 23px;
-    height: 23px;
     top: 40px;
     right: 31px;
-    position: absolute;
-    cursor: pointer;
-    .cancel {
-        width: 18px;
-        height: 18px;
-        fill: #fff;
-        top: 3px;
-        left: 4px;
-        position: absolute;
-        transition: fill 0.3s ease;
-    }
-    &:hover .cancel {
-        fill: #dadada;
-    }
 }
 
 .order-form__opened {
