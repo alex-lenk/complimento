@@ -33,6 +33,7 @@
         
         &:not(:disabled):hover {
             border-color: #DADADA;
+            color: #000
         }
         &:disabled {
             cursor: default;

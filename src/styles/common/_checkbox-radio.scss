@@ -1,58 +1,53 @@
 @import "../common/variables";
 
 .label-block {
+    padding-left: 42px;
     cursor: pointer;
     position: relative;
-    color: #5A5A5A;
-    font-weight: 300;
+    font-weight: 400;
     display: inline-flex;
     align-items: center;
     flex-wrap: wrap;
     transition: all 0.3s ease;
-    @include font-size(18px);
 }
 
 .radio-custom {
     display: none;
     &:checked + .radio-custom-decor {
-        border-color: #303030;
+        border-color: #fff;
         &::after {
-            border-color: #303030;
+            border-color: #fff;
         }
     }
 }
 
 .radio-custom-decor {
-  width: 22px;
-  height: 22px;
-  margin-right: 20px;
-  background-color: #ffffff;
-  line-height: 1;
-  border-radius: 50%;
-  position: absolute;
-  top: 1px;
-  left: 0;
-  border: 1px solid #465a63;
-  transition: all 0.3s ease;
-  content: '';
-  &:after {
-    width: 19px;
-    height: 8px;
-    top: 1px;
-    left: 4px;
+    width: 24px;
+    height: 24px;
+    line-height: 1;
+    border-radius: 100%;
     position: absolute;
-    border-bottom: 2px solid transparent;
-    border-left: 2px solid transparent;
-    transform: rotate(-43deg);
-    transition: all 0.3s ease;
-    content: '';
-  }
+    top: 1px;
+    left: 0;
+    border: 2px solid #dadada;
+    &:after {
+        width: 12px;
+        height: 7px;
+        top: 5px;
+        left: 4px;
+        position: absolute;
+        border-bottom: 2px solid transparent;
+        border-left: 2px solid transparent;
+        transform: rotate(-43deg);
+        transition: all 0.3s ease;
+        content: '';
+    }
 }
 
-.radio-custom-view {
-  a, span {
-    padding-left: 5px;
-  }
+.radio-custom-view span {
+    display: block;
+    color: #C1C1C1;
+    @include font-size(18px);
 }
 
 /*
@@ -70,7 +65,6 @@
 .checkbox-custom {
     display: none;
     &:checked + .checkbox-custom-view {
-        color: #111;
         &::before {
             border-color: #E6DDEE;
         }
