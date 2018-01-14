@@ -99,6 +99,88 @@
 }
 
 @media (max-width: 767px) {
+    .checkout-form__promo {
+        margin-bottom: 40px;
+    }
+    .checkout-form__promo-thanks {
+        margin-top: 20px;
+    }
+    .checkout-form-total {
+        .total {
+            width: 100%;
+        }
+        .sub-total {
+            width: 50%;
+            margin-left: auto;
+            &::before {
+                margin-right: auto;
+                margin-left: 0;
+            }
+        }
+    }
+    .proceed-pay {
+        padding-top: 40px;
+        text-align: center;
+    }
+    
+    .checkout-billing .form-group {
+        margin-bottom: 15px;
+    }
+    
+    .checkout-info {
+        margin-bottom: 60px;
+    }
+    
+    .checkout {
+        overflow: hidden;
+    }
+    .checkout-wrap {
+        padding-top: 108px;
+    }
+    .checkout-title-first {
+        margin-bottom: 18px;
+        text-align: center;
+    }
+    .checkout-panel {
+        .nav-products-next {
+            right: 0;
+            top: -19px;
+        }
+        .nav-products-prev {
+            right: 41px;
+            top: -29px;
+        }
+        .nav-products {
+            width: 100%;
+        }
+        .nav-products__slide {
+            height: 240px;
+            justify-content: center;
+        }
+    }
+    .checkout-panel__title {
+        margin-bottom: 0;
+    }
+    .checkout-right {
+        border-top: 1px solid #000;
+        padding-top: 42px;
+        margin-top: -10px;
+    }
+    .checkout-payments-block .radio {
+        width: 162px;
+        &:not(:last-of-type) {
+            margin-right: 20px;
+        }
+    }
+    
+    .checkout-delivery__method .simplecheckout-block-content {
+        flex-wrap: wrap;
+    }
+    
+    .checkout-title-two {
+        display: none;
+    }
+    
     .fp-tableCell {
         padding-top: 6%;
         padding-right: 0;
@@ -121,6 +203,7 @@
         padding-right: 0;
         top: 120px;
         z-index: 14;
+        position: fixed;
         transition: all 1.5s ease;
         will-change: transform;
         transform: translateX(-100%);
@@ -227,9 +310,61 @@
     }
 }
 
+@media (max-width: 567px) {
+    .checkout-delivery__method .radio {
+        &:first-of-type {
+            margin-right: 100px;
+        }
+        &:last-of-type {
+            width: 100%;
+            margin-top: 30px;
+        }
+    }
+}
+
 //*********************************
 
 @media (min-width: 768px) {
+    .checkout-form__promo-thanks {
+        bottom: -75px;
+        left: 0;
+        position: absolute;
+        @include font-size(20px);
+    }
+    
+    .checkout-form-total .total {
+        margin-left: auto;
+    }
+    
+    .checkout-form__promo {
+        max-width: calc(100% / 2 - 20px);
+        margin-bottom: 0;
+    }
+    
+    .checkout-billing {
+        .form-horizontal {
+            margin: 0 -20px;
+            @include clearfix;
+        }
+        .form-group {
+            width: 100%;
+            max-width: calc(100% / 2 - 40px);
+            margin: 0 20px 25px;
+            float: left;
+        }
+    }
+    .checkout-delivery__method .radio:not(:last-of-type) {
+        margin-right: 100px;
+    }
+    
+    .checkout-payments-block .radio {
+        width: 188px;
+        margin-right: 30px;
+    }
+    .checkout-title-first {
+        display: none;
+    }
+    
     h1, .h1 {
         @include font-size(46px);
     }
@@ -278,6 +413,28 @@
     }
 }
 
+@media (min-width: 1100px) {
+    .checkout-panel {
+        width: 569px;
+        margin-right: 100px;
+        &::before {
+            width: 150rem;
+            height: calc(100% + 270px);
+            top: -270px;
+            right: 0;
+            position: absolute;
+            z-index: -1;
+            background-color: rgba(#000, .3);
+            content: '';
+        }
+    }
+    
+    .checkout-wrap {
+        min-height: 100vh;
+        display: flex;
+    }
+}
+
 @media (min-width: 1920px) {
     .copyright, .fp-tableCell, .catalog-wrap, .contacts, .checkout, .item-page {
         padding-right: 80px;
@@ -310,6 +467,12 @@
 }
 
 //*********************************
+
+@media (min-width: 568px) and (max-width: 1439px) {
+    .checkout-delivery__method .radio:not(:first-of-type):not(:last-of-type) {
+        margin: 0 auto;
+    }
+}
 
 @media (min-width: 768px) and (max-width: 1099px) {
     .catalog-item {

@@ -50,12 +50,28 @@ $(document).ready(function () {
     /* BEGIN инициализация карусели товаров в боковых панелях my-wishlist и my-bag */
 
     var swiper = new Swiper('.wishlist-carousel', {
-        slidesPerView: 1,
-        slidesPerColumn: 2,
         spaceBetween: 0,
         navigation: {
             nextEl: '.nav-products-next',
-            prevEl: '.nav-products-prev',
+            prevEl: '.nav-products-prev'
+        },
+        breakpoints: {
+            2560: {
+                slidesPerColumn: 2,
+                slidesPerView: 1
+            },
+            1099: {
+                slidesPerColumn: 1,
+                slidesPerView: 2
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            567: {
+                slidesPerColumn: 1,
+                slidesPerView: 1
+            }
         }
     });
 
