@@ -114,7 +114,7 @@ $(document).ready(function () {
 
     $('.flying-message-close').click(
         function () {
-            $('.flying-message').fadeOut();
+            $(this).parent().parent().fadeOut();
         }
     );
 
@@ -145,10 +145,14 @@ $(document).ready(function () {
 
 
 
+    /* BEGIN инициализация плагина для кастомизации select тегов */
+
     (function($) {
         $(function() {
             $('select').styler();
         });
     })(jQuery);
+
+    /* END */
 
 });

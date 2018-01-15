@@ -701,18 +701,21 @@
 
 //*******************************
 
-.not-found {
+.not-found .nav-area {
+    display: none;
+}
+
+.not-found__wrapper {
+    min-height: 100vh;
     padding-bottom: 150px;
     padding-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    .nav-area {
-        display: none;
-    }
     h1 {
         margin-bottom: 30px;
     }
+
 }
 
 .not-found__logo {
@@ -966,6 +969,10 @@
 }
 
 //******************************
+
+.item-page {
+    padding-top: 100px;
+}
 
 .item-page__wrap {
     display: flex;
