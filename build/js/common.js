@@ -154,4 +154,9 @@ $(document).ready(function () {
 
     /* END */
 
+// init Masonry
+    var $grid = $('.grid').masonry({
+        // options...
+    });
+
 });

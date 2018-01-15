@@ -1620,3 +1620,10 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   .proceed-pay .btn-white {
     min-width: 228px;
     height: 53px; }
+
+.grid {
+  margin-bottom: 0;
+  list-style: none; }
+  .grid li {
+    width: calc(100% / 5);
+    padding: 10px; }

@@ -715,7 +715,7 @@
     h1 {
         margin-bottom: 30px;
     }
-
+    
 }
 
 .not-found__logo {
@@ -1378,5 +1378,14 @@
     .btn-white {
         min-width: 228px;
         height: 53px;
+    }
+}
+
+.grid {
+    margin-bottom: 0;
+    list-style: none;
+    li {
+        width: calc(100% / 5);
+        padding: 10px;
     }
 }
