@@ -607,13 +607,13 @@
 
 .catalog {
     padding-top: 75px;
+    overflow-x: hidden;
     h1 {
         margin-bottom: 75px;
     }
 }
 
 .catalog-list {
-    margin: 0 -35px;
     display: flex;
     flex-wrap: wrap;
 }
