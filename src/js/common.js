@@ -15,30 +15,6 @@ $(document).ready(function () {
     /* END */
 
 
-
-    /* BEGIN добавление класса input полям, если они были заполнены пользователем */
-
-    var uiField = $(".form-control, .ui-field"),
-        fieldFilled = "field-filled";
-
-    uiField.change(function () {
-        if ($(this).val().trim().length) {
-            $(this).parent().addClass(fieldFilled);
-        } else {
-            $(this).parent().removeClass(fieldFilled);
-        }
-    });
-
-    uiField.each(function () {
-        if (this.value !== "") {
-            $(this).parent().addClass(fieldFilled);
-        }
-    });
-
-    /* END */
-
-
-
     /* BEGIN инициализация плагина для главной страницы */
 
     $('#fullpage').fullpage();
@@ -76,6 +52,41 @@ $(document).ready(function () {
     });
 
     /* END wishlist-carousel */
+
+
+
+    /* BEGIN инициализация плагина для кастомизации select тегов */
+
+    (function ($) {
+        $(function () {
+            $('select').styler();
+        });
+    })(jQuery);
+
+    /* END */
+
+
+
+    /* BEGIN добавление класса input полям, если они были заполнены пользователем */
+
+    var uiField = $(".form-control, .ui-field"),
+        fieldFilled = "field-filled";
+
+    uiField.change(function () {
+        if ($(this).val().trim().length) {
+            $(this).parent().addClass(fieldFilled);
+        } else {
+            $(this).parent().removeClass(fieldFilled);
+        }
+    });
+
+    uiField.each(function () {
+        if (this.value !== "") {
+            $(this).parent().addClass(fieldFilled);
+        }
+    });
+
+    /* END */
 
 
 
@@ -140,18 +151,6 @@ $(document).ready(function () {
             $(this).parent().parent().find(makeOrder).prop("disabled", false);
         }
     );
-
-    /* END */
-
-
-
-    /* BEGIN инициализация плагина для кастомизации select тегов */
-
-    (function($) {
-        $(function() {
-            $('select').styler();
-        });
-    })(jQuery);
 
     /* END */
 
