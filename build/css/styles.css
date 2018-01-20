@@ -330,11 +330,10 @@ body {
 
 a, .as-link {
   color: #5A5A5A;
-  text-decoration: underline;
+  text-decoration: none;
   transition: all 0.3s ease; }
   a:hover, .as-link:hover {
-    color: inherit;
-    text-decoration: none; }
+    color: inherit; }
 
 .as-link {
   cursor: pointer; }
@@ -729,6 +728,11 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   margin-bottom: 5px;
   font-weight: bold;
   position: relative; }
+  .nav-products__title a {
+    color: inherit;
+    text-decoration: none; }
+    .nav-products__title a:hover {
+      color: #dadada; }
 
 .nav-products__cost {
   margin-bottom: 18px;
@@ -736,7 +740,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   font-size: 1.375rem; }
 
 .nav-products__link {
-  color: #DADADA;
+  color: #dadada;
   text-decoration: none;
   display: inline-block;
   line-height: 1; }
@@ -744,7 +748,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
     width: 100%;
     height: 1px;
     margin: 0 auto;
-    background-color: #DADADA;
+    background-color: #dadada;
     display: block;
     content: '';
     transition: all 0.3s ease; }
@@ -828,7 +832,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
     transform: translateX(5px); }
 
 .nav-products__options {
-  color: #DADADA;
+  color: #dadada;
   font-size: 1.125rem; }
 
 .nav-products__size {
@@ -883,15 +887,17 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 .my-bag__opened .panel-basket .bag, .my-bag__opened .panel-basket .count-products {
   opacity: 0; }
 
-.page-menu__opened .page-menu {
-  -ms-transform: translateX(0);
-  transform: translateX(0); }
-
-.page-menu__opened .open-menu .cancel {
-  opacity: 1; }
-
-.page-menu__opened .open-menu::before {
-  opacity: 0; }
+.page-menu__opened {
+  max-height: 100%;
+  height: 100%;
+  overflow: hidden; }
+  .page-menu__opened .page-menu {
+    -ms-transform: translateX(0);
+    transform: translateX(0); }
+  .page-menu__opened .open-menu .cancel {
+    opacity: 1; }
+  .page-menu__opened .open-menu::before {
+    opacity: 0; }
 
 .page-menu {
   padding-top: 165px;
@@ -1101,12 +1107,11 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   padding-top: 130px; }
 
 .contacts-wrap {
-  padding-top: 70px;
   display: -ms-flexbox;
   display: flex; }
 
 .contacts-form {
-  padding-top: 19px;
+  padding-top: 13px;
   width: 100%;
   max-width: 600px; }
 
@@ -1142,7 +1147,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
     margin-right: 145px; }
   .contacts-info__list div {
     margin-bottom: 11px;
-    color: #DADADA;
+    color: #dadada;
     font-weight: 300;
     font-size: 1.125rem; }
   .contacts-info__list a {
@@ -1284,7 +1289,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 
 .item-page__price {
   margin: 27px 0 55px;
-  color: #DADADA;
+  color: #dadada;
   font-weight: bold;
   display: -ms-flexbox;
   display: flex;
@@ -1627,3 +1632,54 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   .grid li {
     width: calc(100% / 5);
     padding: 10px; }
+
+.pay-succes {
+  padding-top: 75px; }
+
+.pay-succes__wrap {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.pay-succes__order, .pay-succes__title {
+  width: 100%; }
+
+.pay-succes__order-title {
+  margin-bottom: 0; }
+
+.pay-succes__products {
+  margin-bottom: 45px;
+  border-bottom: 1px solid #000;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .pay-succes__products .nav-products__slide {
+    padding-left: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    position: relative;
+    overflow: visible; }
+
+.pay-succes__order-thanks {
+  font-weight: 400;
+  font-size: 1.1875rem; }
+
+.pay-succes__info {
+  width: 380px;
+  height: 100%;
+  margin-left: auto;
+  padding: 55px;
+  line-height: 1;
+  background-color: rgba(0, 0, 0, 0.3); }
+
+.pay-succes__info-contact {
+  margin-bottom: 60px; }
+  .pay-succes__info-contact li:not(:last-child) {
+    margin-bottom: 60px; }
+
+.pay-succes__info-label {
+  margin-bottom: 10px;
+  font-weight: 400;
+  color: #DADADA; }

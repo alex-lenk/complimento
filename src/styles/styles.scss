@@ -335,6 +335,13 @@
     margin-bottom: 5px;
     font-weight: bold;
     position: relative;
+    a {
+        color: inherit;
+        text-decoration: none;
+        &:hover {
+            color: #dadada;
+        }
+    }
 }
 
 .nav-products__cost {
@@ -344,7 +351,7 @@
 }
 
 .nav-products__link {
-    color: #DADADA;
+    color: #dadada;
     text-decoration: none;
     display: inline-block;
     line-height: 1;
@@ -352,7 +359,7 @@
         width: 100%;
         height: 1px;
         margin: 0 auto;
-        background-color: #DADADA;
+        background-color: #dadada;
         display: block;
         content: '';
         transition: all 0.3s ease;
@@ -447,7 +454,7 @@
 }
 
 .nav-products__options {
-    color: #DADADA;
+    color: #dadada;
     @include font-size(18px);
 }
 
@@ -520,6 +527,9 @@
 }
 
 .page-menu__opened {
+    max-height: 100%;
+    height: 100%;
+    overflow: hidden;
     .page-menu {
         transform: translateX(0);
     }
@@ -784,12 +794,11 @@
 }
 
 .contacts-wrap {
-    padding-top: 70px;
     display: flex;
 }
 
 .contacts-form {
-    padding-top: 19px;
+    padding-top: 13px;
     width: 100%;
     max-width: 600px;
 }
@@ -829,7 +838,7 @@
     }
     div {
         margin-bottom: 11px;
-        color: #DADADA;
+        color: #dadada;
         font-weight: 300;
         @include font-size(18px);
     }
@@ -997,7 +1006,7 @@
 
 .item-page__price {
     margin: 27px 0 55px;
-    color: #DADADA;
+    color: #dadada;
     font-weight: bold;
     display: flex;
     align-items: flex-end;
@@ -1388,4 +1397,63 @@
         width: calc(100% / 5);
         padding: 10px;
     }
+}
+
+//*****************************
+
+.pay-succes {
+    padding-top: 75px;
+}
+
+.pay-succes__wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pay-succes__order, .pay-succes__title {
+    width: 100%;
+}
+
+.pay-succes__order-title {
+    margin-bottom: 0;
+}
+
+.pay-succes__products {
+    margin-bottom: 45px;
+    border-bottom: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+    .nav-products__slide {
+        padding-left: 0;
+        flex-shrink: 0;
+        position: relative;
+        overflow: visible;
+    }
+}
+
+.pay-succes__order-thanks {
+    font-weight: 400;
+    @include font-size(19px);
+}
+
+.pay-succes__info {
+    width: 380px;
+    height: 100%;
+    margin-left: auto;
+    padding: 55px;
+    line-height: 1;
+    background-color: rgba(#000, .3);
+}
+
+.pay-succes__info-contact {
+    margin-bottom: 60px;
+    li:not(:last-child) {
+        margin-bottom: 60px;
+    }
+}
+
+.pay-succes__info-label {
+    margin-bottom: 10px;
+    font-weight: 400;
+    color: #DADADA;
 }
