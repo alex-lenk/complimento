@@ -439,6 +439,99 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 .hidden {
   display: none; }
 
+.contacts {
+  color: #fff;
+  padding-top: 130px; }
+
+.contacts-wrap {
+  display: -ms-flexbox;
+  display: flex; }
+
+.contacts-form {
+  padding-top: 13px;
+  width: 100%;
+  max-width: 600px;
+  -ms-flex: none;
+  flex: none; }
+
+.contacts-form__title {
+  margin-bottom: 40px;
+  color: #fff;
+  font-weight: 600; }
+
+.contacts-form__block {
+  padding: 50px 50px;
+  background-color: rgba(0, 0, 0, 0.3);
+  text-align: right; }
+  .contacts-form__block .ui-group {
+    text-align: left; }
+
+.contacts-info {
+  -ms-flex: 1;
+  flex: 1; }
+
+.contacts-info__title {
+  margin-bottom: 85px; }
+
+.contacts-info__list {
+  line-height: 1;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.contacts-info__label {
+  margin-bottom: 11px;
+  color: #dadada; }
+
+.contacts-info__link {
+  color: inherit;
+  font-weight: 400;
+  text-decoration: none;
+  font-size: 1.375rem; }
+
+.contacts-info__follow {
+  font-weight: 400;
+  line-height: 1;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: end;
+  align-items: flex-end; }
+
+.contacts-social {
+  display: -ms-flexbox;
+  display: flex; }
+  .contacts-social li:not(:last-child) {
+    margin-right: 21px; }
+  .contacts-social a {
+    width: 24px;
+    height: 24px;
+    border-radius: 2px;
+    background-color: #fff;
+    position: relative;
+    display: block;
+    transition: all 0.5s ease; }
+    .contacts-social a:hover {
+      background-color: transparent; }
+      .contacts-social a:hover svg {
+        fill: #fff; }
+  .contacts-social svg {
+    fill: #000;
+    left: 4px;
+    position: absolute;
+    transition: all 0.3s ease; }
+  .contacts-social .fb {
+    width: 23px;
+    height: 23px;
+    top: 3px; }
+  .contacts-social .instagram {
+    width: 16px;
+    height: 17px;
+    top: 4px; }
+
+.contacts-info__follow-text {
+  margin-right: 35px; }
+
 .close-block {
   width: 23px;
   height: 23px;
@@ -1101,101 +1194,6 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   padding-top: 175px;
   color: #fff;
   text-align: justify; }
-
-.contacts {
-  color: #fff;
-  padding-top: 130px; }
-
-.contacts-wrap {
-  display: -ms-flexbox;
-  display: flex; }
-
-.contacts-form {
-  padding-top: 13px;
-  width: 100%;
-  max-width: 600px; }
-
-.contacts-form__title {
-  margin-bottom: 40px;
-  color: #fff;
-  font-weight: 600;
-  font-size: 2rem; }
-
-.contacts-form__block {
-  padding: 50px 50px;
-  background-color: rgba(0, 0, 0, 0.3);
-  text-align: right; }
-  .contacts-form__block .ui-group {
-    text-align: left; }
-
-.contacts-info {
-  padding-left: 110px;
-  -ms-flex: 1;
-  flex: 1; }
-
-.contacts-info__title {
-  margin-bottom: 85px; }
-
-.contacts-info__list {
-  line-height: 1;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  font-size: 1.375rem; }
-  .contacts-info__list li:not(:last-child) {
-    margin-right: 145px; }
-  .contacts-info__list div {
-    margin-bottom: 11px;
-    color: #dadada;
-    font-weight: 300;
-    font-size: 1.125rem; }
-  .contacts-info__list a {
-    color: inherit;
-    font-weight: 400;
-    text-decoration: none; }
-
-.contacts-info__follow {
-  font-weight: 400;
-  line-height: 1;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: end;
-  align-items: flex-end; }
-
-.contacts-social {
-  display: -ms-flexbox;
-  display: flex; }
-  .contacts-social li:not(:last-child) {
-    margin-right: 21px; }
-  .contacts-social a {
-    width: 24px;
-    height: 24px;
-    border-radius: 2px;
-    background-color: #fff;
-    position: relative;
-    display: block;
-    transition: all 0.5s ease; }
-    .contacts-social a:hover {
-      background-color: transparent; }
-      .contacts-social a:hover svg {
-        fill: #fff; }
-  .contacts-social svg {
-    fill: #000;
-    left: 4px;
-    position: absolute;
-    transition: all 0.3s ease; }
-  .contacts-social .fb {
-    width: 23px;
-    height: 23px;
-    top: 3px; }
-  .contacts-social .instagram {
-    width: 16px;
-    height: 17px;
-    top: 4px; }
-
-.contacts-info__follow-text {
-  margin-right: 35px; }
 
 .flying-message {
   width: 100%;

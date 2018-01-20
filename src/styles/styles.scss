@@ -8,6 +8,7 @@
 @import "common/form";
 @import "common/checkbox-radio";
 @import "common/common";
+@import "blocks/contacts";
 
 .close-block {
     width: 23px;
@@ -784,119 +785,6 @@
     padding-top: 175px;
     color: #fff;
     text-align: justify;
-}
-
-//******************************
-
-.contacts {
-    color: #fff;
-    padding-top: 130px;
-}
-
-.contacts-wrap {
-    display: flex;
-}
-
-.contacts-form {
-    padding-top: 13px;
-    width: 100%;
-    max-width: 600px;
-}
-
-.contacts-form__title {
-    margin-bottom: 40px;
-    color: #fff;
-    font-weight: 600;
-    @include font-size(32px)
-}
-
-.contacts-form__block {
-    padding: 50px 50px;
-    background-color: rgba(#000, .3);
-    text-align: right;
-    .ui-group {
-        text-align: left;
-    }
-}
-
-.contacts-info {
-    padding-left: 110px;
-    flex: 1;
-}
-
-.contacts-info__title {
-    margin-bottom: 85px;
-}
-
-.contacts-info__list {
-    line-height: 1;
-    display: flex;
-    flex-wrap: wrap;
-    @include font-size(22px);
-    li:not(:last-child) {
-        margin-right: 145px;
-    }
-    div {
-        margin-bottom: 11px;
-        color: #dadada;
-        font-weight: 300;
-        @include font-size(18px);
-    }
-    a {
-        color: inherit;
-        font-weight: 400;
-        text-decoration: none;
-    }
-}
-
-.contacts-info__follow {
-    font-weight: 400;
-    line-height: 1;
-    display: flex;
-    align-items: flex-end;
-}
-
-.contacts-social {
-    display: flex;
-    li:not(:last-child) {
-        margin-right: 21px;
-    }
-    a {
-        width: 24px;
-        height: 24px;
-        border-radius: 2px;
-        background-color: #fff;
-        position: relative;
-        display: block;
-        transition: all 0.5s ease;
-        &:hover {
-            background-color: transparent;
-            svg {
-                fill: #fff;
-            }
-        }
-    }
-    svg {
-        fill: #000;
-        left: 4px;
-        position: absolute;
-        transition: all 0.3s ease;
-    }
-    .fb {
-        width: 23px;
-        height: 23px;
-        top: 3px;
-        
-    }
-    .instagram {
-        width: 16px;
-        height: 17px;
-        top: 4px;
-    }
-}
-
-.contacts-info__follow-text {
-    margin-right: 35px;
 }
 
 //********************
