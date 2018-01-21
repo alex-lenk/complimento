@@ -599,7 +599,7 @@
         margin-right: 100px;
     }
     
-    .copyright, .fp-tableCell, .catalog-wrap, .contacts, .checkout, .item-page, .pay-succes {
+    .wrapper, .copyright, .fp-tableCell, .catalog-wrap, .contacts, .checkout, .item-page, .pay-succes {
         padding-right: 80px;
     }
     
@@ -699,7 +699,7 @@
 }
 
 @media (min-width: 768px) and (max-width: 1919px) {
-    .checkout, .item-page, .contacts, .catalog-wrap, .fp-tableCell, .copyright, .pay-succes {
+    .wrapper, .checkout, .item-page, .contacts, .catalog-wrap, .fp-tableCell, .copyright, .pay-succes {
         padding-right: 61px;
     }
 }

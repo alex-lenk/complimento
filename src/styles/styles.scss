@@ -9,6 +9,7 @@
 @import "common/checkbox-radio";
 @import "common/common";
 @import "blocks/contacts";
+@import "blocks/gallery";
 
 .close-block {
     width: 23px;
@@ -1278,12 +1279,113 @@
     }
 }
 
-.grid {
+//*****************************
+
+.filter-gallery__wrap {
+    padding-top: 100px;
+    margin-bottom: 80px;
+    display: flex;
+    align-items: flex-end;
+    h1 {
+        margin-bottom: 0;
+        line-height: 1;
+    }
+}
+
+.filter-gallery {
+    margin-bottom: -3px;
+    margin-left: auto;
+    position: relative;
+}
+
+.filter-gallery__label {
     margin-bottom: 0;
-    list-style: none;
-    li {
-        width: calc(100% / 5);
-        padding: 10px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    .icon-filter {
+        width: 22px;
+        height: 22px;
+        margin-bottom: -4px;
+        margin-right: 10px;
+        fill: #fff;
+    }
+    &:hover {
+        color: #DADADA;
+        .icon-filter {
+            fill: #DADADA;
+        }
+    }
+}
+
+.filter-gallery__list {
+    width: 228px;
+    padding: 28px 28px 18px;
+    top: 49px;
+    right: 0;
+    z-index: 5;
+    position: absolute;
+    background: #101010;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.50);
+}
+
+.filter-gallery__point {
+    cursor: pointer;
+    color: #dadada;
+    position: relative;
+    line-height: 1;
+    transition: all 0.4s ease;
+    &::after {
+        width: 100%;
+        height: 1px;
+        margin: 15px 0;
+        left: -2px;
+        background-color: #4E4E4E;
+        display: block;
+        position: relative;
+        content: '';
+    }
+    span {
+        display: inline-block;
+    }
+    span::after {
+        width: 100%;
+        height: 1px;
+        background-color: #dadada;
+        display: block;
+        content: '';
+        transition: all 0.4s ease;
+    }
+    &:hover:not(.filter-gallery__current) {
+        color: #fff;
+        span::after {
+            width: 0;
+        }
+    }
+}
+
+.filter-gallery__current {
+    color: #fff;
+    span::after {
+        background-color: #fff;
+    }
+}
+
+.filter-gallery__opened {
+    .filter-gallery__list {
+    }
+}
+
+.grid {
+    width: 1530px;
+    margin: 0 -15px;
+}
+
+.grid-item {
+    width: 20%;
+    padding: 15px;
+    float: left;
+    img {
+        box-shadow: 0 0 6px 0 #000000, 0 2px 40px 0 rgba(0, 0, 0, 0.75);
     }
 }
 

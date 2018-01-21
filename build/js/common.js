@@ -154,9 +154,45 @@ $(document).ready(function () {
 
     /* END */
 
-// init Masonry
-    var $grid = $('.grid').masonry({
-        // options...
+
+
+    /* BEGIN Для страницы gallery. Открытие панели с фильтрами. Инициализация и перестройка блоков с изображениями */
+
+    var grid = $('.grid'),
+        filterGalleryPoint = $('.filter-gallery__point'),
+        filterGalleryCurrent = 'filter-gallery__current';
+
+
+    $('.filter-gallery__label').click(
+        function () {
+            $(this).parent().toggleClass('filter-gallery__opened');
+            $('.filter-gallery__list').toggle('medium');
+        }
+    );
+
+    grid.isotope({
+        itemSelector: '.grid-item'
     });
+
+    filterGalleryPoint.click(function () {
+
+        filterGalleryPoint.removeClass(filterGalleryCurrent);
+        $(this).addClass(filterGalleryCurrent);
+
+        var selector = $(this).attr('data-filter');
+
+        grid.isotope({
+            filter: selector,
+            animationOptions: {
+                duration: 1000,
+                easing: 'easeOutQuart',
+                queue: false
+            }
+        });
+        return false;
+
+    });
+
+    /* END */
 
 });

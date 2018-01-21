@@ -6,10 +6,10 @@
  * 3. jquery.fullPage.js
  * 4. swiper.min.js
  * 5. jquery.formstyler.min.js
- * 6. masonry.pkgd.min.js
+ * 6. isotope.pkgd.min.js
  * 7. jquery.fancybox.min.js
  *
-*/
+ */
 
 /* 1. smoothscroll.js */
 //= lib/smoothscroll.js
@@ -30,10 +30,8 @@
 /* 5. jquery.formstyler.min.js */
 //= lib/jquery.formstyler.min.js
 
-
-/* 6. jquery.fancybox.min.js */
-//= ../../bower_components/masonry-layout/dist/masonry.pkgd.min.js
-
+/* 6. isotope.pkgd.min.js */
+//= ../../bower_components/isotope-layout/dist/isotope.pkgd.min.js
 
 /* 7. jquery.fancybox.min.js */
-// = lib/jquery.fancybox.min.js
+//= ../../bower_components/fancybox/dist/jquery.fancybox.min.js
