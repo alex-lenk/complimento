@@ -19,6 +19,14 @@
 @import "blocks/products-color";
 @import "blocks/page-menu";
 
+#fullpage .section {
+    min-height: 100vh;
+    &:not(.fp-table) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
 
 //**********************
 
