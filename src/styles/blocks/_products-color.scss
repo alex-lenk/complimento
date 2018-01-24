@@ -1,0 +1,33 @@
+.products-color {
+    display: flex;
+    align-items: center;
+}
+
+.box-color {
+    width: 21px;
+    height: 21px;
+    margin-left: 11px;
+    display: inline-block;
+    border: 2px solid #fff;
+    border-radius: 100%;
+}
+
+.color-black {
+    background-color: #000;
+}
+
+.color-white {
+    background-color: #fff;
+}
+
+.color-turquoise {
+    background-color: #7DFAFF;
+}
+
+.color-pink {
+    background-color: #FEC0FF;
+}
+
+.color-light-green {
+    background-color: #CEEC8C;
+}
