@@ -125,17 +125,11 @@
     a {
         display: inline-block;
         text-decoration: none;
-        &:hover {
-            .catalog-new {
+        &:hover .catalog-view {
+            color: #fff;
+            &::before {
+                width: 100%;
                 background-color: #fff;
-                color: #202020;
-            }
-            .catalog-view {
-                color: #fff;
-                &::before {
-                    width: 100%;
-                    background-color: #fff;
-                }
             }
         }
     }

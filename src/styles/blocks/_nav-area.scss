@@ -38,9 +38,6 @@
 }
 
 .home:not(.fp-viewing-0) {
-    .nav-area {
-        top: 27px;
-    }
     .menu {
         margin-bottom: -10px;
     }
@@ -48,7 +45,7 @@
 
 .home .nav-area {
     padding-top: 0;
-    top: 60px;
+    top: 27px;
     left: 0;
     position: fixed;
 }

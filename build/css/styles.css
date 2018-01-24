@@ -323,10 +323,17 @@ body {
   line-height: 1.4;
   color: #fff;
   font-weight: 300;
-  background: #000 url(../img/bg/bg-body.jpg) no-repeat center;
-  background-size: cover;
   font-family: 'akrobat', -apple-system, "Segoe UI", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   font-size: 1.125rem; }
+  body::before {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: #000 url(../img/bg/bg-body@2x.jpg) no-repeat center;
+    z-index: -1;
+    content: ''; }
 
 a, .as-link {
   color: #5A5A5A;
@@ -708,7 +715,9 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   left: 0;
   position: absolute;
   color: #5A5A5A;
-  font-family: "Comic Sans MS", 'akrobat', sans-serif; }
+  font-weight: 400;
+  font-family: 'akrobat', sans-serif;
+  font-size: 1.0625rem; }
 
 .menu {
   width: 100%;
@@ -773,15 +782,12 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   -ms-flex: 0 0 303px;
   flex: 0 0 303px; }
 
-.home:not(.fp-viewing-0) .nav-area {
-  top: 27px; }
-
 .home:not(.fp-viewing-0) .menu {
   margin-bottom: -10px; }
 
 .home .nav-area {
   padding-top: 0;
-  top: 60px;
+  top: 27px;
   left: 0;
   position: fixed; }
 
@@ -1111,9 +1117,6 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   .catalog-item a {
     display: inline-block;
     text-decoration: none; }
-    .catalog-item a:hover .catalog-new {
-      background-color: #fff;
-      color: #202020; }
     .catalog-item a:hover .catalog-view {
       color: #fff; }
       .catalog-item a:hover .catalog-view::before {

@@ -29,5 +29,7 @@
     left: 0;
     position: absolute;
     color: #5A5A5A;
-    font-family: "Comic Sans MS", 'akrobat', sans-serif;
+    font-weight: 400;
+    font-family: 'akrobat', sans-serif;
+    @include font-size(17px);
 }
