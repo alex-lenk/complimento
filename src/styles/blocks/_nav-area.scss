@@ -1,0 +1,54 @@
+.nav-area {
+    width: 100%;
+    padding-top: 30px;
+    padding-right: 80px;
+    line-height: 1;
+    position: relative;
+    z-index: $index-nav-area;
+    .container {
+        display: flex;
+    }
+}
+
+.logo {
+    transition: all 0.3s ease;
+}
+
+.home .logo {
+    width: 0;
+    opacity: 0;
+}
+
+.fp-viewing-0 .logo {
+    width: 0;
+    height: 0;
+    margin-right: 0;
+    opacity: 0;
+    flex: 0;
+}
+
+.home:not(.fp-viewing-0), .page {
+    .logo {
+        max-width: 2882px;
+        height: 69px;
+        margin-right: 275px;
+        opacity: 1;
+        flex: 0 0 303px;
+    }
+}
+
+.home:not(.fp-viewing-0) {
+    .nav-area {
+        top: 27px;
+    }
+    .menu {
+        margin-bottom: -10px;
+    }
+}
+
+.home .nav-area {
+    padding-top: 0;
+    top: 60px;
+    left: 0;
+    position: fixed;
+}

@@ -439,6 +439,27 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 .hidden {
   display: none; }
 
+.close-block {
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease; }
+  .close-block .cancel {
+    width: 18px;
+    height: 18px;
+    fill: #fff;
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    transition: fill 0.3s ease; }
+  .close-block:hover {
+    -ms-transform: scale(1.1);
+    transform: scale(1.1); }
+    .close-block:hover .cancel {
+      fill: #dadada; }
+
 .contacts {
   color: #fff;
   padding-top: 130px; }
@@ -561,27 +582,6 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 /* disable CSS transitions for containers with infinite scrolling*/
 .isotope.infinite-scrolling {
   transition: none; }
-
-.close-block {
-  width: 23px;
-  height: 23px;
-  position: absolute;
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.3s ease; }
-  .close-block .cancel {
-    width: 18px;
-    height: 18px;
-    fill: #fff;
-    position: absolute;
-    top: 3px;
-    left: 4px;
-    transition: fill 0.3s ease; }
-  .close-block:hover {
-    -ms-transform: scale(1.1);
-    transform: scale(1.1); }
-    .close-block:hover .cancel {
-      fill: #dadada; }
 
 .nav-panel {
   top: 0;
@@ -711,20 +711,6 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   color: #5A5A5A;
   font-family: "Comic Sans MS", 'akrobat', sans-serif; }
 
-.nav-area {
-  width: 100%;
-  padding-top: 30px;
-  padding-right: 80px;
-  line-height: 1;
-  position: relative;
-  z-index: 11; }
-  .nav-area .container {
-    display: -ms-flexbox;
-    display: flex; }
-
-.logo {
-  transition: all 0.3s ease; }
-
 .menu {
   width: 100%;
   padding-top: 30px;
@@ -753,6 +739,20 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 
 .menu-point__active .menu-link::after {
   width: 100%; }
+
+.nav-area {
+  width: 100%;
+  padding-top: 30px;
+  padding-right: 80px;
+  line-height: 1;
+  position: relative;
+  z-index: 11; }
+  .nav-area .container {
+    display: -ms-flexbox;
+    display: flex; }
+
+.logo {
+  transition: all 0.3s ease; }
 
 .home .logo {
   width: 0;

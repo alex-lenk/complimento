@@ -1,0 +1,35 @@
+.menu {
+    width: 100%;
+    padding-top: 30px;
+    margin-left: auto;
+    color: #fff;
+    line-height: 1;
+    letter-spacing: 1.6px;
+    font-weight: 300;
+    transition: all 0.3s ease;
+}
+
+.menu-link {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    &::after {
+        width: 0;
+        height: 1px;
+        margin: 0 auto;
+        background-color: #fff;
+        display: block;
+        content: '';
+        transition: all 0.3s ease;
+    }
+    &:hover {
+        &::after {
+            width: 100%;
+        }
+    }
+}
+
+.menu-point__active .menu-link::after {
+    width: 100%;
+}
