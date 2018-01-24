@@ -1,0 +1,101 @@
+.nav-panel {
+    top: 0;
+    right: 0;
+    position: fixed;
+    display: flex;
+    z-index: $index-nav-panel;
+    background-color: #000;
+    text-align: center;
+}
+
+.nav-panel__instagram {
+    width: 30px;
+    height: 30px;
+    margin: auto auto 30px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    .instagram {
+        width: 24px;
+        height: 24px;
+        fill: #fff;
+        top: 3px;
+        left: 3px;
+        position: absolute;
+    }
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.open-menu {
+    display: inline-flex;
+    &::before {
+        width: 22px;
+        height: 2px;
+        margin: auto;
+        background-color: #fff;
+        box-shadow: 0 7px 0 #fff, 0 -7px 0 #fff;
+        transition: all .3s ease;
+        content: '';
+    }
+    &:hover::before {
+        transform: scale(1.1);
+    }
+}
+
+.count-products {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    color: #000;
+    background-color: #fff;
+    top: 18px;
+    right: 5px;
+    position: absolute;
+    font-weight: bold;
+    text-align: center;
+    line-height: 14px;
+    transition: all 0.3s ease;
+    @include font-size(11px);
+}
+
+.open-menu,
+.panel-basket,
+.panel-wishlist {
+    width: 35px;
+    height: 35px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    svg {
+        position: absolute;
+        top: 5px;
+        left: 6px;
+        fill: #fff;
+        transition: all 0.3s ease;
+    }
+    .cancel {
+        width: 18px;
+        height: 18px;
+        top: 9px;
+        left: 9px;
+        opacity: 0;
+    }
+    &:hover svg {
+        transform: scale(1.1);
+    }
+}
+
+.panel-wishlist {
+    .hearth {
+        width: 25px;
+        height: 26px;
+    }
+}
+
+.panel-basket .bag {
+    width: 23px;
+    height: 24px;
+}
