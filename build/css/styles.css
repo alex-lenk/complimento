@@ -1743,16 +1743,13 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   .filter-gallery__current span::after {
     background-color: #fff; }
 
-.grid {
-  width: 1530px;
-  margin: 0 -15px; }
+.grid-balance:after {
+  display: table;
+  clear: both;
+  content: ""; }
 
-.grid-item {
-  width: 20%;
-  padding: 15px;
-  float: left; }
-  .grid-item img {
-    box-shadow: 0 0 6px 0 #000000, 0 2px 40px 0 rgba(0, 0, 0, 0.75); }
+.grid-item img {
+  box-shadow: 0 0 6px 0 #000000, 0 2px 40px 0 rgba(0, 0, 0, 0.75); }
 
 .pay-succes {
   padding-top: 75px; }
