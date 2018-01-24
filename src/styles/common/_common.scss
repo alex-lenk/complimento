@@ -21,10 +21,10 @@ body {
     @include font-size(18px);
     &::before {
         width: 100%;
-        height: 100%;
+        height: 100vh;
         top: 0;
         left: 0;
-        position: absolute;
+        position: fixed;
         background: #000 url(../img/bg/bg-body@2x.jpg) no-repeat center;
         z-index: -1;
         content: '';
