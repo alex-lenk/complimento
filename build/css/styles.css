@@ -698,6 +698,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
     stroke: #fff; }
 
 .main-section {
+  height: 100vh;
   position: relative;
   background: url(../img/bg/bg-home.jpg) no-repeat center top;
   background-size: cover; }
@@ -749,6 +750,9 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
     transition: all 0.3s ease; }
   .menu-link:hover::after {
     width: 100%; }
+
+.menu-point__active .menu-link::after {
+  width: 100%; }
 
 .home .logo {
   width: 0;
@@ -1012,8 +1016,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 
 .page-menu__opened {
   max-height: 100%;
-  height: 100%;
-  overflow: hidden; }
+  height: 100%; }
   .page-menu__opened .page-menu {
     -ms-transform: translateX(0);
     transform: translateX(0); }
@@ -1638,6 +1641,17 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 
 .checkout-form__promo {
   width: 100%; }
+  .checkout-form__promo .alert {
+    bottom: -75px;
+    left: 0;
+    position: absolute;
+    font-size: 1.25rem;
+    color: #FE5E5E; }
+    .checkout-form__promo .alert + .checkout-form__promo-thanks {
+      opacity: 0; }
+
+.checkout-form__promo-thanks {
+  transition: all 0.4s ease; }
 
 .checkout-form-apply {
   top: 3px;
@@ -1790,3 +1804,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   margin-bottom: 10px;
   font-weight: 400;
   color: #DADADA; }
+
+.checkout-billing .ui-group::after,
+.checkout-billing .form-group::after {
+  display: none; }
