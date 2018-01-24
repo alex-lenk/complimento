@@ -9,6 +9,7 @@
 @import "common/checkbox-radio";
 @import "common/common";
 @import "blocks/nav-panel";
+@import "blocks/main-section";
 @import "blocks/contacts";
 @import "blocks/gallery";
 
@@ -34,43 +35,6 @@
             fill: #dadada;
         }
     }
-}
-
-//*******************
-
-.fp-tableCell {
-    padding-top: 100px;
-    position: relative;
-}
-
-.main-section__next {
-    bottom: 12px;
-    left: 50%;
-    position: absolute;
-    z-index: 35;
-    transform: translateX(-50%);
-    .arrow-w {
-        width: 34px;
-        height: 34px;
-        fill: #fff;
-        stroke: #fff;
-    }
-}
-
-.main-section {
-    height: 100vh;
-    position: relative;
-    background: url(../img/bg/bg-home.jpg) no-repeat center top;
-    background-size: cover;
-}
-
-.copyright {
-    width: 100%;
-    bottom: 25px;
-    left: 0;
-    position: absolute;
-    color: #5A5A5A;
-    font-family: "Comic Sans MS", 'akrobat', sans-serif;
 }
 
 //*******************
