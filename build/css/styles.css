@@ -327,12 +327,15 @@ body {
   font-size: 1.125rem; }
   body::before {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     top: 0;
     left: 0;
     position: fixed;
     background: #000 url(../img/bg/bg-body@2x.jpg) no-repeat center;
+    background-size: cover;
     z-index: -1;
+    will-change: transform;
+    pointer-events: none;
     content: ''; }
 
 a, .as-link {
@@ -716,7 +719,6 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   position: absolute;
   color: #5A5A5A;
   font-weight: 400;
-  font-family: 'akrobat', sans-serif;
   font-size: 1.0625rem; }
 
 .menu {
