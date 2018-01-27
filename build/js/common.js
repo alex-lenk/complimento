@@ -199,7 +199,10 @@ $(document).ready(function () {
     /* BEGIN инициализация слайдеров на странице товаров */
 
     var galleryMain = new Swiper('.gallery-product__main', {
-        spaceBetween: 10
+        spaceBetween: 10,
+        simulateTouch: false,
+        lazy: true,
+        effect: 'fade'
     });
     var galleryThumbs = new Swiper('.gallery-product__thumbs', {
         spaceBetween: 20,
@@ -207,11 +210,23 @@ $(document).ready(function () {
         slidesPerView: 'auto',
         touchRatio: 0.2,
         slideToClickedSlide: true,
-        direction: 'vertical',
+        lazy: true,
+        direction: 'vertical'
     });
     galleryMain.controller.control = galleryThumbs;
     galleryThumbs.controller.control = galleryMain;
 
     /* END */
+
+    /* BEGIN: wishlist-active */
+
+    $('.wishlist-active').click(
+        function () {
+            $(this).toggleClass('wishlist-active-added');
+        }
+    );
+
+    /* END wishlist-active */
+
 
 });

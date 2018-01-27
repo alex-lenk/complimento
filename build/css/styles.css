@@ -1302,6 +1302,40 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   color: inherit;
   line-height: 1; }
 
+.wishlist {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 50;
+  width: 42px;
+  height: 23px;
+  cursor: pointer; }
+
+.icon-wishlist {
+  position: absolute;
+  fill: #fff;
+  transition: all 0.3s linear; }
+
+.wishlist-active .hearth {
+  width: 25px;
+  height: 25px;
+  top: 2px;
+  left: 0; }
+
+.wishlist-active .hearth-full {
+  width: 45px;
+  height: 45px;
+  top: -9px;
+  left: -8px;
+  opacity: 0;
+  fill: #fff; }
+
+.wishlist-active-added .hearth {
+  opacity: 0; }
+
+.wishlist-active-added .hearth-full {
+  opacity: 1; }
+
 .item-page {
   padding-top: 100px; }
 
@@ -1311,9 +1345,15 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 
 .gallery-product {
   width: 100%;
-  max-width: 714px;
+  max-width: 742px;
+  position: relative;
+  top: -50px;
+  left: -30px;
   display: -ms-flexbox;
   display: flex; }
+
+.gallery-product__new {
+  display: none; }
 
 .gallery-product__main,
 .gallery-product__thumbs {
@@ -1321,28 +1361,36 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   height: 300px; }
 
 .gallery-product__item {
-  background-size: contain;
   background-position: center;
   background-repeat: no-repeat; }
 
 .gallery-product__main {
   height: 100%;
-  width: 80%; }
+  -ms-flex: 1;
+  flex: 1; }
+  .gallery-product__main .gallery-product__item:not(.swiper-slide-active) {
+    opacity: 0 !important; }
+  .gallery-product__main .gallery-product__item {
+    background-size: 643px; }
 
 .gallery-product__thumbs {
   margin-top: auto;
   height: 100%;
-  width: 20%;
-  padding: 0; }
+  width: 115px;
+  padding: 0;
+  -ms-flex: none;
+  flex: none; }
+  .gallery-product__thumbs .gallery-product__item {
+    background-size: contain; }
 
 .gallery-product__thumbs .swiper-slide {
   width: 115px;
   height: 115px;
-  opacity: 0.4;
   border: 2px solid #000; }
 
 .gallery-product__thumbs .swiper-slide-active {
-  opacity: 1; }
+  opacity: 0;
+  display: none; }
 
 .gallery-product__thumbs > .swiper-wrapper {
   transform: translate3d(0px, 0, 0px) !important;
@@ -1356,6 +1404,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 .item-page__right {
   width: 100%;
   max-width: 615px;
+  padding-left: 150px;
   position: relative; }
   .item-page__right h3, .item-page__right .h3 {
     margin-bottom: 6px; }
