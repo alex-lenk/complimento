@@ -229,17 +229,12 @@
 //*********************************
 
 .half-block {
-    margin-top: -105px;
-    min-height: 100vh;
-    display: flex;
     h1 {
         margin-bottom: 80px;
     }
 }
 
 .half-block__left {
-    margin-right: 100px;
-    flex: 0 0 810px;
     position: relative;
     &::after {
         width: 100%;
@@ -264,10 +259,8 @@
 }
 
 .half-block__right {
-    padding-right: 161px;
     padding-top: 175px;
     color: #fff;
-    text-align: justify;
 }
 
 //********************

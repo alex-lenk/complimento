@@ -1205,18 +1205,10 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 .not-found__text {
   margin-bottom: 70px; }
 
-.half-block {
-  margin-top: -105px;
-  min-height: 100vh;
-  display: -ms-flexbox;
-  display: flex; }
-  .half-block h1 {
-    margin-bottom: 80px; }
+.half-block h1 {
+  margin-bottom: 80px; }
 
 .half-block__left {
-  margin-right: 100px;
-  -ms-flex: 0 0 810px;
-  flex: 0 0 810px;
   position: relative; }
   .half-block__left::after {
     width: 100%;
@@ -1237,10 +1229,8 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
     content: ''; }
 
 .half-block__right {
-  padding-right: 161px;
   padding-top: 175px;
-  color: #fff;
-  text-align: justify; }
+  color: #fff; }
 
 .flying-message {
   width: 100%;

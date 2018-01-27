@@ -1,6 +1,4 @@
 @media (max-width: 1919px) {
-  .half-block__right {
-    padding-right: 161px; }
   .nav-panel {
     width: 61px; }
   .nav-area {
@@ -25,6 +23,13 @@
     max-height: 59vh; } }
 
 @media (max-width: 1099px) {
+  .half-block__right {
+    padding-top: 100px;
+    padding-bottom: 50px; }
+  .half-block__left {
+    display: none; }
+  .about-us-img {
+    margin-bottom: 30px; }
   .grid {
     width: 100%; }
   .contacts-info {
@@ -94,6 +99,9 @@
     max-height: 500px; } }
 
 @media (max-width: 767px) {
+  .half-block {
+    padding-right: 15px;
+    padding-left: 15px; }
   .grid-balance {
     margin: 0 -8px; }
   .grid-item {
@@ -364,6 +372,15 @@
     margin-bottom: 85px; } }
 
 @media (min-width: 1100px) {
+  .half-block {
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: -ms-flexbox;
+    display: flex; }
+  .about-us-img {
+    display: none; }
   .contacts-info__follow {
     width: 100%; }
   .contacts-info {
@@ -421,6 +438,10 @@
     padding-left: 165px; }
   .contacts-info__list {
     margin-bottom: 85px; }
+  .half-block__left {
+    margin-right: 100px;
+    -ms-flex: 0 0 810px;
+    flex: 0 0 810px; }
   .half-block__right {
     padding-right: 180px; }
   .catalog-item {
@@ -447,6 +468,9 @@
     margin: 0 auto; } }
 
 @media (min-width: 768px) and (max-width: 1099px) {
+  .half-block {
+    padding-right: 121px;
+    padding-left: 60px; }
   .contacts-info__item:not(:first-of-type):not(.contacts-info__follow) {
     margin-right: auto;
     margin-left: auto; }
@@ -482,6 +506,14 @@
     padding-right: 61px; } }
 
 @media (min-width: 1100px) and (max-width: 1439px) {
+  .half-block__right {
+    padding-right: 140px; }
+  .half-block__left {
+    margin-right: 45px;
+    -ms-flex: 0 0 458px;
+    flex: 0 0 458px; }
+    .half-block__left::before {
+      background-size: 120%; }
   .grid {
     width: 917px; }
   .grid-item {
@@ -512,6 +544,12 @@
     margin-right: 30px; } }
 
 @media (min-width: 1440px) and (max-width: 1919px) {
+  .half-block__left {
+    margin-right: 70px;
+    -ms-flex: 0 0 638px;
+    flex: 0 0 638px; }
+  .half-block__right {
+    padding-right: 161px; }
   .grid {
     width: 1230px; }
   .grid-item {
