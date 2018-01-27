@@ -1309,9 +1309,49 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   display: -ms-flexbox;
   display: flex; }
 
-.item-page__left {
+.gallery-product {
   width: 100%;
-  max-width: 714px; }
+  max-width: 714px;
+  display: -ms-flexbox;
+  display: flex; }
+
+.gallery-product__main,
+.gallery-product__thumbs {
+  width: 100%;
+  height: 300px; }
+
+.gallery-product__item {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.gallery-product__main {
+  height: 100%;
+  width: 80%; }
+
+.gallery-product__thumbs {
+  margin-top: auto;
+  height: 100%;
+  width: 20%;
+  padding: 0; }
+
+.gallery-product__thumbs .swiper-slide {
+  width: 115px;
+  height: 115px;
+  opacity: 0.4;
+  border: 2px solid #000; }
+
+.gallery-product__thumbs .swiper-slide-active {
+  opacity: 1; }
+
+.gallery-product__thumbs > .swiper-wrapper {
+  transform: translate3d(0px, 0, 0px) !important;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
 
 .item-page__right {
   width: 100%;

@@ -195,4 +195,23 @@ $(document).ready(function () {
 
     /* END */
 
+
+    /* BEGIN инициализация слайдеров на странице товаров */
+
+    var galleryMain = new Swiper('.gallery-product__main', {
+        spaceBetween: 10
+    });
+    var galleryThumbs = new Swiper('.gallery-product__thumbs', {
+        spaceBetween: 20,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        touchRatio: 0.2,
+        slideToClickedSlide: true,
+        direction: 'vertical',
+    });
+    galleryMain.controller.control = galleryThumbs;
+    galleryThumbs.controller.control = galleryMain;
+
+    /* END */
+
 });
