@@ -839,6 +839,20 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   margin-left: 10px;
   display: inline-block; }
 
+.nav-window__empty {
+  height: 100%;
+  padding-bottom: 100px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  .nav-window__empty .h3 {
+    margin-bottom: 65px; }
+
 .nav-products__wrap {
   padding-right: 70px;
   position: relative; }
