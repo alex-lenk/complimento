@@ -198,6 +198,8 @@ $(document).ready(function () {
 
     /* BEGIN инициализация слайдеров на странице товаров */
 
+    if ($(".gallery-product").length){
+
     var galleryMain = new Swiper('.gallery-product__main', {
         spaceBetween: 10,
         simulateTouch: false,
@@ -215,7 +217,7 @@ $(document).ready(function () {
     });
     galleryMain.controller.control = galleryThumbs;
     galleryThumbs.controller.control = galleryMain;
-
+}
     /* END */
 
     /* BEGIN: wishlist-active */
