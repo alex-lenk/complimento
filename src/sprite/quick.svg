@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>search</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Catalog-1440" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-572.000000, -309.000000)">
+        <g id="2" transform="translate(393.000000, 287.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Status---New-Copy" transform="translate(145.000000, 13.000000)">
+                <g id="loupe" transform="translate(34.000000, 9.000000)">
+                    <path d="M14.55,12.45 L12.45,10.35 C13.125,9.3 13.5,8.1 13.5,6.75 C13.5,3 10.5,0 6.75,0 C3,0 0,3 0,6.75 C0,10.5 3,13.5 6.75,13.5 C8.1,13.5 9.3,13.125 10.35,12.45 L12.45,14.55 C13.05,15.15 13.95,15.15 14.55,14.55 C15.15,13.95 15.15,13.05 14.55,12.45 Z M6.75,12 C3.825,12 1.5,9.675 1.5,6.75 C1.5,3.825 3.825,1.5 6.75,1.5 C9.675,1.5 12,3.825 12,6.75 C12,9.675 9.675,12 6.75,12 Z" id="search"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
