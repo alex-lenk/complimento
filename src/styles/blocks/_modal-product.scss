@@ -1,0 +1,73 @@
+.modal-product {
+  width: 685px;
+  padding-bottom: 40px;
+  background: rgba(#171717, .9);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.4), inset 0 0 300px 30px rgba(0, 0, 0, .9);
+  .close-block {
+    right: 21px;
+    top: 16px;
+    width: 30px;
+    height: 30px;
+    .cancel {
+      width: 23px;
+      height: 23px;
+    }
+  }
+  .fancybox-close-small {
+    opacity: 0;
+    top: 10px;
+    right: 17px;
+  }
+  .media-product__main {
+    padding-top: 15px;
+    padding-left: 45px;
+  }
+  .media-product__thumbs {
+    padding-bottom: 50px;
+  }
+  .media-product__point {
+    border-width: 0;
+  }
+}
+
+.fancybox-active.product-modal-opened {
+  .fancybox-bg {
+    background-color: transparent;
+  }
+}
+
+/*
+
+   Styles for animated modal
+   =========================
+
+*/
+
+/* Start state */
+.animated-modal {
+  overflow: hidden;
+
+  transform: scale(.7);
+  transition: all .7s;
+}
+
+.animated-modal .media-product {
+  transform: scale(.7);
+  opacity: 0;
+
+  transition-property: transform, opacity;
+  transition-duration: .4s;
+}
+
+/* Final state */
+.fancybox-slide--current .animated-modal,
+.fancybox-slide--current .animated-modal .media-product {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Reveal content with different delays */
+
+.fancybox-slide--current .animated-modal .media-product {
+  transition-delay: .3s;
+}

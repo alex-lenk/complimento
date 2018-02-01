@@ -207,4 +207,15 @@ $(document).ready(function () {
     /* END wishlist-active */
 
 
+    /* BEGIN: catalog-quick */
+
+    $('.catalog-quick').click(
+        function () {
+            $('body').addClass('product-modal-opened');
+        }
+    );
+
+    /* END catalog-quick */
+
+
 });

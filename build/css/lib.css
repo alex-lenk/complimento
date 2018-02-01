@@ -1,221 +1,5 @@
 @charset "UTF-8";
 /*!
- * fullPage 2.9.5
- * https://github.com/alvarotrigo/fullPage.js
- * MIT licensed
- *
- * Copyright (C) 2013 alvarotrigo.com - A project by Alvaro Trigo
- */
-html.fp-enabled,
-.fp-enabled body {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  /*Avoid flicker on slides transitions for mobile phones #336 */
-  -webkit-tap-highlight-color: transparent; }
-
-.fp-section {
-  position: relative;
-  /* Safari<=5 Android<=3 */
-  /* <=28 */
-  box-sizing: border-box; }
-
-.fp-slide {
-  float: left; }
-
-.fp-slide, .fp-slidesContainer {
-  height: 100%;
-  display: block; }
-
-.fp-slides {
-  z-index: 1;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-  /* Safari<=6 Android<=4.3 */
-  transition: all 0.3s ease-out; }
-
-.fp-section.fp-table, .fp-slide.fp-table {
-  display: table;
-  table-layout: fixed;
-  width: 100%; }
-
-.fp-tableCell {
-  display: table-cell;
-  vertical-align: middle;
-  width: 100%;
-  height: 100%; }
-
-.fp-slidesContainer {
-  float: left;
-  position: relative; }
-
-.fp-controlArrow {
-  -webkit-user-select: none;
-  /* webkit (safari, chrome) browsers */
-  -moz-user-select: none;
-  /* mozilla browsers */
-  -khtml-user-select: none;
-  /* webkit (konqueror) browsers */
-  -ms-user-select: none;
-  /* IE10+ */
-  position: absolute;
-  z-index: 4;
-  top: 50%;
-  cursor: pointer;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  margin-top: -38px;
-  -ms-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
-
-.fp-controlArrow.fp-prev {
-  left: 15px;
-  width: 0;
-  border-width: 38.5px 34px 38.5px 0;
-  border-color: transparent #fff transparent transparent; }
-
-.fp-controlArrow.fp-next {
-  right: 15px;
-  border-width: 38.5px 0 38.5px 34px;
-  border-color: transparent transparent transparent #fff; }
-
-.fp-scrollable {
-  overflow: hidden;
-  position: relative; }
-
-.fp-scroller {
-  overflow: hidden; }
-
-.iScrollIndicator {
-  border: 0 !important; }
-
-.fp-notransition {
-  transition: none !important; }
-
-#fp-nav {
-  position: fixed;
-  z-index: 100;
-  margin-top: -32px;
-  top: 50%;
-  opacity: 1;
-  -webkit-transform: translate3d(0, 0, 0); }
-
-#fp-nav.right {
-  right: 17px; }
-
-#fp-nav.left {
-  left: 17px; }
-
-.fp-slidesNav {
-  position: absolute;
-  z-index: 4;
-  opacity: 1;
-  -ms-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  left: 0 !important;
-  right: 0;
-  margin: 0 auto !important; }
-
-.fp-slidesNav.bottom {
-  bottom: 17px; }
-
-.fp-slidesNav.top {
-  top: 17px; }
-
-#fp-nav ul,
-.fp-slidesNav ul {
-  margin: 0;
-  padding: 0; }
-
-#fp-nav ul li,
-.fp-slidesNav ul li {
-  display: block;
-  width: 14px;
-  height: 13px;
-  margin: 7px;
-  position: relative; }
-
-.fp-slidesNav ul li {
-  display: inline-block; }
-
-#fp-nav ul li a,
-.fp-slidesNav ul li a {
-  display: block;
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  text-decoration: none; }
-
-#fp-nav ul li a.active span,
-.fp-slidesNav ul li a.active span,
-#fp-nav ul li:hover a.active span,
-.fp-slidesNav ul li:hover a.active span {
-  height: 12px;
-  width: 12px;
-  margin: -6px 0 0 -6px;
-  border-radius: 100%; }
-
-#fp-nav ul li a span,
-.fp-slidesNav ul li a span {
-  border-radius: 50%;
-  position: absolute;
-  z-index: 1;
-  height: 4px;
-  width: 4px;
-  border: 0;
-  background: #333;
-  left: 50%;
-  top: 50%;
-  margin: -2px 0 0 -2px;
-  transition: all 0.1s ease-in-out; }
-
-#fp-nav ul li:hover a span,
-.fp-slidesNav ul li:hover a span {
-  width: 10px;
-  height: 10px;
-  margin: -5px 0px 0px -5px; }
-
-#fp-nav ul li .fp-tooltip {
-  position: absolute;
-  top: -2px;
-  color: #fff;
-  font-size: 14px;
-  font-family: arial, helvetica, sans-serif;
-  white-space: nowrap;
-  max-width: 220px;
-  overflow: hidden;
-  display: block;
-  opacity: 0;
-  width: 0;
-  cursor: pointer; }
-
-#fp-nav ul li:hover .fp-tooltip,
-#fp-nav.fp-show-active a.active + .fp-tooltip {
-  transition: opacity 0.2s ease-in;
-  width: auto;
-  opacity: 1; }
-
-#fp-nav ul li .fp-tooltip.right {
-  right: 20px; }
-
-#fp-nav ul li .fp-tooltip.left {
-  left: 20px; }
-
-.fp-auto-height.fp-section,
-.fp-auto-height .fp-slide,
-.fp-auto-height .fp-tableCell {
-  height: auto !important; }
-
-.fp-responsive .fp-auto-height-responsive.fp-section,
-.fp-responsive .fp-auto-height-responsive .fp-slide,
-.fp-responsive .fp-auto-height-responsive .fp-tableCell {
-  height: auto !important; }
-
-/*!
  * Bootstrap v4.0.0-beta.2 (https://getbootstrap.com)
  * Copyright 2011-2017 The Bootstrap Authors
  * Copyright 2011-2017 Twitter, Inc.
@@ -725,6 +509,222 @@ pre code {
   .table-bordered th,
   .table-bordered td {
     border: 1px solid #ddd !important; } }
+
+/*!
+ * fullPage 2.9.5
+ * https://github.com/alvarotrigo/fullPage.js
+ * MIT licensed
+ *
+ * Copyright (C) 2013 alvarotrigo.com - A project by Alvaro Trigo
+ */
+html.fp-enabled,
+.fp-enabled body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /*Avoid flicker on slides transitions for mobile phones #336 */
+  -webkit-tap-highlight-color: transparent; }
+
+.fp-section {
+  position: relative;
+  /* Safari<=5 Android<=3 */
+  /* <=28 */
+  box-sizing: border-box; }
+
+.fp-slide {
+  float: left; }
+
+.fp-slide, .fp-slidesContainer {
+  height: 100%;
+  display: block; }
+
+.fp-slides {
+  z-index: 1;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  /* Safari<=6 Android<=4.3 */
+  transition: all 0.3s ease-out; }
+
+.fp-section.fp-table, .fp-slide.fp-table {
+  display: table;
+  table-layout: fixed;
+  width: 100%; }
+
+.fp-tableCell {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%; }
+
+.fp-slidesContainer {
+  float: left;
+  position: relative; }
+
+.fp-controlArrow {
+  -webkit-user-select: none;
+  /* webkit (safari, chrome) browsers */
+  -moz-user-select: none;
+  /* mozilla browsers */
+  -khtml-user-select: none;
+  /* webkit (konqueror) browsers */
+  -ms-user-select: none;
+  /* IE10+ */
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  margin-top: -38px;
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.fp-controlArrow.fp-prev {
+  left: 15px;
+  width: 0;
+  border-width: 38.5px 34px 38.5px 0;
+  border-color: transparent #fff transparent transparent; }
+
+.fp-controlArrow.fp-next {
+  right: 15px;
+  border-width: 38.5px 0 38.5px 34px;
+  border-color: transparent transparent transparent #fff; }
+
+.fp-scrollable {
+  overflow: hidden;
+  position: relative; }
+
+.fp-scroller {
+  overflow: hidden; }
+
+.iScrollIndicator {
+  border: 0 !important; }
+
+.fp-notransition {
+  transition: none !important; }
+
+#fp-nav {
+  position: fixed;
+  z-index: 100;
+  margin-top: -32px;
+  top: 50%;
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0); }
+
+#fp-nav.right {
+  right: 17px; }
+
+#fp-nav.left {
+  left: 17px; }
+
+.fp-slidesNav {
+  position: absolute;
+  z-index: 4;
+  opacity: 1;
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  left: 0 !important;
+  right: 0;
+  margin: 0 auto !important; }
+
+.fp-slidesNav.bottom {
+  bottom: 17px; }
+
+.fp-slidesNav.top {
+  top: 17px; }
+
+#fp-nav ul,
+.fp-slidesNav ul {
+  margin: 0;
+  padding: 0; }
+
+#fp-nav ul li,
+.fp-slidesNav ul li {
+  display: block;
+  width: 14px;
+  height: 13px;
+  margin: 7px;
+  position: relative; }
+
+.fp-slidesNav ul li {
+  display: inline-block; }
+
+#fp-nav ul li a,
+.fp-slidesNav ul li a {
+  display: block;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  text-decoration: none; }
+
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span {
+  height: 12px;
+  width: 12px;
+  margin: -6px 0 0 -6px;
+  border-radius: 100%; }
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  height: 4px;
+  width: 4px;
+  border: 0;
+  background: #333;
+  left: 50%;
+  top: 50%;
+  margin: -2px 0 0 -2px;
+  transition: all 0.1s ease-in-out; }
+
+#fp-nav ul li:hover a span,
+.fp-slidesNav ul li:hover a span {
+  width: 10px;
+  height: 10px;
+  margin: -5px 0px 0px -5px; }
+
+#fp-nav ul li .fp-tooltip {
+  position: absolute;
+  top: -2px;
+  color: #fff;
+  font-size: 14px;
+  font-family: arial, helvetica, sans-serif;
+  white-space: nowrap;
+  max-width: 220px;
+  overflow: hidden;
+  display: block;
+  opacity: 0;
+  width: 0;
+  cursor: pointer; }
+
+#fp-nav ul li:hover .fp-tooltip,
+#fp-nav.fp-show-active a.active + .fp-tooltip {
+  transition: opacity 0.2s ease-in;
+  width: auto;
+  opacity: 1; }
+
+#fp-nav ul li .fp-tooltip.right {
+  right: 20px; }
+
+#fp-nav ul li .fp-tooltip.left {
+  left: 20px; }
+
+.fp-auto-height.fp-section,
+.fp-auto-height .fp-slide,
+.fp-auto-height .fp-tableCell {
+  height: auto !important; }
+
+.fp-responsive .fp-auto-height-responsive.fp-section,
+.fp-responsive .fp-auto-height-responsive .fp-slide,
+.fp-responsive .fp-auto-height-responsive .fp-tableCell {
+  height: auto !important; }
 
 /**
  * Swiper 4.1.0
@@ -2457,173 +2457,3 @@ li.fancybox-thumbs-loading {
     right: 110px; }
   .fancybox-thumbs > ul > li {
     max-width: calc(100% - 10px); } }
-
-/* General styles for the modal */
-/* 
-Styles for the html/body for special modal where we want 3d effects
-Note that we need a container wrapping all content on the page for the 
-perspective effects (not including the modals and the overlay).
-*/
-.md-perspective,
-.md-perspective body {
-  height: 100%;
-  overflow: hidden; }
-
-.md-perspective body {
-  background: #222;
-  perspective: 600px; }
-
-.md-modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 50%;
-  max-width: 685px;
-  min-width: 320px;
-  height: auto;
-  z-index: 2000;
-  visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%); }
-
-.md-show {
-  visibility: visible; }
-
-.md-overlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  visibility: hidden;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  opacity: 0;
-  background: rgba(143, 27, 15, 0.8);
-  transition: all 0.3s; }
-
-.md-show ~ .md-overlay {
-  opacity: 1;
-  visibility: visible; }
-
-/* Content styles */
-.md-content {
-  color: #fff;
-  background: #e74c3c;
-  position: relative;
-  border-radius: 3px;
-  margin: 0 auto; }
-
-.md-content h3 {
-  margin: 0;
-  padding: 0.4em;
-  text-align: center;
-  font-size: 2.4em;
-  font-weight: 300;
-  opacity: 0.8;
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 3px 3px 0 0; }
-
-.md-content > div {
-  padding: 15px 40px 30px;
-  margin: 0;
-  font-weight: 300;
-  font-size: 1.15em; }
-
-.md-content > div p {
-  margin: 0;
-  padding: 10px 0; }
-
-.md-content > div ul {
-  margin: 0;
-  padding: 0 0 30px 20px; }
-
-.md-content > div ul li {
-  padding: 5px 0; }
-
-.md-content button {
-  display: block;
-  margin: 0 auto;
-  font-size: 0.8em; }
-
-/* Individual modal styles with animations/transitions */
-/* Effect 1: Fade in and scale up */
-.md-effect-1 .md-content {
-  -ms-transform: scale(0.7);
-  transform: scale(0.7);
-  opacity: 0;
-  transition: all 0.3s; }
-
-.md-show.md-effect-1 .md-content {
-  -ms-transform: scale(1);
-  transform: scale(1);
-  opacity: 1; }
-
-@keyframes slit {
-  50% {
-    transform: translateZ(-250px) rotateY(89deg);
-    opacity: 1;
-    animation-timing-function: ease-in; }
-  100% {
-    transform: translateZ(0) rotateY(0deg);
-    opacity: 1; } }
-
-@keyframes rotateRightSideFirst {
-  50% {
-    transform: translateZ(-50px) rotateY(5deg);
-    animation-timing-function: ease-out; }
-  100% {
-    transform: translateZ(-200px); } }
-
-.md-effect-18 .md-content {
-  -ms-transform: translateX(200%);
-  transform: translateX(200%);
-  opacity: 0; }
-
-.md-show.md-effect-18 .md-content {
-  -ms-transform: translateX(0);
-  transform: translateX(0);
-  opacity: 1;
-  transition: all 0.5s 0.1s; }
-
-/* Effect 19:  Slip in from the top with perspective on container */
-.md-show.md-effect-19 ~ .container {
-  height: 100%;
-  overflow: hidden; }
-
-.md-show.md-effect-19 ~ .md-overlay {
-  transition: all 0.5s; }
-
-.md-show.md-effect-19 ~ .container,
-.md-show.md-effect-19 ~ .md-overlay {
-  -webkit-transform-style: preserve-3d;
-  -webkit-transform-origin: 50% 100%;
-  -webkit-animation: OpenTop 0.5s forwards ease-in;
-  -moz-transform-style: preserve-3d;
-  -moz-transform-origin: 50% 100%;
-  -moz-animation: OpenTop 0.5s forwards ease-in;
-  transform-style: preserve-3d;
-  -ms-transform-origin: 50% 100%;
-  transform-origin: 50% 100%;
-  animation: OpenTop 0.5s forwards ease-in; }
-
-@keyframes OpenTop {
-  50% {
-    transform: rotateX(10deg);
-    animation-timing-function: ease-out; } }
-
-.md-effect-19 .md-content {
-  -ms-transform: translateY(-200%);
-  transform: translateY(-200%);
-  opacity: 0; }
-
-.md-show.md-effect-19 .md-content {
-  -ms-transform: translateY(0);
-  transform: translateY(0);
-  opacity: 1;
-  transition: all 0.5s 0.1s; }
-
-@media screen and (max-width: 32em) {
-  body {
-    font-size: 75%; } }

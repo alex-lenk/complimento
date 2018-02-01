@@ -1116,46 +1116,32 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
       background-color: #dadada;
       content: ''; }
 
-#fullpage .section {
-  min-height: 100vh; }
-  #fullpage .section:not(.fp-table) {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-pack: center;
-    justify-content: center; }
+.not-found .nav-area {
+  display: none; }
 
-.my-wishlist__opened .my-wishlist {
-  -ms-transform: translateX(0);
-  transform: translateX(0); }
+.not-found__wrapper {
+  min-height: 100vh;
+  padding-bottom: 150px;
+  padding-top: 50px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-align: center;
+  align-items: center; }
+  .not-found__wrapper h1 {
+    margin-bottom: 30px; }
 
-.my-wishlist__opened .panel-wishlist .cancel {
-  opacity: 1; }
+.not-found__logo {
+  width: 437px;
+  height: 107px; }
 
-.my-wishlist__opened .panel-wishlist .hearth, .my-wishlist__opened .panel-wishlist .count-products {
-  opacity: 0; }
+.not-found__box {
+  margin: auto;
+  text-align: center; }
 
-.my-bag__opened .my-bag {
-  -ms-transform: translateX(0);
-  transform: translateX(0); }
-
-.my-bag__opened .panel-basket .cancel {
-  opacity: 1; }
-
-.my-bag__opened .panel-basket .bag, .my-bag__opened .panel-basket .count-products {
-  opacity: 0; }
-
-.page-menu__opened {
-  max-height: 100%;
-  height: 100%; }
-  .page-menu__opened .page-menu {
-    -ms-transform: translateX(0);
-    transform: translateX(0); }
-  .page-menu__opened .open-menu .cancel {
-    opacity: 1; }
-  .page-menu__opened .open-menu::before {
-    opacity: 0; }
+.not-found__text {
+  margin-bottom: 70px; }
 
 .catalog {
   padding-top: 75px;
@@ -1177,6 +1163,11 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
     text-decoration: none; }
   .catalog-item:hover .catalog-quick {
     opacity: 1; }
+  .catalog-item:hover .catalog-title {
+    color: #fff; }
+    .catalog-item:hover .catalog-title::after {
+      width: 100%;
+      opacity: 1; }
 
 .catalog-item__inner {
   display: inline-block;
@@ -1199,9 +1190,41 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
     transform: translate(-50%, -50%); }
 
 .catalog-title {
-  display: block;
+  display: inline-block;
   font-weight: 600;
-  color: #fff; }
+  color: #dadada;
+  line-height: 1;
+  transition: all 0.5s ease; }
+  .catalog-title::after {
+    width: 0;
+    height: 1px;
+    opacity: 0;
+    display: block;
+    background-color: #fff;
+    transition: all 0.5s ease;
+    content: ''; }
+
+.catalog-view {
+  padding-left: 36px;
+  display: inline-block;
+  color: #dadada;
+  position: relative;
+  transition: all 0.5s ease;
+  font-size: 1.125rem; }
+  .catalog-view::before {
+    width: 24px;
+    height: 1px;
+    top: 13px;
+    left: 0;
+    position: absolute;
+    background-color: #dadada;
+    content: '';
+    transition: all 0.5s ease; }
+  .catalog-view:hover {
+    color: #fff; }
+    .catalog-view:hover::before {
+      width: 100%;
+      background-color: #fff; }
 
 .catalog-new {
   width: 35px;
@@ -1257,32 +1280,105 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   background-color: rgba(0, 0, 0, 0.5);
   font-size: 0.8125rem; }
 
-.not-found .nav-area {
-  display: none; }
+.modal-product {
+  width: 685px;
+  padding-bottom: 40px;
+  background: rgba(23, 23, 23, 0.9);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.4), inset 0 0 300px 30px rgba(0, 0, 0, 0.9); }
+  .modal-product .close-block {
+    right: 21px;
+    top: 16px;
+    width: 30px;
+    height: 30px; }
+    .modal-product .close-block .cancel {
+      width: 23px;
+      height: 23px; }
+  .modal-product .fancybox-close-small {
+    opacity: 0;
+    top: 10px;
+    right: 17px; }
+  .modal-product .media-product__main {
+    padding-top: 15px;
+    padding-left: 45px; }
+  .modal-product .media-product__thumbs {
+    padding-bottom: 50px; }
+  .modal-product .media-product__point {
+    border-width: 0; }
 
-.not-found__wrapper {
-  min-height: 100vh;
-  padding-bottom: 150px;
-  padding-top: 50px;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-align: center;
-  align-items: center; }
-  .not-found__wrapper h1 {
-    margin-bottom: 30px; }
+.fancybox-active.product-modal-opened .fancybox-bg {
+  background-color: transparent; }
 
-.not-found__logo {
-  width: 437px;
-  height: 107px; }
+/*
 
-.not-found__box {
-  margin: auto;
-  text-align: center; }
+   Styles for animated modal
+   =========================
 
-.not-found__text {
-  margin-bottom: 70px; }
+*/
+/* Start state */
+.animated-modal {
+  overflow: hidden;
+  -ms-transform: scale(0.7);
+  transform: scale(0.7);
+  transition: all .7s; }
+
+.animated-modal .media-product {
+  -ms-transform: scale(0.7);
+  transform: scale(0.7);
+  opacity: 0;
+  transition-property: transform, opacity;
+  transition-duration: .4s; }
+
+/* Final state */
+.fancybox-slide--current .animated-modal,
+.fancybox-slide--current .animated-modal .media-product {
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1; }
+
+/* Reveal content with different delays */
+.fancybox-slide--current .animated-modal .media-product {
+  transition-delay: .3s; }
+
+#fullpage .section {
+  min-height: 100vh; }
+  #fullpage .section:not(.fp-table) {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+
+.my-wishlist__opened .my-wishlist {
+  -ms-transform: translateX(0);
+  transform: translateX(0); }
+
+.my-wishlist__opened .panel-wishlist .cancel {
+  opacity: 1; }
+
+.my-wishlist__opened .panel-wishlist .hearth, .my-wishlist__opened .panel-wishlist .count-products {
+  opacity: 0; }
+
+.my-bag__opened .my-bag {
+  -ms-transform: translateX(0);
+  transform: translateX(0); }
+
+.my-bag__opened .panel-basket .cancel {
+  opacity: 1; }
+
+.my-bag__opened .panel-basket .bag, .my-bag__opened .panel-basket .count-products {
+  opacity: 0; }
+
+.page-menu__opened {
+  max-height: 100%;
+  height: 100%; }
+  .page-menu__opened .page-menu {
+    -ms-transform: translateX(0);
+    transform: translateX(0); }
+  .page-menu__opened .open-menu .cancel {
+    opacity: 1; }
+  .page-menu__opened .open-menu::before {
+    opacity: 0; }
 
 .half-block h1 {
   margin-bottom: 80px; }
@@ -1977,8 +2073,3 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 .checkout-billing .ui-group::after,
 .checkout-billing .form-group::after {
   display: none; }
-
-.modal-product .md-content {
-  height: 795px;
-  background: rgba(23, 23, 23, 0.9);
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.4); }

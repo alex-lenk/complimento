@@ -8,8 +8,7 @@
  * 5.   jquery.formstyler.min.js
  * 6.   isotope.pkgd.min.js
  * 7.   jquery.fancybox.min.js
- * 8.   classie.js
- * 8.1. modalEffects.js
+ * 8.   bootstrap.min.js
  *
  */
 
@@ -39,3 +38,6 @@
 
 /* 7. jquery.fancybox.min.js */
 //= ../../bower_components/fancybox/dist/jquery.fancybox.min.js
+
+/* 7. bootstrap.min.js */
+//= lib/bootstrap/bootstrap.min.js
