@@ -1977,3 +1977,8 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 .checkout-billing .ui-group::after,
 .checkout-billing .form-group::after {
   display: none; }
+
+.modal-product .md-content {
+  height: 795px;
+  background: rgba(23, 23, 23, 0.9);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.4); }

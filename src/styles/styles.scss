@@ -1030,3 +1030,12 @@
 .checkout-billing .form-group::after {
     display: none;
 }
+
+//******************************
+
+.modal-product .md-content {
+    height: 795px;
+    background: rgba(#171717, .9);
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.40);
+}
+
