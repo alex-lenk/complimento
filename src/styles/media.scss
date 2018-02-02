@@ -124,18 +124,22 @@
     .logo {
         height: 0;
     }
-    
+
     body:not(.fp-viewing-0) {
         .logo {
             height: 63px;
             padding-top: 0;
             width: 100%;
-            margin: 0 auto 24px;
-            flex: none;
+            margin: 0 auto;
         }
         .menu {
             margin-bottom: 0;
         }
+    }
+
+    .home:not(.fp-viewing-0) .logo {
+        margin-bottom: 24px;
+        transition-delay: .7s;
     }
     
     .nav-products__slide {
@@ -568,6 +572,14 @@
 }
 
 @media (min-width: 1100px) {
+    .home:not(.fp-viewing-0),
+    .page {
+        .logo {
+            margin-right: 275px;
+            flex: 0 0 303px;
+        }
+    }
+
     .section-flower__get {
         transform: translateY(100%);
     }
@@ -729,8 +741,12 @@
         margin-left: auto;
     }
     
-    body:not(.fp-viewing-0) .nav-area {
+    .home:not(.fp-viewing-0) .nav-area {
         top: 34px;
+    }
+
+    .page .nav-area {
+        padding-top: 37px;
     }
     
     .pay-succes {

@@ -194,3 +194,36 @@ button, input, select, textarea {
         }
     }
 }
+
+.home .logo {
+    width: 0;
+    opacity: 0;
+}
+
+.fp-viewing-0 .logo {
+    width: 0;
+    height: 0;
+    margin-right: 0;
+    opacity: 0;
+    flex: 0;
+}
+
+.home:not(.fp-viewing-0),
+.page {
+    .logo {
+        max-width: 282px;
+        height: 69px;
+        opacity: 1;
+    }
+}
+
+.home:not(.fp-viewing-0) .menu {
+  margin-bottom: -10px;
+}
+
+.home .nav-area {
+    padding-top: 0;
+    top: 27px;
+    left: 0;
+    position: fixed;
+}

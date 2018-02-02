@@ -470,6 +470,33 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
     .close-block:hover .cancel {
       fill: #dadada; }
 
+.home .logo {
+  width: 0;
+  opacity: 0; }
+
+.fp-viewing-0 .logo {
+  width: 0;
+  height: 0;
+  margin-right: 0;
+  opacity: 0;
+  -ms-flex: 0;
+  flex: 0; }
+
+.home:not(.fp-viewing-0) .logo,
+.page .logo {
+  max-width: 282px;
+  height: 69px;
+  opacity: 1; }
+
+.home:not(.fp-viewing-0) .menu {
+  margin-bottom: -10px; }
+
+.home .nav-area {
+  padding-top: 0;
+  top: 27px;
+  left: 0;
+  position: fixed; }
+
 .contacts {
   color: #fff;
   padding-top: 130px; }
@@ -618,9 +645,6 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
     top: 3px;
     left: 3px;
     position: absolute; }
-  .nav-panel__instagram:hover {
-    -ms-transform: scale(1.1);
-    transform: scale(1.1); }
 
 .open-menu {
   display: -ms-inline-flexbox;
@@ -633,9 +657,6 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
     box-shadow: 0 7px 0 #fff, 0 -7px 0 #fff;
     transition: all .3s ease;
     content: ''; }
-  .open-menu:hover::before {
-    -ms-transform: scale(1.1);
-    transform: scale(1.1); }
 
 .count-products {
   width: 14px;
@@ -676,11 +697,6 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
     top: 9px;
     left: 9px;
     opacity: 0; }
-  .open-menu:hover svg,
-  .panel-basket:hover svg,
-  .panel-wishlist:hover svg {
-    -ms-transform: scale(1.1);
-    transform: scale(1.1); }
 
 .panel-wishlist .hearth {
   width: 25px;
@@ -763,35 +779,6 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 
 .logo {
   transition: all 0.3s ease; }
-
-.home .logo {
-  width: 0;
-  opacity: 0; }
-
-.fp-viewing-0 .logo {
-  width: 0;
-  height: 0;
-  margin-right: 0;
-  opacity: 0;
-  -ms-flex: 0;
-  flex: 0; }
-
-.home:not(.fp-viewing-0) .logo, .page .logo {
-  max-width: 2882px;
-  height: 69px;
-  margin-right: 275px;
-  opacity: 1;
-  -ms-flex: 0 0 303px;
-  flex: 0 0 303px; }
-
-.home:not(.fp-viewing-0) .menu {
-  margin-bottom: -10px; }
-
-.home .nav-area {
-  padding-top: 0;
-  top: 27px;
-  left: 0;
-  position: fixed; }
 
 .nav-window {
   width: 100%;

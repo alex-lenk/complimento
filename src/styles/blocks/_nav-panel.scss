@@ -24,9 +24,6 @@
         left: 3px;
         position: absolute;
     }
-    &:hover {
-        transform: scale(1.1);
-    }
 }
 
 .open-menu {
@@ -39,9 +36,6 @@
         box-shadow: 0 7px 0 #fff, 0 -7px 0 #fff;
         transition: all .3s ease;
         content: '';
-    }
-    &:hover::before {
-        transform: scale(1.1);
     }
 }
 
@@ -82,9 +76,6 @@
         top: 9px;
         left: 9px;
         opacity: 0;
-    }
-    &:hover svg {
-        transform: scale(1.1);
     }
 }
 
