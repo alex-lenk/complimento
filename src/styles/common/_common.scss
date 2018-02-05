@@ -214,6 +214,8 @@ button, input, select, textarea {
         max-width: 282px;
         height: 69px;
         opacity: 1;
+        transition: all .7s ease;
+        transition-delay: .7s;
     }
 }
 
@@ -223,7 +225,7 @@ button, input, select, textarea {
 
 .home .nav-area {
     padding-top: 0;
-    top: 27px;
+    top: 30px;
     left: 0;
     position: fixed;
 }

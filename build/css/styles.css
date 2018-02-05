@@ -486,14 +486,16 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 .page .logo {
   max-width: 282px;
   height: 69px;
-  opacity: 1; }
+  opacity: 1;
+  transition: all .7s ease;
+  transition-delay: .7s; }
 
 .home:not(.fp-viewing-0) .menu {
   margin-bottom: -10px; }
 
 .home .nav-area {
   padding-top: 0;
-  top: 27px;
+  top: 30px;
   left: 0;
   position: fixed; }
 
@@ -1851,19 +1853,20 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 .checkout-delivery__method .label-block {
   margin-bottom: 0; }
 
-.checkout-billing {
-  margin-bottom: 40px; }
-  .checkout-billing .form-control {
-    height: 48px;
-    padding: 0 20px;
-    border-bottom: 0;
-    background-color: rgba(0, 0, 0, 0.3); }
-  .checkout-billing .control-label {
-    display: none; }
-  .checkout-billing .col-sm-8 {
-    padding: 0; }
-  .checkout-billing .jq-selectbox__select {
-    padding-left: 20px; }
+.checkout-billing .form-control {
+  height: 48px;
+  padding: 0 20px;
+  border-bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3); }
+
+.checkout-billing .control-label {
+  display: none; }
+
+.checkout-billing .col-sm-8 {
+  padding: 0; }
+
+.checkout-billing .jq-selectbox__select {
+  padding-left: 20px; }
 
 .checkout-form-total {
   display: -ms-flexbox;
@@ -2060,3 +2063,38 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 .checkout-billing .ui-group::after,
 .checkout-billing .form-group::after {
   display: none; }
+
+/*
+
+1. Подправить меню на главной и на внутренних страницах
+2. Подправить пропорции второго слайда картинку!
+3. Выровнить сердце на внутренней товара
+4. Подправить согласно макету миниатюры товара.
+5. Подправить эффект наведения в каталоге на "быстрый просмотре" (подсказка по умолчанию скрыта, при наведении показывается)
+6. Подправить попорции товаров в каталоге!5
+
+
+Вербицкий Лев Николаевич
++7 919 997 87 47
+
+
+https://www.instagram.com
+Логин: +7 919 997 87 47 (либо levverbitskii)
+Пароль: r7k9rtedt43
+
+
+
+https://www.facebook.com
++7 919 997 87 47
+r7k9rtedt43
+
+
+https://vk.com/
+r7k9rtedt43
+
+
+https://google.ru/
+skdoanalitica@gmail.com
+jH8$b!((-+~
+
+*/

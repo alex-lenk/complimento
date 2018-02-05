@@ -321,11 +321,11 @@ pre code {
 
 @media (min-width: 1440px) {
   .container-fluid, .container {
-    padding-right: 100px;
-    padding-left: 100px; }
+    padding-right: 88px;
+    padding-left: 88px; }
   .row {
-    margin-right: -100px;
-    margin-left: -100px; } }
+    margin-right: -88px;
+    margin-left: -88px; } }
 
 .row {
   display: -ms-flexbox;
