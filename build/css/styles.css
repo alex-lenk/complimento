@@ -470,7 +470,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
     .close-block:hover .cancel {
       fill: #dadada; }
 
-.home .logo {
+.fp-viewing-0 .logo {
   width: 0;
   opacity: 0; }
 
@@ -484,14 +484,18 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 
 .home:not(.fp-viewing-0) .logo,
 .page .logo {
-  max-width: 282px;
-  height: 69px;
+  max-width: 303px;
+  height: 74px; }
+
+.home:not(.fp-viewing-0) .menu,
+.page .menu {
+  position: relative;
+  bottom: -5px; }
+
+.home:not(.fp-viewing-0) .logo {
   opacity: 1;
   transition: all .7s ease;
   transition-delay: .7s; }
-
-.home:not(.fp-viewing-0) .menu {
-  margin-bottom: -10px; }
 
 .home .nav-area {
   padding-top: 0;
@@ -770,7 +774,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 
 .nav-area {
   width: 100%;
-  padding-top: 30px;
+  padding-top: 25px;
   padding-right: 80px;
   line-height: 1;
   position: relative;
@@ -1512,31 +1516,14 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   max-width: 755px;
   position: relative;
   top: -35px;
-  left: -30px;
-  display: -ms-flexbox;
-  display: flex; }
-
-.media-product__main {
-  height: 100%;
-  -ms-flex: 1;
-  flex: 1; }
+  left: -30px; }
 
 .media-product__thumbs {
-  max-width: 150px;
-  margin-top: auto;
+  padding-left: 0;
   margin-bottom: 0;
-  height: 100%;
-  width: 115px;
-  padding: 0 0 70px;
   list-style: none;
-  -ms-flex: none;
-  flex: none;
   display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-pack: end;
-  justify-content: flex-end; }
+  display: flex; }
 
 .media-product__new {
   width: 45px;
@@ -1556,14 +1543,13 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 
 .media-product__point {
   padding: 5px 12px 0;
-  width: 117px;
-  height: 117px;
   margin-top: 20px;
   border: 2px solid #000;
   cursor: pointer;
-  transition: all 0.5s ease; }
-  .media-product__point:hover {
-    border-color: #dadada; }
+  transition: background-color 0.5s ease; }
+
+.media-product__point-active {
+  background-color: rgba(0, 0, 0, 0.7); }
 
 .item-page__right {
   width: 100%;

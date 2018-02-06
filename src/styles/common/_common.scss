@@ -195,7 +195,7 @@ button, input, select, textarea {
     }
 }
 
-.home .logo {
+.fp-viewing-0 .logo {
     width: 0;
     opacity: 0;
 }
@@ -211,16 +211,21 @@ button, input, select, textarea {
 .home:not(.fp-viewing-0),
 .page {
     .logo {
-        max-width: 282px;
-        height: 69px;
+        max-width: 303px;
+        height: 74px;
+    }
+    .menu {
+        position: relative;
+        bottom: -5px;
+    }
+}
+
+.home:not(.fp-viewing-0) {
+    .logo {
         opacity: 1;
         transition: all .7s ease;
         transition-delay: .7s;
     }
-}
-
-.home:not(.fp-viewing-0) .menu {
-  margin-bottom: -10px;
 }
 
 .home .nav-area {

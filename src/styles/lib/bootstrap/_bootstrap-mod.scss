@@ -402,6 +402,17 @@ pre code {
     }
 }
 
+@media (min-width: 1920px) {
+    .container-fluid, .container {
+        padding-right: 100px;
+        padding-left: 100px;
+    }
+    .row {
+        margin-right: -100px;
+        margin-left: -100px;
+    }
+}
+
 .row {
     display: flex;
     flex-wrap: wrap;
