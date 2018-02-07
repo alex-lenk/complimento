@@ -62,48 +62,6 @@
     flex: 1;
 }
 
-.menu {
-    font-weight: 300;
-    display: flex;
-}
-
-.menu-item {
-    margin-bottom: 50px;
-    color: $colorDark;
-    text-transform: uppercase;
-    position: relative;
-    line-height: 1;
-    white-space: nowrap;
-}
-
-.menu-link {
-    color: inherit;
-    position: relative;
-    text-decoration: none;
-    &:hover {
-        color: inherit;
-    }
-}
-
-.menu-catalog {
-    cursor: pointer;
-    .arrow-s {
-        width: 12px;
-        height: 12px;
-        margin-left: 7px;
-        top: -1px;
-        position: relative;
-        fill: $colorDark;
-    }
-}
-
-.menu-active {
-    color: $colorLight;
-    .arrow-s {
-        fill: $colorLight;
-    }
-}
-
 .header-home-icons, .header-catalog-icons {
     padding-top: 7px;
     margin-left: auto;

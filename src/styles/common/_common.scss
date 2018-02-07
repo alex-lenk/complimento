@@ -195,6 +195,11 @@ button, input, select, textarea {
     }
 }
 
+.logo {
+    height: 74px;
+    transition: all 0.3s ease;
+}
+
 .fp-viewing-0 .logo {
     width: 0;
     opacity: 0;
@@ -212,11 +217,6 @@ button, input, select, textarea {
 .page {
     .logo {
         max-width: 303px;
-        height: 74px;
-    }
-    .menu {
-        position: relative;
-        bottom: -5px;
     }
 }
 
@@ -233,4 +233,18 @@ button, input, select, textarea {
     top: 30px;
     left: 0;
     position: fixed;
+}
+
+.decor-link {
+    display: inline-block;
+    text-decoration: none;
+    &::after {
+        width: 0;
+        height: 1px;
+        margin: 0 auto;
+        background-color: #fff;
+        display: block;
+        transition: all 0.3s ease;
+        content: '';
+    }
 }

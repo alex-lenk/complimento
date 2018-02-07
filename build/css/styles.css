@@ -470,6 +470,10 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
     .close-block:hover .cancel {
       fill: #dadada; }
 
+.logo {
+  height: 74px;
+  transition: all 0.3s ease; }
+
 .fp-viewing-0 .logo {
   width: 0;
   opacity: 0; }
@@ -484,13 +488,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 
 .home:not(.fp-viewing-0) .logo,
 .page .logo {
-  max-width: 303px;
-  height: 74px; }
-
-.home:not(.fp-viewing-0) .menu,
-.page .menu {
-  position: relative;
-  bottom: -5px; }
+  max-width: 303px; }
 
 .home:not(.fp-viewing-0) .logo {
   opacity: 1;
@@ -502,6 +500,18 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   top: 30px;
   left: 0;
   position: fixed; }
+
+.decor-link {
+  display: inline-block;
+  text-decoration: none; }
+  .decor-link::after {
+    width: 0;
+    height: 1px;
+    margin: 0 auto;
+    background-color: #fff;
+    display: block;
+    transition: all 0.3s ease;
+    content: ''; }
 
 .contacts {
   color: #fff;
@@ -745,32 +755,47 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 
 .menu {
   width: 100%;
-  padding-top: 30px;
   margin-left: auto;
   color: #fff;
   line-height: 1;
   letter-spacing: 1.6px;
   font-weight: 300;
+  display: -ms-flexbox;
+  display: flex;
   transition: all 0.3s ease; }
+
+.menu-item {
+  margin-bottom: 50px;
+  color: #2A2928;
+  text-transform: uppercase;
+  position: relative;
+  line-height: 1;
+  white-space: nowrap; }
 
 .menu-link {
   color: #fff;
-  text-decoration: none;
-  display: inline-block;
   position: relative; }
-  .menu-link::after {
-    width: 0;
-    height: 1px;
-    margin: 0 auto;
-    background-color: #fff;
-    display: block;
-    content: '';
-    transition: all 0.3s ease; }
-  .menu-link:hover::after {
-    width: 100%; }
+  .menu-link:hover {
+    color: inherit; }
+    .menu-link:hover::after {
+      width: 100%; }
 
-.menu-point__active .menu-link::after {
-  width: 100%; }
+.menu-catalog {
+  cursor: pointer; }
+  .menu-catalog .arrow-s {
+    width: 12px;
+    height: 12px;
+    margin-left: 7px;
+    top: -1px;
+    position: relative;
+    fill: #2A2928; }
+
+.menu-active {
+  color: #C5C5C5; }
+  .menu-active .arrow-s {
+    fill: #C5C5C5; }
+  .menu-active .menu-link::after {
+    width: 100%; }
 
 .nav-area {
   width: 100%;
@@ -782,9 +807,6 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   .nav-area .container {
     display: -ms-flexbox;
     display: flex; }
-
-.logo {
-  transition: all 0.3s ease; }
 
 .nav-window {
   width: 100%;
@@ -805,7 +827,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   box-shadow: 3px 2px 30px rgba(0, 0, 0, 0.6);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
-  transition: transform 1.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  transition: transform .7s ease;
   will-change: transform; }
 
 .nav-window__title {
@@ -1021,15 +1043,6 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   -ms-flex-align: center;
   align-items: center; }
 
-.page-menu__point::after {
-  width: 0;
-  height: 1px;
-  margin: -5px auto 0;
-  background-color: #fff;
-  display: block;
-  content: '';
-  transition: all 0.3s ease; }
-
 .page-menu__point:hover::after {
   width: 100%; }
 
@@ -1051,15 +1064,28 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   max-width: 1161px;
   width: 100%;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column; }
 
 .section-flower__media {
   max-height: 66vh;
   height: 100%;
   margin-bottom: 20px;
   overflow: hidden;
-  display: block;
-  position: relative; }
+  position: relative;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  -ms-flex: 1;
+  flex: 1; }
+  .section-flower__media img {
+    max-height: inherit;
+    margin-right: auto;
+    margin-left: auto;
+    display: block; }
   .section-flower__media:hover .section-flower__get {
     -ms-transform: translateY(0);
     transform: translateY(0); }
@@ -1068,6 +1094,8 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   color: #fff;
   line-height: 32px;
   font-family: "Comic Sans MS", akrobat, sans-serif;
+  -ms-flex: 1;
+  flex: 1;
   font-size: 1.0625rem; }
 
 .section-flower__get {
@@ -1149,8 +1177,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   flex-wrap: wrap; }
 
 .catalog-item {
-  margin-bottom: 85px;
-  min-width: 237px;
+  position: relative;
   text-align: center; }
   .catalog-item a {
     text-decoration: none; }
@@ -1162,40 +1189,18 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
       width: 100%;
       opacity: 1; }
 
-.catalog-item__inner {
-  display: inline-block;
-  position: relative; }
-
 .catalog-media {
-  width: 148px;
-  height: 191px;
-  margin-bottom: 15px;
-  position: relative;
-  display: block;
-  z-index: -1; }
-  .catalog-media img {
-    max-width: 274px;
-    max-height: 307px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
+  display: block; }
 
 .catalog-title {
+  max-width: 50%;
   display: inline-block;
   font-weight: 600;
   color: #dadada;
   line-height: 1;
+  top: -30px;
+  position: relative;
   transition: all 0.5s ease; }
-  .catalog-title::after {
-    width: 0;
-    height: 1px;
-    opacity: 0;
-    display: block;
-    background-color: #fff;
-    transition: all 0.5s ease;
-    content: ''; }
 
 .catalog-view {
   padding-left: 36px;
@@ -1228,8 +1233,8 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   color: #fff;
   line-height: 34px;
   text-transform: uppercase;
-  top: 0;
-  left: -3px;
+  top: 17%;
+  left: 23%;
   position: absolute;
   z-index: 5;
   transition: all 0.3s ease;
@@ -1237,12 +1242,14 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 
 .catalog-quick {
   position: absolute;
-  top: 0;
-  right: -35px;
+  top: 17%;
+  right: 11%;
   z-index: 10;
   cursor: pointer;
   opacity: 0;
   transition: opacity 0.3s ease; }
+  .catalog-quick:hover .catalog-quick-view {
+    opacity: 1; }
 
 .catalog-quick__wrap {
   width: 35px;
@@ -1270,7 +1277,9 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   font-weight: 400;
   display: inline-block;
   color: #fff;
+  opacity: 0;
   background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s ease;
   font-size: 0.8125rem; }
 
 .modal-product {
@@ -1291,12 +1300,12 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
     top: 10px;
     right: 17px; }
   .modal-product .media-product__main {
-    padding-top: 15px;
-    padding-left: 45px; }
-  .modal-product .media-product__thumbs {
-    padding-bottom: 50px; }
+    padding-top: 15px; }
   .modal-product .media-product__point {
     border-width: 0; }
+  .modal-product .media-product {
+    margin: auto;
+    left: 0; }
 
 .fancybox-active.product-modal-opened .fancybox-bg {
   background-color: transparent; }
@@ -2058,29 +2067,5 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 4. Подправить согласно макету миниатюры товара.
 5. Подправить эффект наведения в каталоге на "быстрый просмотре" (подсказка по умолчанию скрыта, при наведении показывается)
 6. Подправить попорции товаров в каталоге!5
-
-
-Вербицкий Лев Николаевич
-+7 919 997 87 47
-
-
-https://www.instagram.com
-Логин: +7 919 997 87 47 (либо levverbitskii)
-Пароль: r7k9rtedt43
-
-
-
-https://www.facebook.com
-+7 919 997 87 47
-r7k9rtedt43
-
-
-https://vk.com/
-r7k9rtedt43
-
-
-https://google.ru/
-skdoanalitica@gmail.com
-jH8$b!((-+~
 
 */

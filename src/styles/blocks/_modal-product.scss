@@ -20,13 +20,14 @@
   }
   .media-product__main {
     padding-top: 15px;
-    padding-left: 45px;
-  }
-  .media-product__thumbs {
-    padding-bottom: 50px;
   }
   .media-product__point {
     border-width: 0;
+  }
+
+  .media-product {
+    margin: auto;
+    left: 0;
   }
 }
 
@@ -46,7 +47,6 @@
 /* Start state */
 .animated-modal {
   overflow: hidden;
-
   transform: scale(.7);
   transition: all .7s;
 }

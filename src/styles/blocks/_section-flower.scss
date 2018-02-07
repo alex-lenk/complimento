@@ -8,6 +8,8 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .section-flower__media {
@@ -15,8 +17,15 @@
   height: 100%;
   margin-bottom: 20px;
   overflow: hidden;
-  display: block;
   position: relative;
+  align-self: center;
+  flex: 1;
+  img {
+    max-height: inherit;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+  }
   &:hover .section-flower__get {
     transform: translateY(0);
   }
@@ -26,6 +35,7 @@
   color: #fff;
   line-height: 32px;
   font-family: "Comic Sans MS", akrobat, sans-serif;
+  flex: 1;
   @include font-size(17px);
 }
 

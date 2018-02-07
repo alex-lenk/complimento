@@ -1,35 +1,52 @@
 .menu {
     width: 100%;
-    padding-top: 30px;
     margin-left: auto;
     color: #fff;
     line-height: 1;
     letter-spacing: 1.6px;
     font-weight: 300;
+    display: flex;
     transition: all 0.3s ease;
+}
+
+.menu-item {
+  margin-bottom: 50px;
+  color: $colorDark;
+  text-transform: uppercase;
+  position: relative;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .menu-link {
     color: #fff;
-    text-decoration: none;
-    display: inline-block;
     position: relative;
-    &::after {
-        width: 0;
-        height: 1px;
-        margin: 0 auto;
-        background-color: #fff;
-        display: block;
-        content: '';
-        transition: all 0.3s ease;
-    }
     &:hover {
+      color: inherit;
         &::after {
             width: 100%;
         }
     }
 }
 
-.menu-point__active .menu-link::after {
+.menu-catalog {
+    cursor: pointer;
+    .arrow-s {
+        width: 12px;
+        height: 12px;
+        margin-left: 7px;
+        top: -1px;
+        position: relative;
+        fill: $colorDark;
+    }
+}
+
+.menu-active {
+    color: $colorLight;
+    .arrow-s {
+        fill: $colorLight;
+    }
+  .menu-link::after {
     width: 100%;
+  }
 }
