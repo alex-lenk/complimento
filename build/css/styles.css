@@ -496,8 +496,6 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   transition-delay: .7s; }
 
 .home .nav-area {
-  padding-top: 0;
-  top: 30px;
   left: 0;
   position: fixed; }
 
@@ -760,8 +758,6 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   line-height: 1;
   letter-spacing: 1.6px;
   font-weight: 300;
-  display: -ms-flexbox;
-  display: flex;
   transition: all 0.3s ease; }
 
 .menu-item {
@@ -2065,11 +2061,6 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 .checkout-billing .form-group::after {
   display: none; }
 
-/*
-
-Подправить ошибки в чекауте
-
-*/
 .page {
   display: -ms-flexbox;
   display: flex;

@@ -187,15 +187,6 @@
         margin-bottom: 45px;
     }
 
-    body:not(.fp-viewing-0) .nav-area {
-        top: 93px;
-        padding-top: 0;
-    }
-
-    .nav-area .logo {
-        display: none;
-    }
-
     .pay-succes__title {
         margin-bottom: 40px;
     }
@@ -335,16 +326,20 @@
     }
 
     //**********************
-
     .nav-area {
         max-width: 190px;
         padding-right: 0;
         top: 120px;
+        top: 93px;
+        padding-top: 0;
         z-index: 14;
         position: fixed;
         transition: all 1.5s ease;
         will-change: transform;
         transform: translateX(-100%);
+        .logo {
+            display: none;
+        }
     }
 
     .menu {
@@ -476,6 +471,11 @@
 }
 
 @media (min-width: 768px) {
+    .home .nav-area {
+        padding-top: 0;
+        top: 30px;
+    }
+
     .grid-balance {
         margin: 0 -15px;
     }
