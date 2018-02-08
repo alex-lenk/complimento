@@ -595,8 +595,8 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
     position: absolute;
     transition: all 0.3s ease; }
   .contacts-social .fb {
-    width: 23px;
-    height: 23px;
+    width: 21px;
+    height: 21px;
     top: 3px; }
   .contacts-social .instagram {
     width: 16px;
@@ -2067,14 +2067,6 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 
 /*
 
-1. Подправить меню на главной и на внутренних страницах
-2. Подправить пропорции второго слайда картинку!
-3. Выровнить сердце на внутренней товара
-4. Подправить согласно макету миниатюры товара.
-5. Подправить эффект наведения в каталоге на "быстрый просмотре" (подсказка по умолчанию скрыта, при наведении показывается)
-6. Подправить попорции товаров в каталоге!5
-
-Подправить крестик в меню товаров
 Подправить ошибки в чекауте
 
 */
