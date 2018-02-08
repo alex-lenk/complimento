@@ -891,7 +891,9 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   width: 154px;
   height: 191px;
   margin-right: 25px;
-  position: relative; }
+  position: relative;
+  -ms-flex: 0 0 154px;
+  flex: 0 0 154px; }
   .nav-products__media img {
     max-width: 270px;
     margin-top: 9px;
@@ -904,9 +906,12 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
     transform: translate(-50%, -50%); }
 
 .nav-products__info {
+  -ms-flex: 1;
+  flex: 1;
   font-size: 1.125rem; }
 
 .nav-products__title {
+  padding-right: 26px;
   margin-bottom: 5px;
   font-weight: bold;
   position: relative; }
@@ -941,7 +946,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
       background-color: #fff; }
 
 .close-product {
-  right: -26px;
+  right: 0;
   top: 3px;
   width: 20px;
   height: 20px; }
@@ -2068,7 +2073,6 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 4. Подправить согласно макету миниатюры товара.
 5. Подправить эффект наведения в каталоге на "быстрый просмотре" (подсказка по умолчанию скрыта, при наведении показывается)
 6. Подправить попорции товаров в каталоге!5
-
 
 Подправить крестик в меню товаров
 Подправить ошибки в чекауте
