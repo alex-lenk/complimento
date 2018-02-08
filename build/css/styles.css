@@ -790,11 +790,11 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
     position: relative;
     fill: #2A2928; }
 
-.menu-active {
+.menu-point__active {
   color: #C5C5C5; }
-  .menu-active .arrow-s {
+  .menu-point__active .arrow-s {
     fill: #C5C5C5; }
-  .menu-active .menu-link::after {
+  .menu-point__active .decor-link::after {
     width: 100%; }
 
 .nav-area {
@@ -1774,7 +1774,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   padding-top: 70px; }
 
 .checkout-panel {
-  padding-top: 24px;
+  padding-top: 194px;
   position: relative; }
   .checkout-panel .swiper-container {
     margin: 0; }
@@ -1788,7 +1788,8 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
     margin-top: -1px; }
 
 .checkout-right {
-  padding-bottom: 60px;
+  padding-top: 170px;
+  padding-bottom: 110px;
   -ms-flex: 1;
   flex: 1; }
 
@@ -2068,4 +2069,41 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 5. Подправить эффект наведения в каталоге на "быстрый просмотре" (подсказка по умолчанию скрыта, при наведении показывается)
 6. Подправить попорции товаров в каталоге!5
 
+
+Подправить крестик в меню товаров
+Подправить ошибки в чекауте
+
 */
+.page {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  .page .nav-area {
+    -ms-flex: 0;
+    flex: 0; }
+
+.page #barba-wrapper, .page .barba-container, .checkout, .checkout-wrap, #simplecheckout_form_0 {
+  -ms-flex: 1;
+  flex: 1;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.checkout {
+  margin-top: -170px;
+  overflow-y: hidden; }
+
+.simplecheckout {
+  padding-bottom: 23px;
+  position: relative; }
+
+.simplecheckout-step {
+  -ms-flex: 1;
+  flex: 1; }
+
+.simplecheckout-button-block {
+  position: absolute;
+  right: 0;
+  bottom: 50px; }

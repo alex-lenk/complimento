@@ -41,12 +41,12 @@
     }
 }
 
-.menu-active {
+.menu-point__active {
     color: $colorLight;
     .arrow-s {
         fill: $colorLight;
     }
-  .menu-link::after {
+  .decor-link::after {
     width: 100%;
   }
 }

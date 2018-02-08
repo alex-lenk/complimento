@@ -408,15 +408,15 @@
     padding: 55px 35px; }
   .checkout-panel::before {
     width: 150rem;
-    height: calc(100% + 270px);
-    top: -270px;
+    height: 100rem;
+    top: 0;
     right: 0;
     position: absolute;
     z-index: -1;
     background-color: rgba(0, 0, 0, 0.3);
     content: ''; }
-  .checkout-wrap {
-    min-height: 100vh;
+  .simplecheckout-step {
+    min-height: 100%;
     display: -ms-flexbox;
     display: flex; } }
 

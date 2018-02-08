@@ -533,7 +533,7 @@
 }
 
 .checkout-panel {
-    padding-top: 24px;
+    padding-top: 194px;
     position: relative;
     .swiper-container {
         margin: 0;
@@ -552,7 +552,8 @@
 }
 
 .checkout-right {
-    padding-bottom: 60px;
+    padding-top: 170px;
+    padding-bottom: 110px;
     flex: 1;
 }
 
@@ -885,4 +886,42 @@
 5. Подправить эффект наведения в каталоге на "быстрый просмотре" (подсказка по умолчанию скрыта, при наведении показывается)
 6. Подправить попорции товаров в каталоге!5
 
+
+Подправить крестик в меню товаров
+Подправить ошибки в чекауте
+
 */
+
+.page {
+    display: flex;
+    flex-direction: column;
+    .nav-area {
+        flex: 0;
+    }
+}
+
+.page #barba-wrapper, .page .barba-container, .checkout, .checkout-wrap, #simplecheckout_form_0 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout {
+    margin-top: -170px;
+    overflow-y: hidden;
+}
+
+.simplecheckout {
+    padding-bottom: 23px;
+    position: relative;
+}
+
+.simplecheckout-step {
+    flex: 1;
+}
+
+.simplecheckout-button-block {
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+}
