@@ -591,17 +591,11 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
     border-radius: 2px;
     background-color: #fff;
     position: relative;
-    display: block;
-    transition: all 0.5s ease; }
-    .contacts-social a:hover {
-      background-color: transparent; }
-      .contacts-social a:hover svg {
-        fill: #fff; }
+    display: block; }
   .contacts-social svg {
     fill: #000;
     left: 4px;
-    position: absolute;
-    transition: all 0.3s ease; }
+    position: absolute; }
   .contacts-social .fb {
     width: 21px;
     height: 21px;
@@ -1570,7 +1564,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 .media-product__point {
   padding: 5px 12px 0;
   margin-top: 20px;
-  border: 2px solid #000;
+  border: 2px solid #101010;
   cursor: pointer;
   transition: background-color 0.5s ease; }
 
@@ -1916,8 +1910,8 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
     bottom: -75px;
     left: 0;
     position: absolute;
-    font-size: 1.25rem;
-    color: #FE5E5E; }
+    color: #FE5E5E;
+    font-size: 1.0625rem; }
     .checkout-form__promo .alert + .checkout-form__promo-thanks {
       opacity: 0; }
 
@@ -1978,7 +1972,10 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   z-index: 5;
   position: absolute;
   background: #101010;
-  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.5); }
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease-in;
+  opacity: 0;
+  pointer-events: none; }
 
 .filter-gallery__point {
   cursor: pointer;
@@ -2014,13 +2011,19 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   .filter-gallery__current span::after {
     background-color: #fff; }
 
+.filter-gallery__opened .filter-gallery__list {
+  opacity: 1;
+  pointer-events: auto; }
+
 .grid-balance:after {
   display: table;
   clear: both;
   content: ""; }
 
-.grid-item img {
-  box-shadow: 0 0 6px 0 #000000, 0 2px 40px 0 rgba(0, 0, 0, 0.75); }
+.grid-item {
+  cursor: pointer; }
+  .grid-item img {
+    box-shadow: 0 0 6px 0 #000000, 0 2px 40px 0 rgba(0, 0, 0, 0.75); }
 
 .pay-succes {
   padding-top: 75px; }

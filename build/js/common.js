@@ -166,7 +166,6 @@ $(document).ready(function () {
     $('.filter-gallery__label').click(
         function () {
             $(this).parent().toggleClass('filter-gallery__opened');
-            $('.filter-gallery__list').toggle('medium');
         }
     );
 

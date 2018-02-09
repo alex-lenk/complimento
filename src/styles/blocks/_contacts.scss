@@ -74,19 +74,11 @@
         background-color: #fff;
         position: relative;
         display: block;
-        transition: all 0.5s ease;
-        &:hover {
-            background-color: transparent;
-            svg {
-                fill: #fff;
-            }
-        }
     }
     svg {
         fill: #000;
         left: 4px;
         position: absolute;
-        transition: all 0.3s ease;
     }
     .fb {
         width: 21px;

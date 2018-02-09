@@ -281,7 +281,7 @@
 .media-product__point {
     padding: 5px 12px 0;
     margin-top: 20px;
-    border: 2px solid #000;
+    border: 2px solid #101010;
     cursor: pointer;
     transition: background-color 0.5s ease;
 }
@@ -673,8 +673,8 @@
         bottom: -75px;
         left: 0;
         position: absolute;
-        font-size: 1.25rem;
         color: #FE5E5E;
+        @include font-size(17px);
         + .checkout-form__promo-thanks {
             opacity: 0;
         }
@@ -750,6 +750,10 @@
     position: absolute;
     background: #101010;
     box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.50);
+
+    transition: all 0.5s ease-in;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .filter-gallery__point {
@@ -796,6 +800,8 @@
 
 .filter-gallery__opened {
     .filter-gallery__list {
+        opacity: 1;
+        pointer-events: auto;
     }
 }
 
@@ -804,6 +810,7 @@
 }
 
 .grid-item {
+    cursor: pointer;
     img {
         box-shadow: 0 0 6px 0 #000000, 0 2px 40px 0 rgba(0, 0, 0, 0.75);
     }
