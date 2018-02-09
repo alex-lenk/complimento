@@ -1031,6 +1031,9 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 .color-light-green {
   background-color: #CEEC8C; }
 
+.color-red {
+  background-color: #FE5E5E; }
+
 .page-menu {
   padding-top: 165px;
   text-align: center; }
@@ -1191,7 +1194,10 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
       opacity: 1; }
 
 .catalog-media {
-  display: block; }
+  display: block;
+  padding-bottom: 50px;
+  max-width: 200px;
+  margin: 0 auto; }
 
 .catalog-title {
   max-width: 50%;
@@ -2081,6 +2087,20 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 .checkout {
   margin-top: -170px;
   overflow-y: hidden; }
+  .checkout .has-error .form-control::-moz-placeholder {
+    opacity: 0; }
+  .checkout .has-error .form-control:-ms-input-placeholder {
+    opacity: 0; }
+  .checkout .has-error .form-control::-ms-input-placeholder {
+    opacity: 0; }
+  .checkout .has-error .form-control::-webkit-input-placeholder {
+    opacity: 0; }
+  .checkout .has-error .simplecheckout-rule-group {
+    position: absolute;
+    top: 12px;
+    left: 20px;
+    color: #fe5d5e;
+    pointer-events: none; }
 
 .simplecheckout {
   padding-bottom: 23px;

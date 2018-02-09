@@ -894,6 +894,20 @@
 .checkout {
     margin-top: -170px;
     overflow-y: hidden;
+    .has-error {
+        .form-control {
+            @include hidePlaceholder {
+                opacity: 0;
+            }
+        }
+        .simplecheckout-rule-group {
+            position: absolute;
+            top: 12px;
+            left: 20px;
+            color: #fe5d5e;
+            pointer-events: none;
+        }
+    }
 }
 
 .simplecheckout {

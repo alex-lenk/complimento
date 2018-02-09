@@ -35,6 +35,10 @@
 }
 
 @media (max-width: 1439px) {
+    .nav-products__info {
+        padding-right: 10px;
+    }
+    
     .contacts-form__block {
         padding-top: 40px;
         padding-bottom: 40px;
@@ -516,9 +520,6 @@
             float: left;
         }
     }
-    .checkout-delivery__method .radio:not(:last-of-type) {
-        margin-right: 100px;
-    }
 
     .checkout-payments-block .radio {
         width: 188px;
@@ -703,7 +704,7 @@
         margin-right: 100px;
     }
 
-    .wrapper, .copyright, .fp-tableCell, .catalog-wrap, .contacts, .checkout, .item-page, .pay-succes {
+    .wrapper, .copyright, .fp-tableCell, .catalog, .contacts, .checkout, .item-page, .pay-succes {
         padding-right: 80px;
     }
 
@@ -764,6 +765,10 @@
 }
 
 @media (min-width: 768px) and (max-width: 1099px) {
+    .checkout-delivery__method .radio:not(:last-of-type) {
+        margin-right: 100px;
+    }
+    
     .half-block {
         padding-right: 121px;
         padding-left: 60px;
@@ -822,12 +827,29 @@
 }
 
 @media (min-width: 768px) and (max-width: 1919px) {
-    .wrapper, .checkout, .item-page, .contacts, .catalog-wrap, .fp-tableCell, .copyright, .pay-succes {
+    .wrapper, .checkout, .item-page, .contacts, .catalog, .fp-tableCell, .copyright, .pay-succes {
         padding-right: 61px;
     }
 }
 
 @media (min-width: 1100px) and (max-width: 1439px) {
+    .checkout-delivery__method .radio:not(:last-of-type) {
+        margin-right: 75px;
+    }
+    
+    .checkout-billing .form-horizontal {
+        margin: 0 -15px;
+    }
+    
+    .checkout-billing .form-group {
+        max-width: calc(100% / 2 - 30px);
+        margin: 0 15px 25px;
+    }
+    
+    .checkout-form-total {
+        align-items: flex-start;
+    }
+    
     .half-block__right {
         padding-right: 140px;
     }
@@ -878,8 +900,26 @@
     }
 
     .checkout-panel {
-        width: 392px;
+        width: 320px;
         margin-right: 30px;
+    }
+}
+
+@media (min-width: 1100px) and (max-width: 1919px) {
+    h1, .h1 {
+        margin-bottom: 60px;
+    }
+    
+    .checkout-info {
+        margin-bottom: 60px;
+    }
+    
+    .checkout-delivery__method .radio:not(:last-of-type) {
+        margin-right: 100px;
+    }
+    
+    .checkout .form-horizontal.simplecheckout-block {
+        margin-bottom: 30px;
     }
 }
 
@@ -954,7 +994,7 @@
     }
 
     .checkout-panel {
-        width: 496px;
+        width: 410px;
         margin-right: 70px;
     }
 }
