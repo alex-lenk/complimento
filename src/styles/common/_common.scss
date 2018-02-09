@@ -17,6 +17,7 @@ body {
     line-height: 1.4;
     color: #fff;
     font-weight: 300;
+    background-color: #000;
     font-family: 'akrobat', -apple-system, "Segoe UI", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     @include font-size(18px);
     &::before {
@@ -244,5 +245,18 @@ button, input, select, textarea {
         display: block;
         transition: all 0.3s ease;
         content: '';
+    }
+}
+
+.main-section__next {
+    animation: arr 2s infinite;
+}
+
+@keyframes arr{
+    0%,100%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(20px);
     }
 }
