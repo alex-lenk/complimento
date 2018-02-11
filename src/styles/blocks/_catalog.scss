@@ -1,9 +1,6 @@
 .catalog {
     padding-top: 75px;
     overflow-x: hidden;
-    h1 {
-        margin-bottom: 75px;
-    }
 }
 
 .catalog-list {
@@ -33,19 +30,14 @@
 
 .catalog-media {
     display: block;
-    padding-bottom: 50px;
-    max-width: 200px;
-    margin: 0 auto;
+    max-width: 180px;
+    margin: 0 auto 10px;
 }
 
 .catalog-title {
-    max-width: 50%;
-    display: inline-block;
     font-weight: 600;
     color: #dadada;
     line-height: 1;
-    top: -30px;
-    position: relative;
     transition: all 0.5s ease;
 }
 
