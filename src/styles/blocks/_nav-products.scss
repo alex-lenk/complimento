@@ -10,7 +10,6 @@
 
 .nav-products__slide {
     height: 300px;
-    padding-left: 70px;
     text-align: left;
     overflow: hidden;
     display: flex;
@@ -19,20 +18,10 @@
 }
 
 .nav-products__media {
-    width: 154px;
-    height: 191px;
-    margin-right: 25px;
+    margin-right: 10px;
     position: relative;
-    flex: 0 0 154px;
+    flex: 0 0 170px;
     img {
-        max-width: 270px;
-        margin-top: 9px;
-        margin-left: 5px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        pointer-events: none;
-        transform: translate(-50%, -50%);
     }
 }
 
@@ -94,15 +83,6 @@
         height: 14px;
         top: 3px;
         left: 3px;
-    }
-}
-
-.swiper-wrapper .nav-products__slide {
-    &:nth-of-type(odd) {
-        transform: translateY(25px);
-    }
-    &:nth-of-type(even) {
-        transform: translateY(-25px);
     }
 }
 

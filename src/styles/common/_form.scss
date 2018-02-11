@@ -46,7 +46,7 @@
 }
 
 .ui-label {
-    color: #DADADA;
+    color: #dadada;
 }
 
 textarea.ui-field, textarea.form-control {
@@ -58,7 +58,7 @@ textarea.ui-field, textarea.form-control {
     width: 100%;
     padding: 0 12px;
     background: transparent;
-    color: #DADADA;
+    color: #dadada;
     font-weight: 300;
     display: block;
     outline: none;
@@ -136,4 +136,15 @@ input::-webkit-contacts-auto-fill-button {
     pointer-events: none;
     position: absolute;
     right: 0;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s; /* выставляется желаемая задержка */
+}
+
+input:-webkit-autofill {
+    -webkit-text-fill-color: #dadada !important;
 }

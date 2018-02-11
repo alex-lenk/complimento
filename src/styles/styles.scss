@@ -535,6 +535,22 @@
 
 //******************************
 
+.checkout-is-empty {
+    height: 100%;
+    .checkout-title-first {
+        display: block;
+    }
+    .checkout-wrap {
+        justify-content: center;
+        align-items: center;
+    }
+    #simplecheckout_form_0 {
+        justify-content: center;
+        align-items: center;
+        flex: 0;
+    }
+}
+
 .checkout-wrap {
     padding-top: 70px;
 }
@@ -544,9 +560,6 @@
     position: relative;
     .swiper-container {
         margin: 0;
-    }
-    .nav-products__slide {
-        padding-left: 0;
     }
     .nav-products__wrap {
         padding-right: 0;
