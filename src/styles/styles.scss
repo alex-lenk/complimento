@@ -196,8 +196,6 @@
 
 .wishlist {
     position: absolute;
-    right: 40px;
-    top: 50px;
     z-index: 50;
     width: 35px;
     height: 35px;
@@ -252,13 +250,6 @@
     position: relative;
 }
 
-.product-new-wrap {
-    .wishlist {
-        right: -4px;
-        top: 46px;
-    }
-}
-
 .media-product__thumbs {
     padding-left: 0;
     margin-bottom: 0;
@@ -273,8 +264,6 @@
     background-color: #fff;
     color: #000;
     text-transform: uppercase;
-    top: 41px;
-    right: 65px;
     line-height: 45px;
     font-weight: 600;
     text-align: center;
@@ -340,7 +329,6 @@
 
 .product-select {
     width: 100%;
-    max-width: 240px;
     margin-bottom: 0;
     .form-control {
         border-bottom: 0;
@@ -993,3 +981,15 @@
     right: 0;
     bottom: 50px;
 }
+
+//*************************
+
+.products-bottom__quantity {
+}
+
+.products-bottom__text {
+}
+
+.products-bottom__number {
+}
+

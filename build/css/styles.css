@@ -1477,8 +1477,6 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 
 .wishlist {
   position: absolute;
-  right: 40px;
-  top: 50px;
   z-index: 50;
   width: 35px;
   height: 35px;
@@ -1520,10 +1518,6 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 .media-product__main {
   position: relative; }
 
-.product-new-wrap .wishlist {
-  right: -4px;
-  top: 46px; }
-
 .media-product__thumbs {
   padding-left: 0;
   margin-bottom: 0;
@@ -1538,8 +1532,6 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   background-color: #fff;
   color: #000;
   text-transform: uppercase;
-  top: 41px;
-  right: 65px;
   line-height: 45px;
   font-weight: 600;
   text-align: center;
@@ -1600,7 +1592,6 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 
 .product-select {
   width: 100%;
-  max-width: 240px;
   margin-bottom: 0; }
   .product-select .form-control {
     border-bottom: 0;

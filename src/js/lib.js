@@ -39,5 +39,5 @@
 /* 7. jquery.fancybox.min.js */
 //= ../../bower_components/fancybox/dist/jquery.fancybox.min.js
 
-/* 7. bootstrap.min.js */
+/* 8. bootstrap.min.js */
 //= lib/bootstrap/bootstrap.min.js
