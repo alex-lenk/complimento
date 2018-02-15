@@ -412,10 +412,11 @@
     }
     .btn-white {
         height: 55px;
-        margin: 0 91px 0 16px;
+        margin-left: 16px;
     }
     .btn-buy {
         height: auto;
+        margin-left: 90px;
         padding: 0;
         min-width: 0;
         color: #fff;
@@ -628,6 +629,9 @@
     }
     .label-block {
         margin-bottom: 0;
+    }
+    .radio:not(:last-of-type) {
+        margin-right: 100px;
     }
 }
 
@@ -991,6 +995,7 @@
 }
 
 .products-bottom__number {
+    display: flex;
 }
 
 //*****************************

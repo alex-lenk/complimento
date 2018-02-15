@@ -191,6 +191,10 @@
 }
 
 @media (max-width: 767px) {
+    .products-bottom .btn-buy {
+        margin-left: 45px;
+    }
+
     .products-bottom {
         flex-wrap: wrap;
         .btn-white {
@@ -352,7 +356,31 @@
     }
     
     .checkout {
-        overflow: hidden;
+        margin-top: 0;
+        .nav-products__media {
+            width: 135px;
+            height: auto;
+            flex-basis: 135px;
+            img {
+                max-width: 100%;
+            }
+        }
+        .nav-products__title {
+            padding-right: 0;
+        }
+    }
+    .checkout-form-total {
+        padding-top: 10px;
+    }
+    .simplecheckout-button-block {
+        width: 100%;
+        text-align: center;
+        bottom: 40px;
+    }
+    .checkout-form__promo .alert {
+        top: 15px;
+        bottom: auto;
+        position: relative;
     }
     .checkout-wrap {
         padding-top: 108px;
@@ -362,6 +390,7 @@
         text-align: center;
     }
     .checkout-panel {
+        padding-top: 20px;
         .nav-products-next {
             right: 0;
             top: -19px;
@@ -551,14 +580,9 @@
         max-width: 100%;
     }
     
-    .checkout-delivery__method .radio {
-        &:first-of-type {
-            margin-right: 100px;
-        }
-        &:last-of-type {
-            width: 100%;
-            margin-top: 30px;
-        }
+    .checkout-delivery__method .radio:last-of-type {
+        width: 100%;
+        margin-top: 30px;
     }
 }
 
@@ -577,6 +601,10 @@
 }
 
 @media (min-width: 768px) {
+    .products-bottom__text {
+        display: none;
+    }
+
     .home .nav-area {
         padding-top: 30px;
         top: 0;
@@ -802,11 +830,7 @@
     .products-bottom .btn-white {
         min-width: 200px;
     }
-    
-    .checkout-delivery__method .radio:not(:last-of-type) {
-        margin-right: 100px;
-    }
-    
+
     .simplecheckout-button-block .btn-white {
         height: 55px;
     }
@@ -970,6 +994,15 @@
 }
 
 @media (min-width: 768px) and (max-width: 1099px) {
+    .checkout-wrap {
+        padding-top: 239px;
+    }
+    .checkout-panel {
+        padding-top: 0;
+    }
+    .checkout-title-first {
+        margin-bottom: 60px;
+    }
     .checkout-right {
         padding-top: 0;
     }
@@ -1034,11 +1067,7 @@
         max-width: 165px;
         margin-bottom: 5px;
     }
-    
-    .checkout-delivery__method .radio:not(:last-of-type) {
-        margin-right: 100px;
-    }
-    
+
     .half-block {
         padding-right: 121px;
         padding-left: 60px;

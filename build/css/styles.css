@@ -1667,9 +1667,10 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
     display: none; }
   .products-bottom .btn-white {
     height: 55px;
-    margin: 0 91px 0 16px; }
+    margin-left: 16px; }
   .products-bottom .btn-buy {
     height: auto;
+    margin-left: 90px;
     padding: 0;
     min-width: 0;
     color: #fff;
@@ -1854,6 +1855,9 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 
 .checkout-delivery__method .label-block {
   margin-bottom: 0; }
+
+.checkout-delivery__method .radio:not(:last-of-type) {
+  margin-right: 100px; }
 
 .checkout-billing .form-control {
   height: 48px;
@@ -2159,3 +2163,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   position: absolute;
   right: 0;
   bottom: 50px; }
+
+.products-bottom__number {
+  display: -ms-flexbox;
+  display: flex; }
