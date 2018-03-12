@@ -9,7 +9,6 @@
   body:not(.fp-viewing-0) .logo {
     margin-right: 7%; }
   .nav-window {
-    max-width: 750px;
     padding-right: 61px; } }
 
 @media (max-width: 1439px) {
@@ -112,14 +111,10 @@
   .home:not(.fp-viewing-0) .logo {
     margin-bottom: 24px;
     transition-delay: .7s; }
-  .nav-products__slide {
-    height: 250px; }
   .swiper-wrapper .nav-products__slide:nth-of-type(odd),
   .swiper-wrapper .nav-products__slide:nth-of-type(even) {
     -ms-transform: translateY(0);
-    transform: translateY(0); }
-  .nav-products {
-    max-height: 500px; } }
+    transform: translateY(0); } }
 
 @media (max-width: 767px) {
   .products-bottom .btn-buy {
@@ -478,14 +473,13 @@
     margin-bottom: 85px; } }
 
 @media (min-width: 1100px) {
-  .checkout-title-first {
-    display: none; }
-  .item-page__title {
+  .checkout-title-first,
+  .item-page__title,
+  .main-section__logo,
+  .about-us-img {
     display: none; }
   .main-section {
     overflow: hidden; }
-  .main-section__logo {
-    display: none; }
   .fullscreen-bg {
     position: absolute;
     top: 0;
@@ -529,8 +523,6 @@
     left: 0;
     display: -ms-flexbox;
     display: flex; }
-  .about-us-img {
-    display: none; }
   .contacts-info__follow {
     width: 100%; }
   .contacts-info {
@@ -568,6 +560,10 @@
     margin-right: 0; } }
 
 @media (min-width: 1920px) {
+  .nav-products__slide {
+    height: 300px; }
+  .nav-window {
+    padding-right: 80px; }
   .product-new-wrap .wishlist {
     right: 1px;
     top: 12px; }
@@ -674,12 +670,25 @@
     margin-bottom: 60px; }
   .checkout-right {
     padding-top: 0; }
+  .nav-products__wrap {
+    max-width: 435px;
+    margin: auto;
+    padding-right: 0; }
   .nav-products__title {
     padding-right: 0; }
   .nav-products__media {
-    margin-left: -10px;
-    -ms-flex: 0 0 135px;
-    flex: 0 0 135px; }
+    max-width: 180px;
+    -ms-flex: none;
+    flex: none; }
+  .nav-products__slide {
+    padding-bottom: 50px; }
+  .nav-products-prev,
+  .nav-products-next {
+    margin-top: -50px; }
+  .nav-products-next {
+    right: -55px; }
+  .nav-products-prev {
+    left: -55px; }
   .media-product__new {
     right: -75px;
     top: 23px; }
@@ -857,6 +866,8 @@
     margin-right: 30px; } }
 
 @media (min-width: 1100px) and (max-width: 1919px) {
+  .nav-products__slide {
+    height: 250px; }
   h1, .h1 {
     margin-bottom: 60px; }
   .checkout-info {

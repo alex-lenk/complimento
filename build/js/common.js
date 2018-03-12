@@ -27,27 +27,11 @@ $(document).ready(function () {
 
     var swiper = new Swiper('.wishlist-carousel', {
         spaceBetween: 0,
+        slidesPerColumn: 2,
+        slidesPerView: 1,
         navigation: {
             nextEl: '.nav-products-next',
             prevEl: '.nav-products-prev'
-        },
-        breakpoints: {
-            2560: {
-                slidesPerColumn: 2,
-                slidesPerView: 1
-            },
-            1099: {
-                slidesPerColumn: 1,
-                slidesPerView: 2
-            },
-            768: {
-                slidesPerView: 2,
-                spaceBetween: 20
-            },
-            567: {
-                slidesPerColumn: 1,
-                slidesPerView: 1
-            }
         }
     });
 
