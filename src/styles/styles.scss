@@ -196,7 +196,7 @@
 
 .wishlist {
     position: absolute;
-    z-index: 50;
+    z-index: 11;
     width: 35px;
     height: 35px;
     cursor: pointer;
@@ -435,6 +435,24 @@
         }
     }
 }
+
+.products-bottom__quantity {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex: 0;
+}
+
+.products-bottom__text {
+    margin-right: 23px;
+}
+
+.products-bottom__number {
+    display: flex;
+}
+
+//*****************************
+
 
 .number-products__minus, .number-products__plus {
     width: 20px;
@@ -986,17 +1004,3 @@
     right: 0;
     bottom: 50px;
 }
-
-//*************************
-
-.products-bottom__quantity {
-}
-
-.products-bottom__text {
-}
-
-.products-bottom__number {
-    display: flex;
-}
-
-//*****************************

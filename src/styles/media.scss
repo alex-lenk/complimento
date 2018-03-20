@@ -49,6 +49,10 @@
 }
 
 @media (max-width: 1099px) {
+    .item-page__wrap {
+        flex-direction: column;
+    }
+
     .checkout-title-two {
         display: none;
     }
@@ -176,7 +180,7 @@
         margin-bottom: 24px;
         transition-delay: .7s;
     }
-    
+
     .swiper-wrapper .nav-products__slide:nth-of-type(odd),
     .swiper-wrapper .nav-products__slide:nth-of-type(even) {
         transform: translateY(0);
@@ -184,10 +188,28 @@
 }
 
 @media (max-width: 767px) {
+    .products-bottom__quantity {
+        padding-left: 23px;
+        margin-bottom: 38px;
+    }
+
+    .nav-window {
+        .nav-window__title {
+            margin-bottom: 30px;
+        }
+        .nav-products__media {
+            width: auto;
+            height: auto;
+        }
+        .nav-products__media img {
+            max-width: 100%;
+        }
+    }
+
     .products-bottom .btn-buy {
         margin-left: 45px;
     }
-    
+
     .products-bottom {
         flex-wrap: wrap;
         .btn-white {
@@ -530,11 +552,27 @@
     .nav-products-prev, .nav-products-next {
         margin-top: -10px;
     }
+
     .nav-products-next {
         right: 15px;
     }
     .nav-products-prev {
         left: 10px;
+    }
+
+    .nav-window {
+        .nav-products-next {
+            top: -50px;
+        }
+        .nav-products-prev {
+            left: auto;
+            right: 35px;
+            top: -50px;
+        }
+
+        .nav-products__slide {
+            margin-bottom: 30px;
+        }
     }
     
     //**********************
@@ -572,7 +610,16 @@
     .media-product {
         max-width: 100%;
     }
-    
+    .media-product__main {
+        max-width: 305px;
+        margin: 0 auto;
+    }
+
+    .wishlist {
+        top: 26px;
+        right: 21px;
+    }
+
     .checkout-delivery__method .radio:last-of-type {
         width: 100%;
         margin-top: 30px;
@@ -594,10 +641,14 @@
 }
 
 @media (min-width: 768px) {
+    .item-page__wrap {
+        display: flex;
+    }
+
     .products-bottom__text {
         display: none;
     }
-    
+
     .home .nav-area {
         padding-top: 30px;
         top: 0;
@@ -724,21 +775,18 @@
     }
     
     .fullscreen-bg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        min-width: 100%;
-        min-height: 100%;
-        width: auto;
-        height: 100vh;
         overflow: hidden;
+        z-index: 1;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        padding-top:45%;
     }
     #fullscreen-bg__video {
         position: absolute;
         top: 0;
         left: 0;
-        width: inherit;
-        height: 100vh;
+        width: 100%;
     }
     .overlay {
         background: rgba(0, 0, 0, 0.6);
@@ -748,10 +796,6 @@
         width: 100%;
         height: 100%;
         z-index: 4;
-    }
-    
-    .item-page__wrap {
-        display: flex;
     }
     
     .catalog-title {
@@ -777,7 +821,7 @@
         left: 0;
         display: flex;
     }
-    
+
     .contacts-info__follow {
         width: 100%;
     }
@@ -815,7 +859,7 @@
     .products-bottom .btn-white {
         min-width: 200px;
     }
-    
+
     .simplecheckout-button-block .btn-white {
         height: 55px;
     }
@@ -836,11 +880,11 @@
     .nav-products__slide {
         height: 300px;
     }
-    
+
     .nav-window {
         padding-right: 80px;
     }
-    
+
     .product-new-wrap .wishlist {
         right: 1px;
         top: 12px;
@@ -999,7 +1043,7 @@
     .checkout-right {
         padding-top: 0;
     }
-    
+
     .nav-products__wrap {
         max-width: 435px;
         margin: auto;
@@ -1041,8 +1085,11 @@
     }
     
     .media-product {
+        width: auto;
+        max-width: 100%;
         margin-bottom: 15px;
         display: flex;
+        align-self: center;
     }
     .media-product__main {
         max-width: 450px;
@@ -1056,7 +1103,11 @@
         justify-content: flex-end;
         flex: 0;
     }
-    
+    .media-product__new {
+        right: -75px;
+        top: 23px;
+    }
+
     .item-page__price {
         margin-top: 20px;
         margin-bottom: 45px;
@@ -1079,7 +1130,7 @@
         max-width: 165px;
         margin-bottom: 5px;
     }
-    
+
     .half-block {
         padding-right: 121px;
         padding-left: 60px;
@@ -1293,7 +1344,7 @@
     .nav-products__slide {
         height: 250px;
     }
-    
+
     h1, .h1 {
         margin-bottom: 60px;
     }

@@ -741,6 +741,9 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   padding-top: 100px;
   position: relative; }
 
+.main-section .fp-tableCell {
+  padding-top: 0; }
+
 .main-section__next {
   bottom: 12px;
   left: 50%;
@@ -1475,7 +1478,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 
 .wishlist {
   position: absolute;
-  z-index: 50;
+  z-index: 11;
   width: 35px;
   height: 35px;
   cursor: pointer; }
@@ -1683,6 +1686,22 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
       color: #dadada; }
       .products-bottom .btn-buy:hover span {
         border-color: transparent; }
+
+.products-bottom__quantity {
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex: 0;
+  flex: 0; }
+
+.products-bottom__text {
+  margin-right: 23px; }
+
+.products-bottom__number {
+  display: -ms-flexbox;
+  display: flex; }
 
 .number-products__minus, .number-products__plus {
   width: 20px;
@@ -2163,7 +2182,3 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   position: absolute;
   right: 0;
   bottom: 50px; }
-
-.products-bottom__number {
-  display: -ms-flexbox;
-  display: flex; }
