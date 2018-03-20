@@ -62,11 +62,8 @@
         display: none;
     }
     
-    .item-page__right {
-        max-width: none;
-        > h2 {
+    .item-page__right > h2 {
             display: none;
-        }
     }
     
     .item-page__title {
@@ -253,6 +250,7 @@
         order: 1;
     }
     .product-box-color {
+        width: 100%;
         padding-left: 20px;
         margin-bottom: 35px;
         margin-left: 0;
@@ -758,6 +756,10 @@
 }
 
 @media (min-width: 1100px) {
+    .item-page__right {
+        max-width: 615px;
+    }
+
     .checkout-title-first,
     .item-page__title,
     .main-section__logo,
@@ -1025,6 +1027,11 @@
 }
 
 @media (min-width: 768px) and (max-width: 1099px) {
+    .item-page__right {
+        max-width: 592px;
+        margin-right: auto;
+    }
+
     .checkout-wrap {
         padding-top: 239px;
     }
