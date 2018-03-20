@@ -533,9 +533,6 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   50% {
     transform: translateY(20px); } }
 
-.page .menu {
-  padding-top: 10px; }
-
 .contacts {
   color: #fff;
   padding-top: 130px; }
@@ -1070,19 +1067,20 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
-  flex-direction: column; }
+  flex-direction: column;
+  -ms-flex-pack: center;
+  justify-content: center; }
 
 .section-flower__media {
   max-height: 66vh;
-  height: 100%;
   margin-bottom: 20px;
   overflow: hidden;
   position: relative;
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
-  -ms-flex: 1;
-  flex: 1; }
+  -ms-flex: none;
+  flex: none; }
   .section-flower__media img {
     max-height: inherit;
     margin-right: auto;

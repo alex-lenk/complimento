@@ -222,12 +222,10 @@ button, input, select, textarea {
     }
 }
 
-.home:not(.fp-viewing-0) {
-    .logo {
-        opacity: 1;
-        transition: all .7s ease;
-        transition-delay: .7s;
-    }
+.home:not(.fp-viewing-0) .logo {
+    opacity: 1;
+    transition: all .7s ease;
+    transition-delay: .7s;
 }
 
 .home .nav-area {
@@ -260,8 +258,4 @@ button, input, select, textarea {
     50% {
         transform: translateY(20px);
     }
-}
-
-.page .menu {
-    padding-top: 10px;
 }

@@ -10,16 +10,16 @@
   margin-right: auto;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .section-flower__media {
   max-height: 66vh;
-  height: 100%;
   margin-bottom: 20px;
   overflow: hidden;
   position: relative;
   align-self: center;
-  flex: 1;
+  flex: none;
   img {
     max-height: inherit;
     margin-right: auto;
