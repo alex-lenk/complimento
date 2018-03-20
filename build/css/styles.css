@@ -499,7 +499,9 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 
 .home:not(.fp-viewing-0) .logo,
 .page .logo {
-  max-width: 303px; }
+  max-width: 303px;
+  -ms-flex: none;
+  flex: none; }
 
 .home:not(.fp-viewing-0) .logo {
   opacity: 1;
