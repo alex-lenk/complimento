@@ -748,6 +748,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   left: 0;
   position: absolute;
   color: #5A5A5A;
+  text-align: right;
   font-weight: 400;
   font-size: 1.0625rem; }
 
@@ -1537,10 +1538,10 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   .item-page__right h3, .item-page__right .h3 {
     margin-bottom: 6px; }
   .item-page__right:not(.out-stock) h2 {
-    margin-bottom: 10px; }
+    margin-bottom: 25px; }
 
 .item-page__price {
-  margin: 27px 0 55px;
+  margin-left: 55px;
   color: #dadada;
   font-weight: bold;
   display: -ms-flexbox;
@@ -1564,7 +1565,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   #product hr {
     width: 100%;
     height: 1px;
-    margin: 28px 0 91px;
+    margin: 42px 0 30px;
     border: 0;
     background-color: #000;
     -ms-flex-order: 2;
@@ -1642,6 +1643,8 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   width: 100%;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -ms-flex-order: 3;
   order: 3; }
   .products-bottom::after {
@@ -1651,12 +1654,11 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
     margin-left: 16px; }
   .products-bottom .btn-buy {
     height: auto;
+    margin-left: 60px;
     padding: 0;
     min-width: 0;
     color: #fff;
     text-transform: uppercase;
-    -ms-flex: 1;
-    flex: 1;
     font-size: 1.1875rem; }
     .products-bottom .btn-buy span {
       border-bottom: 1px solid;
@@ -1667,13 +1669,12 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
         border-color: transparent; }
 
 .products-bottom__quantity {
+  margin-bottom: 47px;
   width: 100%;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
-  align-items: center;
-  -ms-flex: 0;
-  flex: 0; }
+  align-items: center; }
 
 .products-bottom__text {
   margin-right: 23px; }
@@ -1681,6 +1682,19 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 .products-bottom__number {
   display: -ms-flexbox;
   display: flex; }
+
+.add-bag {
+  padding: 0;
+  border: 0;
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.3125rem; }
+  .add-bag .bag {
+    width: 23px;
+    height: 23px;
+    margin-right: 13px;
+    margin-top: -3px;
+    fill: #fff; }
 
 .number-products__minus, .number-products__plus {
   width: 20px;
@@ -2161,3 +2175,38 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   position: absolute;
   right: 0;
   bottom: 50px; }
+
+.add-sing {
+  margin-top: 26px;
+  position: relative;
+  font-size: 1.1875rem; }
+
+.add-sing__btn {
+  text-decoration: underline;
+  font-weight: 500;
+  cursor: pointer;
+  text-transform: uppercase; }
+
+.add-sing__block {
+  width: 470px;
+  height: 179px;
+  top: 100%;
+  left: 0;
+  position: absolute;
+  z-index: 50;
+  background-color: rgba(23, 23, 23, 0.9); }
+
+.add-sing__buttons {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
+
+.add-sing__cancel {
+  margin-right: 50px;
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.1875rem; }

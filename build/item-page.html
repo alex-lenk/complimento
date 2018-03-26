@@ -269,10 +269,6 @@
         <div class="item-page__right">
             <h2>Blue Eustoma in Round Flower Box</h2>
 
-            <div>Show your love with a premium box filled with fully-bloomed, mesmeric roses.</div>
-
-            <div class="item-page__price">Price: <span class="item-page__price-num">$459.00</span></div>
-
             <h3>This Gift Box includes:</h3>
 
             <ul class="list-line">
@@ -336,19 +332,44 @@
                     </div>
                 </div>
 
+                <div class="add-sing">
+                    <span class="add-sing__btn">Add Sign (+$50)</span>
+
+                    <form action="#" class="add-sing__block">
+                        <div class="form-group">
+                            <input class="form-control" type="text" placeholder="Sign Text">
+                        </div>
+                        <div class="add-sing__buttons">
+                            <div class="add-sing__cancel">Cancel</div>
+                            <button class="btn btn-white">Add</button>
+                        </div>
+                    </form>
+                </div>
+
                 <hr>
 
-                <div class="products-bottom form-group">
-                    <button class="number-products__minus" disabled>-</button>
-                    <input type="text" name="quantity" value="1" size="1" id="input-quantity" class="form-control">
-                    <span class="number-products__plus">+</span>
+                <div class="products-bottom form-group field-filled">
+                    <div class="products-bottom__quantity">
+                        <div class="products-bottom__text">Quantity:</div>
+                        <div class="products-bottom__number">
+                            <button class="number-products__minus" disabled="">-</button>
+                            <input type="text" name="quantity" value="1" size="1" id="input-quantity" class="form-control">
+                            <span class="number-products__plus">+</span>
+                            <input type="hidden" name="product_id" value="42">
+                        </div>
 
-                    <input type="hidden" name="product_id" value="53">
+                        <div class="item-page__price">Price: <span class="item-page__price-num">$459.00</span></div>
+                    </div>
 
                     <br>
 
-                    <button type="button" class="btn btn-white"><span>Add to Bag</span></button>
-                    <button type="button" class="btn btn-buy"><span>Buy Now</span></button>
+                    <button type="button" class="btn add-bag">
+                        <svg class="bag">
+                            <use xlink:href="img/sprite.svg#bag"></use>
+                        </svg>
+                        <span>Add to Bag</span>
+                    </button>
+                    <button type="button" class="btn btn-buy" id="button-cart-buy"><span>Buy Now</span></button>
                 </div>
             </div>
         </div>

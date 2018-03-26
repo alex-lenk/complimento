@@ -292,12 +292,12 @@
         margin-bottom: 6px;
     }
     &:not(.out-stock) h2 {
-        margin-bottom: 10px;
+        margin-bottom: 25px;
     }
 }
 
 .item-page__price {
-    margin: 27px 0 55px;
+    margin-left: 55px;
     color: #dadada;
     font-weight: bold;
     display: flex;
@@ -319,7 +319,7 @@
     hr {
         width: 100%;
         height: 1px;
-        margin: 28px 0 91px;
+        margin: 42px 0 30px;
         border: 0;
         background-color: #000;
         order: 2;
@@ -406,6 +406,7 @@
 .products-bottom {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     order: 3;
     &::after {
         display: none;
@@ -416,11 +417,11 @@
     }
     .btn-buy {
         height: auto;
+        margin-left: 60px;
         padding: 0;
         min-width: 0;
         color: #fff;
         text-transform: uppercase;
-        flex: 1;
         @include font-size(19px);
         span {
             border-bottom: 1px solid;
@@ -436,10 +437,10 @@
 }
 
 .products-bottom__quantity {
+    margin-bottom: 47px;
     width: 100%;
     display: flex;
     align-items: center;
-    flex: 0;
 }
 
 .products-bottom__text {
@@ -450,8 +451,22 @@
     display: flex;
 }
 
-//*****************************
+.add-bag {
+    padding: 0;
+    border: 0;
+    color: #fff;
+    font-weight: 400;
+    @include font-size(21px);
+    .bag {
+        width: 23px;
+        height: 23px;
+        margin-right: 13px;
+        margin-top: -3px;
+        fill: #fff;
+    }
+}
 
+//*****************************
 
 .number-products__minus, .number-products__plus {
     width: 20px;
@@ -1002,4 +1017,43 @@
     position: absolute;
     right: 0;
     bottom: 50px;
+}
+
+.add-sing {
+    margin-top: 26px;
+    position: relative;
+    @include font-size(19px)
+}
+
+.add-sing__btn {
+    text-decoration: underline;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.add-sing__block {
+    width: 470px;
+    height: 179px;
+    top: 100%;
+    left: 0;
+    position: absolute;
+    z-index: 50;
+    background-color: rgba(#171717, .9);
+}
+
+.add-sing__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    .btn-white {
+    }
+}
+
+.add-sing__cancel {
+    margin-right: 50px;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-weight: 400;
+    @include font-size(19px);
 }

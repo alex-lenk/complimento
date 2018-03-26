@@ -922,9 +922,7 @@
   .item-page__right {
     -ms-flex: 1;
     flex: 1;
-    max-width: 570px; }
-  .item-page__price {
-    margin: 18px 0 45px; }
+    max-width: 585px; }
   .media-product__main {
     padding: 0 10px;
     position: relative; }
@@ -944,7 +942,7 @@
     top: -15px;
     left: -7px; }
   #product {
-    margin-top: 60px; }
+    margin-top: 38px; }
   .wishlist {
     right: 15px;
     top: 19px; }
