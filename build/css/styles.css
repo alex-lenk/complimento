@@ -750,6 +750,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   color: #5A5A5A;
   text-align: right;
   font-weight: 400;
+  z-index: 2;
   font-size: 1.0625rem; }
 
 .menu {
