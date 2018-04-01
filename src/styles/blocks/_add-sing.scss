@@ -1,0 +1,77 @@
+.add-sing {
+    width: 100%;
+    margin-top: 26px;
+    position: relative;
+    order: 2;
+}
+
+.add-sing__btn, .sign-filled {
+    text-decoration: underline;
+    font-weight: 400;
+    @include font-size(19px);
+}
+
+.add-sing__btn {
+    cursor: pointer;
+    text-transform: uppercase;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.sign-filled {
+    display: flex;
+    align-items: center;
+    .cancel {
+        width: 15px;
+        height: 15px;
+        margin-left: 16px;
+        fill: #fff;
+    }
+}
+
+.add-sing__form {
+    width: 100%;
+    height: 179px;
+    top: 100%;
+    left: 0;
+    margin-top: 22px;
+    padding: 21px 39px 10px;
+    position: absolute;
+    z-index: 50;
+    background-color: rgba(#171717, .95);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+    .form-group {
+        margin-bottom: 36px;
+    }
+}
+
+.add-sing__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    .btn-white {
+        min-width: 100px;
+        height: 55px;
+        padding: 0 32px;
+    }
+}
+
+.add-sing__cancel {
+    margin-right: 70px;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-weight: 400;
+    cursor: pointer;
+    @include font-size(19px);
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.add-sing__opened {
+    opacity: 1;
+    pointer-events: auto;
+}

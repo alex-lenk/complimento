@@ -201,4 +201,19 @@ $(document).ready(function () {
     /* END catalog-quick */
 
 
+    /* BEGIN: Всплывающая форма добавления подписи */
+
+    $('.add-sing__btn').click(
+        function () {
+            $('.add-sing__form').toggleClass('add-sing__opened');
+        }
+    );
+    $('.add-sing__cancel').click(
+        function () {
+            $(this).parent().parent().removeClass('add-sing__opened');
+        }
+    );
+
+    /* END */
+
 });

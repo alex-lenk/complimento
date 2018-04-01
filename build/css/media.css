@@ -502,6 +502,8 @@
     margin-bottom: 85px; } }
 
 @media (min-width: 1100px) {
+  .add-sing__form {
+    max-width: 470px; }
   .item-page__right {
     max-width: 615px; }
   .checkout-title-first,

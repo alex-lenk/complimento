@@ -1320,6 +1320,77 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 .fancybox-slide--current .animated-modal .media-product {
   transition-delay: .3s; }
 
+.add-sing {
+  width: 100%;
+  margin-top: 26px;
+  position: relative;
+  -ms-flex-order: 2;
+  order: 2; }
+
+.add-sing__btn, .sign-filled {
+  text-decoration: underline;
+  font-weight: 400;
+  font-size: 1.1875rem; }
+
+.add-sing__btn {
+  cursor: pointer;
+  text-transform: uppercase; }
+  .add-sing__btn:hover {
+    text-decoration: none; }
+
+.sign-filled {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center; }
+  .sign-filled .cancel {
+    width: 15px;
+    height: 15px;
+    margin-left: 16px;
+    fill: #fff; }
+
+.add-sing__form {
+  width: 100%;
+  height: 179px;
+  top: 100%;
+  left: 0;
+  margin-top: 22px;
+  padding: 21px 39px 10px;
+  position: absolute;
+  z-index: 50;
+  background-color: rgba(23, 23, 23, 0.95);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease; }
+  .add-sing__form .form-group {
+    margin-bottom: 36px; }
+
+.add-sing__buttons {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
+  .add-sing__buttons .btn-white {
+    min-width: 100px;
+    height: 55px;
+    padding: 0 32px; }
+
+.add-sing__cancel {
+  margin-right: 70px;
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-weight: 400;
+  cursor: pointer;
+  font-size: 1.1875rem; }
+  .add-sing__cancel:hover {
+    text-decoration: none; }
+
+.add-sing__opened {
+  opacity: 1;
+  pointer-events: auto; }
+
 .menu + .pull-left,
 .language-block {
   width: 41px;
@@ -2231,38 +2302,3 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   position: absolute;
   right: 0;
   bottom: 50px; }
-
-.add-sing {
-  margin-top: 26px;
-  position: relative;
-  font-size: 1.1875rem; }
-
-.add-sing__btn {
-  text-decoration: underline;
-  font-weight: 500;
-  cursor: pointer;
-  text-transform: uppercase; }
-
-.add-sing__block {
-  width: 470px;
-  height: 179px;
-  top: 100%;
-  left: 0;
-  position: absolute;
-  z-index: 50;
-  background-color: rgba(23, 23, 23, 0.9); }
-
-.add-sing__buttons {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-pack: end;
-  justify-content: flex-end; }
-
-.add-sing__cancel {
-  margin-right: 50px;
-  text-decoration: underline;
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 1.1875rem; }

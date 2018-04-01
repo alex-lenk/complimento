@@ -22,6 +22,7 @@
 @import "blocks/not-found";
 @import "blocks/catalog";
 @import "blocks/modal-product";
+@import "blocks/add-sing";
 @import "blocks/language";
 
 #fullpage .section {
@@ -1018,43 +1019,4 @@
     position: absolute;
     right: 0;
     bottom: 50px;
-}
-
-.add-sing {
-    margin-top: 26px;
-    position: relative;
-    @include font-size(19px)
-}
-
-.add-sing__btn {
-    text-decoration: underline;
-    font-weight: 500;
-    cursor: pointer;
-    text-transform: uppercase;
-}
-
-.add-sing__block {
-    width: 470px;
-    height: 179px;
-    top: 100%;
-    left: 0;
-    position: absolute;
-    z-index: 50;
-    background-color: rgba(#171717, .9);
-}
-
-.add-sing__buttons {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    .btn-white {
-    }
-}
-
-.add-sing__cancel {
-    margin-right: 50px;
-    text-decoration: underline;
-    text-transform: uppercase;
-    font-weight: 400;
-    @include font-size(19px);
 }
