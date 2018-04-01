@@ -1,20 +1,18 @@
-.menu + .pull-left,
 .language-block {
     width: 41px;
     min-height: 18px;
     padding-top: 37px;
-    margin-left: 12%;
     position: relative;
     flex: none;
 }
 
 .header-lang {
-    width: 61px;
+    width: 70px;
     padding-top: 43px;
     position: absolute;
     top: 37px;
     left: -21px;
-    &:hover .language-bar-item {
+    &:hover .language-bar-item:not(.language-bar-current) {
         opacity: 1;
         pointer-events: auto;
         height: 100%;

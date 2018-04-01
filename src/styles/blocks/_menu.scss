@@ -6,6 +6,12 @@
     letter-spacing: 1.6px;
     font-weight: 300;
     transition: all 0.3s ease;
+    &::after {
+        width: 1px;
+        height: 100%;
+        display: block;
+        content: '';
+    }
 }
 
 .menu-item {

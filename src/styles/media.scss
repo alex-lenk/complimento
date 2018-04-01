@@ -70,14 +70,6 @@
         width: 100%;
     }
     
-    .main-section__logo {
-        position: absolute;
-        z-index: 10;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-    }
-    
     .fullscreen-bg {
         display: none;
     }
@@ -153,7 +145,7 @@
     }
     
     .nav-area .container {
-        flex-direction: column;
+        flex-wrap: wrap;
         display: flex;
     }
     
@@ -167,10 +159,15 @@
     
     .home:not(.fp-viewing-0) .logo,
     .page .logo {
-        margin: 0 auto;
+        width: 100%;
+        max-width: none;
         height: 50px;
-        max-width: 255px;
         flex: none;
+        a {
+            max-width: 255px;
+            margin: 0 auto;
+            display: block;
+        }
     }
     
     .swiper-wrapper .nav-products__slide:nth-of-type(odd),
@@ -233,10 +230,6 @@
         margin-top: 5px;
         width: 90px;
         height: 90px;
-    }
-    
-    .item-page__price {
-        margin-bottom: 35px;
     }
     
     #product {
@@ -597,7 +590,9 @@
     
     .main-section__logo {
         width: 100%;
-        max-width: 342px;
+        max-width: 303px;
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .media-product {
@@ -628,6 +623,10 @@
 }
 
 @media (min-width: 568px) {
+    .nav-panel .language-block {
+        display: none;
+    }
+    
     .product-select {
         max-width: 240px;
     }
@@ -1035,6 +1034,11 @@
     .main-section__logo {
         text-align: center;
         width: 100%;
+        position: absolute;
+        z-index: 10;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
     }
 }
 
@@ -1127,11 +1131,6 @@
         top: 23px;
     }
     
-    .item-page__price {
-        margin-top: 20px;
-        margin-bottom: 45px;
-    }
-    
     #product {
         margin-top: 55px;
         hr {
@@ -1217,7 +1216,7 @@
 @media (min-width: 1100px) and (max-width: 1439px) {
     body:not(.fp-viewing-0) .logo {
         padding-top: 10px;
-        max-width: 244px;
+        max-width: 244px !important;
     }
     
     .wishlist {
@@ -1262,11 +1261,6 @@
     }
     .item-page__right {
         flex: 1;
-    }
-    
-    .item-page__price {
-        margin-top: 0;
-        margin-bottom: 37px;
     }
     
     .product-box-color {

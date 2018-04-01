@@ -454,6 +454,7 @@
 }
 
 .add-bag {
+    min-width: 0;
     padding: 0;
     border: 0;
     color: #fff;
@@ -1019,4 +1020,28 @@
     position: absolute;
     right: 0;
     bottom: 50px;
+}
+
+.nav-products__text {
+    border-bottom: 1px solid #fff;
+    transition: border-bottom-color 0.3s ease;
+    &:hover {
+        border-bottom-color: transparent;
+        + .nav-products__hint {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+}
+
+.nav-products__hint {
+    padding: 5px 15px;
+    top: 23px;
+    right: 0;
+    position: absolute;
+    background-color: rgba(#171717, .95);
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.40);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
 }

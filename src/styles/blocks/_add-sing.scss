@@ -19,15 +19,11 @@
     }
 }
 
-.sign-filled {
-    display: flex;
-    align-items: center;
-    .cancel {
-        width: 15px;
-        height: 15px;
-        margin-left: 16px;
-        fill: #fff;
-    }
+.sign-filled .cancel {
+    width: 15px;
+    height: 15px;
+    margin-left: 16px;
+    fill: #fff;
 }
 
 .add-sing__form {

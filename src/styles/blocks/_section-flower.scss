@@ -34,7 +34,7 @@
 .section-flower__text {
   color: #fff;
   line-height: 32px;
-  font-family: "Comic Sans MS", akrobat, sans-serif;
+  font-family: "Comic Sans MS", 'ComicSansMS', akrobat, sans-serif;
   flex: 1;
   @include font-size(17px);
 }

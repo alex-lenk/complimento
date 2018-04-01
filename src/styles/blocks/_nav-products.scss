@@ -123,9 +123,12 @@
 
 .nav-products__options {
     color: #dadada;
+    position: relative;
     @include font-size(18px);
 }
 
 .nav-products__size {
     margin-bottom: 7px;
+    margin-right: 5px;
+    float: left;
 }

@@ -18,6 +18,12 @@
   font-weight: 300;
   font-style: normal; }
 
+@font-face {
+  font-family: 'ComicSansMS';
+  src: url("ComicSansMS.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 .btn {
   min-width: 135px;
   height: 52px;
@@ -761,6 +767,11 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   letter-spacing: 1.6px;
   font-weight: 300;
   transition: all 0.3s ease; }
+  .menu::after {
+    width: 1px;
+    height: 100%;
+    display: block;
+    content: ''; }
 
 .menu-item {
   margin-bottom: 50px;
@@ -975,12 +986,16 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 
 .nav-products__options {
   color: #dadada;
+  position: relative;
   font-size: 1.125rem; }
 
 .nav-products__size {
-  margin-bottom: 7px; }
+  margin-bottom: 7px;
+  margin-right: 5px;
+  float: left; }
 
 .products-color {
+  clear: both;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -1076,7 +1091,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 .section-flower__text {
   color: #fff;
   line-height: 32px;
-  font-family: "Comic Sans MS", akrobat, sans-serif;
+  font-family: "Comic Sans MS", 'ComicSansMS', akrobat, sans-serif;
   -ms-flex: 1;
   flex: 1;
   font-size: 1.0625rem; }
@@ -1338,16 +1353,11 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   .add-sing__btn:hover {
     text-decoration: none; }
 
-.sign-filled {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  align-items: center; }
-  .sign-filled .cancel {
-    width: 15px;
-    height: 15px;
-    margin-left: 16px;
-    fill: #fff; }
+.sign-filled .cancel {
+  width: 15px;
+  height: 15px;
+  margin-left: 16px;
+  fill: #fff; }
 
 .add-sing__form {
   width: 100%;
@@ -1399,23 +1409,21 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   opacity: 1;
   pointer-events: auto; }
 
-.menu + .pull-left,
 .language-block {
   width: 41px;
   min-height: 18px;
   padding-top: 37px;
-  margin-left: 12%;
   position: relative;
   -ms-flex: none;
   flex: none; }
 
 .header-lang {
-  width: 61px;
+  width: 70px;
   padding-top: 43px;
   position: absolute;
   top: 37px;
   left: -21px; }
-  .header-lang:hover .language-bar-item {
+  .header-lang:hover .language-bar-item:not(.language-bar-current) {
     opacity: 1;
     pointer-events: auto;
     height: 100%; }
@@ -1819,6 +1827,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   display: flex; }
 
 .add-bag {
+  min-width: 0;
   padding: 0;
   border: 0;
   color: #fff;
@@ -2310,3 +2319,23 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   position: absolute;
   right: 0;
   bottom: 50px; }
+
+.nav-products__text {
+  border-bottom: 1px solid #fff;
+  transition: border-bottom-color 0.3s ease; }
+  .nav-products__text:hover {
+    border-bottom-color: transparent; }
+    .nav-products__text:hover + .nav-products__hint {
+      opacity: 1;
+      pointer-events: auto; }
+
+.nav-products__hint {
+  padding: 5px 15px;
+  top: 23px;
+  right: 0;
+  position: absolute;
+  background-color: rgba(23, 23, 23, 0.95);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease; }
