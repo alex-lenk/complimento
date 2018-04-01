@@ -499,10 +499,36 @@
     }
     
     .nav-panel__logo {
-        width: 168px;
         height: 40px;
         margin-left: 15px;
         margin-right: auto;
+        width: 0;
+        opacity: 0;
+        overflow: hidden;
+    }
+    
+    .language-block {
+        left: 0;
+        top: 0;
+        padding-top: 0;
+        position: absolute;
+        transition: all 0.3s ease;
+    }
+    .header-lang {
+        top: 20px;
+        left: 62px;
+    }
+    
+    .page-menu__opened {
+        .nav-panel__logo {
+            width: 168px;
+            opacity: 1;
+        }
+        .language-block {
+            left: 200px;
+            opacity: 0;
+            pointer-events: none;
+        }
     }
     
     .nav-panel__instagram {
