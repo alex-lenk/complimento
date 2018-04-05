@@ -1424,10 +1424,6 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   position: absolute;
   top: 37px;
   left: -21px; }
-  .header-lang:hover .language-bar-item:not(.language-bar-current) {
-    opacity: 1;
-    pointer-events: auto;
-    height: 100%; }
 
 .language-bar-item {
   cursor: pointer;
@@ -1462,6 +1458,13 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
     background: url(../img/arrow-lang.svg) no-repeat center;
     background-size: contain;
     content: ''; }
+  .language-bar-current .language-select {
+    pointer-events: none; }
+
+.language-bar__opened .language-bar-item:not(.language-bar-current) {
+  opacity: 1;
+  pointer-events: auto;
+  height: 100%; }
 
 #fullpage .section {
   min-height: 100vh; }
@@ -2320,6 +2323,9 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   right: 0;
   bottom: 50px; }
 
+.nav-products__sign {
+  position: relative; }
+
 .nav-products__text {
   border-bottom: 1px solid #fff;
   transition: border-bottom-color 0.3s ease; }
@@ -2332,7 +2338,8 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 .nav-products__hint {
   padding: 5px 15px;
   top: 23px;
-  right: 0;
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
   position: absolute;
   background-color: rgba(23, 23, 23, 0.95);
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.4);

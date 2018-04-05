@@ -1021,6 +1021,10 @@
     bottom: 50px;
 }
 
+.nav-products__sign {
+    position: relative;
+}
+
 .nav-products__text {
     border-bottom: 1px solid #fff;
     transition: border-bottom-color 0.3s ease;
@@ -1036,10 +1040,10 @@
 .nav-products__hint {
     padding: 5px 15px;
     top: 23px;
-    right: 0;
+    transform: translateX(-50%);
     position: absolute;
     background-color: rgba(#171717, .95);
-    box-shadow: 0 0 20px 0 rgba(0,0,0,0.40);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.40);
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;

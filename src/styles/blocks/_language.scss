@@ -12,11 +12,6 @@
     position: absolute;
     top: 37px;
     left: -21px;
-    &:hover .language-bar-item:not(.language-bar-current) {
-        opacity: 1;
-        pointer-events: auto;
-        height: 100%;
-    }
 }
 
 .language-bar-item {
@@ -34,8 +29,6 @@
             padding-top: 12px;
             padding-bottom: 6px;
         }
-    }
-    &:hover {
     }
     &:last-of-type .language-select {
         padding-bottom: 12px;
@@ -60,4 +53,13 @@
         background-size: contain;
         content: '';
     }
+    .language-select {
+        pointer-events: none;
+    }
+}
+
+.language-bar__opened .language-bar-item:not(.language-bar-current) {
+    opacity: 1;
+    pointer-events: auto;
+    height: 100%;
 }

@@ -216,4 +216,15 @@ $(document).ready(function () {
 
     /* END */
 
+    /* BEGIN: открытие и закрытие языковой панели */
+
+    $('.language-bar-current').click(
+        function () {
+            $(this).parent().toggleClass('language-bar__opened');
+            //$(this).prop("disabled", true);
+        }
+    );
+
+    /* END */
+
 });
