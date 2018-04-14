@@ -3,11 +3,11 @@
 }
 
 .nav-products {
-    width: 400px;
+    width: 100%;
     max-height: 600px;
 }
 
-.nav-products__slide {
+.nav-products__slide-wrap {
     text-align: left;
     overflow: hidden;
     display: flex;

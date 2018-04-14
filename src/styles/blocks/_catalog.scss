@@ -42,10 +42,12 @@
 }
 
 .catalog-view {
+    margin-top: 40px;
     padding-left: 36px;
     display: inline-block;
     color: #dadada;
     position: relative;
+    font-family: 'akrobat', -apple-system, "Segoe UI", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     transition: all 0.5s ease;
     @include font-size(18px);
     &::before {

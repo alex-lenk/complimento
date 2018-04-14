@@ -834,7 +834,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   box-shadow: 3px 2px 30px rgba(0, 0, 0, 0.6);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
-  transition: transform .7s ease;
+  transition: transform .5s ease;
   will-change: transform; }
 
 .nav-window__title {
@@ -879,10 +879,10 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   position: relative; }
 
 .nav-products {
-  width: 400px;
+  width: 100%;
   max-height: 600px; }
 
-.nav-products__slide {
+.nav-products__slide-wrap {
   text-align: left;
   overflow: hidden;
   display: -ms-flexbox;
@@ -1197,10 +1197,12 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   transition: all 0.5s ease; }
 
 .catalog-view {
+  margin-top: 40px;
   padding-left: 36px;
   display: inline-block;
   color: #dadada;
   position: relative;
+  font-family: 'akrobat', -apple-system, "Segoe UI", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   transition: all 0.5s ease;
   font-size: 1.125rem; }
   .catalog-view::before {
@@ -1759,7 +1761,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
       width: 100%;
       height: 100%;
       position: absolute;
-      text-indent: -99px; }
+      text-indent: -999px; }
     .product-box-color .radio input {
       position: absolute;
       top: 0;
