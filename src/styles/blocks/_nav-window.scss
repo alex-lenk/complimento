@@ -15,6 +15,19 @@
     transform: translateX(100%);
     transition: transform .5s ease;
     will-change: transform;
+    .nav-products__slide {
+        display: flex;
+        align-items: center;
+    }
+    .nav-products-prev,
+    .nav-products-next {
+        transform: translateY(-50%);
+    }
+}
+
+.nav-products__slide-wrap {
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .nav-window__title {

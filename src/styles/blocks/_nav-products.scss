@@ -109,17 +109,13 @@
 
 .nav-products-prev {
     left: 55px;
-    transform: rotate(180deg);
-    &:hover .arrow-lr {
-        transform: translateX(5px);
+    .arrow-lr {
+        transform: rotate(180deg);
     }
 }
 
 .nav-products-next {
     right: 55px;
-    &:hover .arrow-lr {
-        transform: translateX(5px);
-    }
 }
 
 .nav-products__options {
