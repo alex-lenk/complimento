@@ -27,154 +27,160 @@ const webp = require("gulp-webp");
 const imageminWebp = require("imagemin-webp");
 
 let way = {
-    build: {
-        html: './build/',
-        js: './build/js/',
-        css: './build/css/',
-        img: './build/img/',
-        fonts: './build/fonts/'
-    },
-    src: {
-        html: 'src/*.html',
-        js: 'src/js/*.js',
-        styles: 'src/styles/**/*.scss',
-        img: 'src/img/**/*.*',
-        fonts: 'src/fonts/**/*.*'
-    },
-    watch: {
-        html: 'src/*.html',
-        html_template: 'src/template/*.html',
-        js: 'src/js/*.js',
-        styles: 'src/styles/*.scss',
-        styles_blocks: 'src/styles/bocks/*.scss',
-        styles_common: 'src/styles/common/*.scss',
-        styles_lib: 'src/styles/lib/*.scss',
-        img: 'src/img/**/*.*',
-        fonts: 'src/fonts/**/*.*'
-    },
-    clean: './build'
+  build: {
+    html: './build/',
+    js: './build/js/',
+    css: './build/css/',
+    img: './build/img/',
+    fonts: './build/fonts/'
+  },
+  src: {
+    html: './src/*.html',
+    js: './src/js/*.js',
+    styles: './src/styles/**/*.scss',
+    img: './src/img/**/*.*',
+    fonts: './src/fonts/**/*.*'
+  },
+  watch: {
+    html: './src/*.html',
+    html_template: './src/template/*.html',
+    js: './src/js/*.js',
+    styles: './src/styles/*.scss',
+    styles_blocks: './src/styles/bocks/*.scss',
+    styles_common: './src/styles/common/*.scss',
+    styles_lib: './src/styles/lib/*.scss',
+    img: './src/img/**/*.*',
+    fonts: './src/fonts/**/*.*'
+  },
+  clean: './build'
 };
 
 // css task
 const css = () => {
-    return src('src/styles/styles.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(autoprefixer())
-        .pipe(rename('styles.css'))
-        .pipe(csso())
-        .pipe(dest('./build/css'))
-        .pipe(mode.development(browserSync.stream()));
+  return src('./src/styles/styles.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer())
+    .pipe(rename('styles.min.css'))
+    .pipe(csso())
+    .pipe(dest('./build/css'))
+    .pipe(mode.development(browserSync.stream()));
 }
 
 // js task
 const js = () => {
-    return src('./src/js/scripts.js')
-        .pipe(uglify())
-        .pipe(dest('./build/js'))
-        .pipe(mode.development(browserSync.stream()));
+  return src('./src/js/scripts.js')
+    .pipe(uglify())
+    .pipe(dest('./build/js'))
+    .pipe(mode.development(browserSync.stream()));
 }
 
 const jsVendors = () => {
-    return src([
-        './src/js/lib/svgxuse.min.js'
-    ])
-        .pipe(concat('libs.js'))
-        .pipe(dest('./build/js'));
+  return src([
+    './bower_components/jquery/dist/jquery.min.js',
+    './bower_components/fullPage.js/dist/jquery.fullpage.min.js',
+    './bower_components/swiper/dist/js/swiper.min.js',
+    './src/js/lib/jquery.formstyler.min.js',
+    './bower_components/isotope-layout/dist/isotope.pkgd.min.js',
+    './bower_components/fancybox/dist/jquery.fancybox.min.js',
+    './src/js/lib/bootstrap/bootstrap.min.js'
+  ])
+    .pipe(concat('libs.js'))
+    .pipe(dest('./build/js'));
 }
 
 // copy tasks
 const copyImages = () => {
-    return src('./src/img/**/*.{jpg,jpeg,png,svg}')
-        .pipe(imagemin([
-            imageminPngquant({
-                speed: 5,
-                quality: [0.6, 0.8]
-            }),
-            imageminZopfli({
-                more: true
-            }),
-            imageminMozjpeg({
-                progressive: true,
-                quality: 90
-            }),
-            imagemin.svgo({
-                plugins: [
-                    {removeViewBox: false},
-                    {removeUnusedNS: false},
-                    {removeUselessStrokeAndFill: false},
-                    {cleanupIDs: false},
-                    {removeComments: true},
-                    {removeEmptyAttrs: true},
-                    {removeEmptyText: true},
-                    {collapseGroups: true}
-                ]
-            })
-        ]))
-        .pipe(dest('./build/img'));
+  return src('./src/img/**/*.{jpg,jpeg,png,svg}')
+    .pipe(imagemin([
+      imageminPngquant({
+        speed: 5,
+        quality: [0.6, 0.8]
+      }),
+      imageminZopfli({
+        more: true
+      }),
+      imageminMozjpeg({
+        progressive: true,
+        quality: 90
+      }),
+      imagemin.svgo({
+        plugins: [
+          {removeViewBox: false},
+          {removeUnusedNS: false},
+          {removeUselessStrokeAndFill: false},
+          {cleanupIDs: false},
+          {removeComments: true},
+          {removeEmptyAttrs: true},
+          {removeEmptyText: true},
+          {collapseGroups: true}
+        ]
+      })
+    ]))
+    .pipe(dest('./build/img'));
 }
 
 
 const webpTask = () => {
-    return src('./src/img/**/*.{jpg,jpeg,png}')
-        .pipe(webp(imageminWebp({
-            lossless: true,
-            quality: 6,
-            alphaQuality: 85
-        })))
-        .pipe(dest('./build/img'));
+  return src('./src/img/**/*.{jpg,jpeg,png}')
+    .pipe(webp(imageminWebp({
+      lossless: true,
+      quality: 6,
+      alphaQuality: 85
+    })))
+    .pipe(dest('./build/img'));
 }
 
 const copyFonts = () => {
-    return src('src/fonts/**/*.{woff,woff2}')
-        .pipe(dest('./build/fonts'));
+  return src('./src/fonts/**/*.{woff,woff2}')
+    .pipe(dest('./build/fonts'));
 }
 
 const copyFavicon = () => {
-    return src('src/favicon/*.*')
-        .pipe(dest('./build/favicon'));
+  return src('./src/favicon/*.*')
+    .pipe(dest('./build/favicon'));
 }
 
 const html = () => {
-    return src('src/view/*.html')
-        .pipe(fileinclude())
-        .pipe(mode.production(htmlbeautify()))
-        .pipe(dest('./build'))
-        .pipe(mode.development(browserSync.stream()));
+  return src('./src/view/*.html')
+    .pipe(fileinclude())
+    .pipe(mode.production(htmlbeautify()))
+    .pipe(dest('./build'))
+    .pipe(mode.development(browserSync.stream()));
 }
 
 const svgStore = () => {
-    return src('./src/img/sprite/*.svg')
-        .pipe(svgmin(function (file) {
-            let prefix = basePath.basename(file.relative, basePath.extname(file.relative));
-            return {
-                plugins: [{
-                    cleanupIDs: {
-                        prefix: prefix + '-',
-                        minify: true
-                    }
-                }]
-            }
-        }))
-        .pipe(svgstore())
-        .pipe(dest('./build/img'));
+  return src('./src/img/sprite/*.svg')
+    .pipe(svgmin(function (file) {
+      let prefix = basePath.basename(file.relative, basePath.extname(file.relative));
+      return {
+        plugins: [{
+          cleanupIDs: {
+            prefix: prefix + '-',
+            minify: true
+          }
+        }]
+      }
+    }))
+    .pipe(svgstore())
+    .pipe(dest('./build/img'));
 }
 
 // watch task
 const watchForChanges = () => {
-    browserSync.init({
-        server: {
-            baseDir: './build/'
-        },
-        notify: false,
-        port: 7384
-    });
+  browserSync.init({
+    server: {
+      baseDir: './build/'
+    },
+    notify: false,
+    port: 7384
+  });
 
-    watch('src/styles/**/*.scss', css);
-    watch('src/js/**/*.js', js);
-    watch('src/view/*.html', html);
-    watch('src/img/**/*.{png,jpg,jpeg,svg}', series(copyImages));
-    watch('src/fonts/**/*.{woff,woff2}', series(copyFonts));
-    watch('src/favicon/*.*', series(copyFavicon));
+  watch('./src/styles/**/*.scss', css);
+  watch('./src/js/**/*.js', js);
+  watch('./src/view/*.html', html);
+  watch('./src/img/**/*.{png,jpg,jpeg,svg}', series(copyImages));
+  watch('./src/fonts/*.*', series(copyFonts));
+  watch('./src/favicon/*.*', series(copyFavicon));
 }
 
 // public tasks
@@ -242,7 +248,7 @@ gulp.task('js:build', function () {
 gulp.task('styles:build', function () {
     gulp.src(way.src.styles)
         .pipe(sass({
-            includePaths: ['src/styles/'],
+            includePaths: ['./src/styles/'],
             errLogToConsole: true
         }))
         .pipe(prefixer({
