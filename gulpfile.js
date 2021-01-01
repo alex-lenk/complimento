@@ -1,30 +1,38 @@
 'use strict';
 
-var gulp = require('gulp'),
-    watch = require('gulp-watch'),
-    prefixer = require('gulp-autoprefixer'),
-    uglify = require('gulp-uglify'),
-    sass = require('gulp-sass'),
-    rigger = require('gulp-rigger'),
-    cssmin = require('gulp-minify-css'),
-    imagemin = require('gulp-imagemin'),
-    pngquant = require('imagemin-pngquant'),
-    rimraf = require('rimraf'),
-    includer     = require("gulp-x-includer"),
-    browserSync = require("browser-sync"),
-    reload = browserSync.reload,
-    svgstore = require('gulp-svgstore'),
-    svgmin = require('gulp-svgmin'),
-    path = require('path'),
-    cheerio = require('gulp-cheerio');
+const {src, dest, watch, series, parallel} = require('gulp');
+const sass = require('gulp-dart-sass');
+const autoprefixer = require('gulp-autoprefixer');
+const csso = require('gulp-csso');
+const babel = require('gulp-babel');
+const rename = require('gulp-rename');
+const fileinclude = require('gulp-ex-file-include');
+const terser = require('gulp-terser');
+const webpack = require('webpack-stream');
+const sourcemaps = require('gulp-sourcemaps');
+const del = require('del');
+const mode = require('gulp-mode')();
+const htmlbeautify = require('gulp-html-beautify');
+const browserSync = require('browser-sync').create();
+const concat = require('gulp-concat');
+const basePath = require('path');
+const svgmin = require('gulp-svgmin');
+const svgstore = require('gulp-svgstore');
+const uglify = require('gulp-uglify-es').default;
+const imagemin = require("gulp-imagemin");
+const imageminPngquant = require("imagemin-pngquant");
+const imageminZopfli = require("imagemin-zopfli");
+const imageminMozjpeg = require("imagemin-mozjpeg");
+const webp = require("gulp-webp");
+const imageminWebp = require("imagemin-webp");
 
-var way = {
+let way = {
     build: {
-        html: 'build/',
-        js: 'build/js/',
-        css: 'build/css/',
-        img: 'build/img/',
-        fonts: 'build/fonts/'
+        html: './build/',
+        js: './build/js/',
+        css: './build/css/',
+        img: './build/img/',
+        fonts: './build/fonts/'
     },
     src: {
         html: 'src/*.html',
@@ -47,7 +55,137 @@ var way = {
     clean: './build'
 };
 
-var config = {
+// css task
+const css = () => {
+    return src('src/styles/styles.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(autoprefixer())
+        .pipe(rename('styles.css'))
+        .pipe(csso())
+        .pipe(dest('./build/css'))
+        .pipe(mode.development(browserSync.stream()));
+}
+
+// js task
+const js = () => {
+    return src('./src/js/scripts.js')
+        .pipe(uglify())
+        .pipe(dest('./build/js'))
+        .pipe(mode.development(browserSync.stream()));
+}
+
+const jsVendors = () => {
+    return src([
+        './src/js/lib/svgxuse.min.js'
+    ])
+        .pipe(concat('libs.js'))
+        .pipe(dest('./build/js'));
+}
+
+// copy tasks
+const copyImages = () => {
+    return src('./src/img/**/*.{jpg,jpeg,png,svg}')
+        .pipe(imagemin([
+            imageminPngquant({
+                speed: 5,
+                quality: [0.6, 0.8]
+            }),
+            imageminZopfli({
+                more: true
+            }),
+            imageminMozjpeg({
+                progressive: true,
+                quality: 90
+            }),
+            imagemin.svgo({
+                plugins: [
+                    {removeViewBox: false},
+                    {removeUnusedNS: false},
+                    {removeUselessStrokeAndFill: false},
+                    {cleanupIDs: false},
+                    {removeComments: true},
+                    {removeEmptyAttrs: true},
+                    {removeEmptyText: true},
+                    {collapseGroups: true}
+                ]
+            })
+        ]))
+        .pipe(dest('./build/img'));
+}
+
+
+const webpTask = () => {
+    return src('./src/img/**/*.{jpg,jpeg,png}')
+        .pipe(webp(imageminWebp({
+            lossless: true,
+            quality: 6,
+            alphaQuality: 85
+        })))
+        .pipe(dest('./build/img'));
+}
+
+const copyFonts = () => {
+    return src('src/fonts/**/*.{woff,woff2}')
+        .pipe(dest('./build/fonts'));
+}
+
+const copyFavicon = () => {
+    return src('src/favicon/*.*')
+        .pipe(dest('./build/favicon'));
+}
+
+const html = () => {
+    return src('src/view/*.html')
+        .pipe(fileinclude())
+        .pipe(mode.production(htmlbeautify()))
+        .pipe(dest('./build'))
+        .pipe(mode.development(browserSync.stream()));
+}
+
+const svgStore = () => {
+    return src('./src/img/sprite/*.svg')
+        .pipe(svgmin(function (file) {
+            let prefix = basePath.basename(file.relative, basePath.extname(file.relative));
+            return {
+                plugins: [{
+                    cleanupIDs: {
+                        prefix: prefix + '-',
+                        minify: true
+                    }
+                }]
+            }
+        }))
+        .pipe(svgstore())
+        .pipe(dest('./build/img'));
+}
+
+// watch task
+const watchForChanges = () => {
+    browserSync.init({
+        server: {
+            baseDir: './build/'
+        },
+        notify: false,
+        port: 7384
+    });
+
+    watch('src/styles/**/*.scss', css);
+    watch('src/js/**/*.js', js);
+    watch('src/view/*.html', html);
+    watch('src/img/**/*.{png,jpg,jpeg,svg}', series(copyImages));
+    watch('src/fonts/**/*.{woff,woff2}', series(copyFonts));
+    watch('src/favicon/*.*', series(copyFavicon));
+}
+
+// public tasks
+exports.default = series(parallel(css, js, jsVendors, copyImages, copyFonts, html, copyFavicon), watchForChanges);
+exports.build = series(parallel(css, js, jsVendors, copyImages, copyFonts, html, copyFavicon));
+exports.sprite = series(svgStore);
+exports.webpTask = series(webpTask);
+
+/*
+
+let config = {
     server: {
         baseDir: "./build"
     },
@@ -59,9 +197,9 @@ var config = {
 
 gulp.task('svgstore', function () {
     return gulp
-        .src('./src/sprite/*.svg')
+        .src('./src/sprite/!*.svg')
         .pipe(svgmin(function (file) {
-            var prefix = path.basename(file.relative, path.extname(file.relative));
+            let prefix = path.basename(file.relative, path.extname(file.relative));
             return {
                 plugins: [{
                     cleanupIDs: {
@@ -138,14 +276,13 @@ gulp.task('fonts:build', function () {
         .pipe(gulp.dest(way.build.fonts))
 });
 
-gulp.task('build', [
+gulp.task('./build', [
     'html:build',
     'js:build',
     'styles:build',
     'fonts:build',
     'image:build'
 ]);
-
 
 gulp.task('watch', function () {
     watch([way.watch.html], function (event, cb) {
@@ -177,5 +314,5 @@ gulp.task('watch', function () {
     });
 });
 
-
-gulp.task('default', ['build', 'webserver', 'watch']);
+gulp.task('default', ['./build', 'webserver', 'watch']);
+*/
