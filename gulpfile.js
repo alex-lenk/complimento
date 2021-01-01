@@ -172,7 +172,7 @@ const watchForChanges = () => {
       baseDir: './build/'
     },
     notify: false,
-    port: 7384
+    port: 7383
   });
 
   watch('./src/styles/**/*.scss', css);
